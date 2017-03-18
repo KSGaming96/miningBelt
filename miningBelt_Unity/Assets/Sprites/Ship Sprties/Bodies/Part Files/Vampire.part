@@ -1,0 +1,12 @@
+Body
+Vampire
+none
+
+Crew:	1
+Thrust:	2
+Armor:  1
+
+Connections: U D L R T B: 1
+1 0	     0 0 0 0 0 1
+0 0          0 0 1 0 0 1
+2 0          0 0 0 1 0 1

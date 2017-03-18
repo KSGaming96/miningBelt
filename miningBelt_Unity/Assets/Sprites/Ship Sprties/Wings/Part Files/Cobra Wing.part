@@ -1,0 +1,12 @@
+Body
+Cobra Wing
+none
+
+Crew:	0
+Thrust:	0
+Armor:  1
+
+Connections: U D L R T B: 3
+0 1	     0 0 1 0 0 0
+0 0          0 0 0 0 0 1
+0 2          0 0 0 0 0 0

@@ -1,0 +1,12 @@
+Body
+Midge Fly
+none
+
+Crew:	2
+Thrust:	2
+Armor:  2
+
+Connections: U D L R T B: 3
+1 0          0 1 0 0 0 1
+0 0	     0 1 0 0 0 1
+2 0          0 1 0 0 0 1

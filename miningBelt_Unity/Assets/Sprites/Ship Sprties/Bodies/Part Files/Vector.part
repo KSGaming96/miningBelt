@@ -1,0 +1,11 @@
+Body
+Vector
+none
+
+Crew:	2
+Thrust:	1
+Armor:  2
+
+Connections: U D L R T B: 2
+0 1	     0 1 1 1 1 0
+0 0          0 0 0 0 1 1

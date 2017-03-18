@@ -1,0 +1,13 @@
+Body
+Star Cruiser
+none
+
+Crew:	2
+Thrust:	2
+Armor:  2
+
+Connections: U D L R T B: 4
+0 0	     0 0 0 0 0 0
+1 0          0 1 1 0 1 1
+0 1          0 0 0 0 0 0
+1 1          0 1 0 1 1 1
