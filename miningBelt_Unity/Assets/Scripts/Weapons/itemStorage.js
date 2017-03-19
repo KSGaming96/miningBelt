@@ -1,10 +1,10 @@
 ﻿//File: itemStorage.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/18/2017
+//Last Modified: 03/19/2017
 
 /*
---Holds all item states for sorting
+--Holds all item states for storage stacking
 */
 
 #pragma strict
@@ -34,6 +34,16 @@ function setArray1(arrayLocation : int) {
 function setArray0(arrayLocation : int) {
 
     itemArray[arrayLocation] = 0;
+}
+
+function setEnergyEquip(temp : int) {
+
+    energyEquip = temp;
+}
+
+function setMissileEquip(temp : int) {
+
+    missileEquip = temp;
 }
 
 function openSlot() : int {
