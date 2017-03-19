@@ -1,12 +1,10 @@
 ﻿//File: projectileSpawn.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/10/2017
+//Last Modified: 03/19/2017
 
 /*
---projectileSpawn.js
---
---Spawns weapon object. Needs to be modular and accept variables for all future weapon objects.
+--Spawns weapon object. Instantiates according to tag and equip states in itemStorage.
 --
 --Spawn() makes a single bullet up from player.
 --SplitSpawn() reads how many splits there are, and spawns the bullets Spread degrees apart.
@@ -14,18 +12,37 @@
 
 #pragma strict
 
-public var ProjectileParent : GameObject;
 public var PlayerObject : GameObject;
-public var Weapon : GameObject;
+public var bottomGUI : GameObject;
+public var weaponArray : GameObject[] = new GameObject[2];
+private var Weapon : GameObject;
 
-public var FireRate : float;
-public var Split : int;
-public var Spread : int;
-
+private var FireRate : int;
+private var Split : int = 0;
+private var Spread : int = 0;
 private var temp : float = 0.0;
-private var i : int = 0;
+private var state : int;
+
+function Start () {
+
+    if (gameObject.name == "Energy") {
+
+        Weapon = weaponArray[0].gameObject;
+        FireRate = 10 * PlayerObject.GetComponent(Player).FireRate;
+        state = 1;
+    }
+        
+    if (gameObject.tag == "Missile") {
+
+        Weapon = weaponArray[1].gameObject;
+        FireRate = 5 * PlayerObject.GetComponent(Player).FireRate;
+        state = 2;
+    } 
+}
 
 function Update () {
+
+    var weaponSelection : GameObject;
 
     if (Input.GetButton("Fire")) {
 
@@ -33,14 +50,18 @@ function Update () {
 
             temp = Time.time + (10 / FireRate);
 
-            if (Split == 0) {
+            if (bottomGUI.GetComponent(itemStorage).energyEquip == 1 && state == 1
+                || bottomGUI.GetComponent(itemStorage).missileEquip == 1 && state == 2) {
 
-                Spawn();
-            }
+                if (Split == 0) {
+
+                    Spawn();
+                }
     
-            else {
+                else {
 
-                SplitSpawn();
+                    SplitSpawn();
+                }
             }
         }
     }
