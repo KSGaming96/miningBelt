@@ -1,0 +1,11 @@
+Body
+Tri-Thruster
+none
+
+Crew:	0
+Thrust:	4
+Armor:  0
+
+Connections: U D L R T B: 2
+0 0	     1 0 1 1 0 0
+1 0          0 0 0 0 0 0

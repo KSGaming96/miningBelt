@@ -4,7 +4,7 @@
 //Last Modified: 03/19/2017
 
 /*
---Holds all item states for storage stacking
+--Holds all slot states for storage stacking.
 */
 
 #pragma strict
@@ -13,7 +13,7 @@ static var itemArray : int[] = new int[8];
 static var energyEquip : int;
 static var missileEquip : int;
 
-function Start () {
+function Start () { //Initialize array for all 0 states.
 
     energyEquip = 0;
     missileEquip = 0;
@@ -26,27 +26,27 @@ function Start () {
     }
 }
 
-function setArray1(arrayLocation : int) {
+function setArray1(arrayLocation : int) { //Array setter
 
     itemArray[arrayLocation] = 1;
 }
 
-function setArray0(arrayLocation : int) {
+function setArray0(arrayLocation : int) { //Array setter
 
     itemArray[arrayLocation] = 0;
 }
 
-function setEnergyEquip(temp : int) {
+function setEnergyEquip(temp : int) { //Equipped Setter
 
     energyEquip = temp;
 }
 
-function setMissileEquip(temp : int) {
+function setMissileEquip(temp : int) { //Equipped setter
 
     missileEquip = temp;
 }
 
-function openSlot() : int {
+function openSlot() : int { //Returns number of the first slot with an open 0 state. Always flows 1 to 8.
 
     var i : int;
     var location : int;

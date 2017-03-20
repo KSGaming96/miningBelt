@@ -5,9 +5,6 @@
 
 /*
 --Spawns weapon object. Instantiates according to tag and equip states in itemStorage.
---
---Spawn() makes a single bullet up from player.
---SplitSpawn() reads how many splits there are, and spawns the bullets Spread degrees apart.
 */
 
 #pragma strict
@@ -23,32 +20,30 @@ private var Spread : int = 0;
 private var temp : float = 0.0;
 private var state : int;
 
-function Start () {
+function Start () { //Setting initial variables depending on weapon type. Chooses what prefab to instantiate.
 
-    if (gameObject.name == "Energy") {
+    if (gameObject.tag == "Energy") {
 
         Weapon = weaponArray[0].gameObject;
-        FireRate = 10 * PlayerObject.GetComponent(Player).FireRate;
+        FireRate = PlayerObject.GetComponent(Player).FireRate;
         state = 1;
     }
         
     if (gameObject.tag == "Missile") {
 
         Weapon = weaponArray[1].gameObject;
-        FireRate = 5 * PlayerObject.GetComponent(Player).FireRate;
+        FireRate = PlayerObject.GetComponent(Player).FireRate * 2;
         state = 2;
     } 
 }
 
-function Update () {
-
-    var weaponSelection : GameObject;
+function Update () { //Checks if weapon is equipped depending on object tag. Spawns weapons if not unequipped.
 
     if (Input.GetButton("Fire")) {
 
         if (temp < Time.time) {
 
-            temp = Time.time + (10 / FireRate);
+            temp = Time.time + FireRate;
 
             if (bottomGUI.GetComponent(itemStorage).energyEquip == 1 && state == 1
                 || bottomGUI.GetComponent(itemStorage).missileEquip == 1 && state == 2) {
@@ -67,12 +62,12 @@ function Update () {
     }
 }
 
-function Spawn () {
+function Spawn () { //Makes a single bullet up from player.
 
     Instantiate(Weapon, this.transform.position, PlayerObject.transform.rotation);
 }
 
-function SplitSpawn () {
+function SplitSpawn () { //Reads how many splits there are, and spawns the bullets Spread degrees apart.
 
     var rotation : Quaternion = PlayerObject.transform.rotation;
 

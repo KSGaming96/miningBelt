@@ -1,0 +1,11 @@
+Body
+Overdrive
+none
+
+Crew:	0
+Thrust:	5
+Armor:  2
+
+Connections: U D L R T B: 2
+0 0	     1 0 0 0 0 0
+1 0          0 0 0 0 0 0

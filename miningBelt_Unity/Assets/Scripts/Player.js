@@ -1,13 +1,13 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/12/2017
+//Last Modified: 03/19/2017
 
 /*
 --Player.js holds player stats and controls game movement.
-
---15;32-- All global variables. Will add more function as game progresses.
---27;34-- All referenced objects.
+--
+--17;34-- All global variables. Will add more function as game progresses.
+--36;43-- All referenced objects.
 --
 --Turns ore into a variable on collision.
 */
@@ -49,7 +49,7 @@ function Start () {
     var Camera : Component = CameraObject.GetComponent("mainCamera");
 }
 
-function Update () {
+function Update () { // Movement. Upward thrust and references RotateAround
 
     var RotationUpRange : Quaternion = Quaternion.Euler(0, 0, 4);
     var RotationDownRange : Quaternion = Quaternion.Euler(0, 0, -4);
@@ -73,7 +73,7 @@ function Update () {
     }   
 } 
 
-function RotateAround() {
+function RotateAround() { //Player rotation function.
 
     transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
     CameraObject.transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
@@ -81,67 +81,34 @@ function RotateAround() {
     Items.transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
 }
 
-function OnTriggerEnter2D (temp : Collider2D) {
+function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
 
     if (temp.gameObject.tag == "Ore") {
 
-        if (temp.gameObject.name == "copperOre(Clone)") {
-
+        if (temp.gameObject.name == "copperOre(Clone)")
             Copper++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "silverOre(Clone)") {
-
+        if (temp.gameObject.name == "silverOre(Clone)")
             Silver++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "goldOre(Clone)") {
-
+        if (temp.gameObject.name == "goldOre(Clone)")
             Gold++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "diamondOre(Clone)") {
-
+        if (temp.gameObject.name == "diamondOre(Clone)")
             Diamond++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "uraniumOre(Clone)") {
-
+        if (temp.gameObject.name == "uraniumOre(Clone)")
             Uranium++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "siliconOre(Clone)") {
-
+        if (temp.gameObject.name == "siliconOre(Clone)")
             Silicon++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "crystalOre(Clone)") {
-
+        if (temp.gameObject.name == "crystalOre(Clone)")
             Crystal++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "magnesiumOre(Clone)") {
-
+        if (temp.gameObject.name == "magnesiumOre(Clone)")
             Magnesium++;
-            Destroy(temp.gameObject);
-        }
-
-        if (temp.gameObject.name == "fluoriteOre(Clone)") {
-
+        if (temp.gameObject.name == "fluoriteOre(Clone)")
             Fluorite++;
-            Destroy(temp.gameObject);
-        }
+        
+        Destroy(temp.gameObject);
     }
 }
 
-function OnGUI () {
+function OnGUI () { //Prints ore numbers on GUI
 
     var gui : GUI; 
     

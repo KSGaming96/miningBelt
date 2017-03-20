@@ -4,7 +4,7 @@
 //Last Modified: 03/19/2017
 
 /*
---Script with interaction to itemStorage for smart item stacking. Reads tag and assigns everything to that.
+--Script with interaction to itemStorage for smart item stacking. Reads tag and assigns everything for weapon spawning and storage organization.
 */
 
 #pragma strict
@@ -15,7 +15,7 @@ public var bottomGUI : GameObject;
 
 var equipped : int = 0;
 
-function Start () {
+function Start () { //Changes initial slot state to 1 and finds type of weapon.
 
     var temp : int;
 
@@ -39,7 +39,7 @@ function Start () {
     }
 }
 
-function OnMouseDown() {
+function OnMouseDown() { //Checks multiple variables to see where the item needs to be moved. Storage slots read either 0 or 1, depending on what objects are in storage. 
 
     var temp : int;
     var i : int = 0;
@@ -69,11 +69,7 @@ function OnMouseDown() {
             i++;
         }
         
-        if (gameObject.tag == "Energy")
-            this.transform.position = weaponEquip.transform.position;
-        else if (gameObject.tag == "Missile")
-            this.transform.position = weaponEquip.transform.position;
-
+        this.transform.position = weaponEquip.transform.position;
         equipped = 1;
     }
 
