@@ -1,0 +1,11 @@
+Body
+Fighter Wing
+none
+
+Crew:	0
+Thrust:	2
+Armor:  2
+
+Connections: U D L R T B: 2
+1 0	     0 0 1 0 1 1
+0 0          0 0 0 0 0 1

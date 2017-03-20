@@ -1,15 +1,15 @@
 ﻿//File: restartLevel.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/12/2017
+//Last Modified: 03/19/2017
 
 /*
---Simple restart command. Will remove when gae menus are implemented.
+--Simple restart command. Will remove when game menus are implemented.
 */
 
 #pragma strict
 
-function Update () {
+function Update () { //restarts the room.
 	
     if (Input.GetButton("Restart"))
     {

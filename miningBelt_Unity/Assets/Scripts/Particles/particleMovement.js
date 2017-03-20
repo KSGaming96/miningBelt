@@ -1,7 +1,7 @@
 ﻿//File: particleMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/12/2017
+//Last Modified: 03/19/2017
 
 /*
 --Basic movement for particle system. Reads object tag and assigns movement needed.
@@ -10,11 +10,9 @@
 #pragma strict
 
 public var RB : Rigidbody2D;
-
 private var rand : Random;
 
-
-function Start () {
+function Start () { //Assigns unique transforms depending on particle type.
 
     var Life : int;
 
@@ -45,12 +43,6 @@ function Start () {
         RB.AddTorque(rand.Range(-3.0, 3.0));
     }
 
-    if (Life > 0) {
-
+    if (Life > 0)
         Destroy(gameObject, Life);
-    }
-}
-
-function Update () {
-    
 }
