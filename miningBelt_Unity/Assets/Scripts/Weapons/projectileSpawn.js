@@ -1,115 +1,138 @@
 ﻿//File: projectileSpawn.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/19/2017
+//Last Modified: 03/22/2017
 
 /*
---Spawns weapon object. Instantiates according to tag and equip states in itemStorage.
+--Spawns weapon object. Instantiates according to tag and equip states in itemStorage. Attaches to weapon item.
 */
 
 #pragma strict
 
 public var PlayerObject : GameObject;
 public var bottomGUI : GameObject;
-public var weaponArray : GameObject[] = new GameObject[2];
-private var Weapon : GameObject;
+static var EnergyWeapon : GameObject;
+static var MissileWeapon : GameObject;
 
-private var FireRate : int;
-private var Split : int = 0;
-private var Spread : int = 0;
-private var temp : float = 0.0;
-private var state : int;
-
-function Start () { //Setting initial variables depending on weapon type. Chooses what prefab to instantiate.
-
-    if (gameObject.tag == "Energy") {
-
-        Weapon = weaponArray[0].gameObject;
-        FireRate = PlayerObject.GetComponent(Player).FireRate;
-        state = 1;
-    }
-        
-    if (gameObject.tag == "Missile") {
-
-        Weapon = weaponArray[1].gameObject;
-        FireRate = PlayerObject.GetComponent(Player).FireRate * 2;
-        state = 2;
-    } 
-}
+static var Split : int = 0;
+static var Spread : int = 0;
+static var Burst : int = 0;
+static var energyFireRate : float;
+static var missileFireRate : float;
+private var energyTime : float = 0.0;
+private var missileTime : float = 0.0;
 
 function Update () { //Checks if weapon is equipped depending on object tag. Spawns weapons if not unequipped.
 
     if (Input.GetButton("Fire")) {
 
-        if (temp < Time.time) {
+        if (bottomGUI.GetComponent(itemStorage).energyEquip == 1) {
 
-            temp = Time.time + FireRate;
+            if (energyTime < Time.time) {
 
-            if (bottomGUI.GetComponent(itemStorage).energyEquip == 1 && state == 1
-                || bottomGUI.GetComponent(itemStorage).missileEquip == 1 && state == 2) {
-
-                if (Split == 0) {
-
-                    Spawn();
-                }
-    
-                else {
-
+                energyTime = Time.time + energyFireRate;
+                
+                if (Split == 0)
+                    energySpawn();
+                else 
                     SplitSpawn();
-                }
-            }
+            } 
         }
+
+        if (bottomGUI.GetComponent(itemStorage).missileEquip == 1) {
+
+            if (missileTime < Time.time) {
+
+                missileTime = Time.time + missileFireRate;
+                if (Split == 0)
+                    missileSpawn();
+                else 
+                    SplitSpawn();
+            }
+        }    
     }
 }
 
-function Spawn () { //Makes a single bullet up from player.
+function energySpawn () { //Makes a single bullet up from player.
 
-    Instantiate(Weapon, this.transform.position, PlayerObject.transform.rotation);
+    var rotation : Quaternion = PlayerObject.transform.rotation;
+    Instantiate(EnergyWeapon, this.transform.position, rotation);
+}
+
+function missileSpawn () { //Makes a single bullet up from player.
+
+    var rotation : Quaternion = PlayerObject.transform.rotation;
+    Instantiate(MissileWeapon, this.transform.position, rotation);
 }
 
 function SplitSpawn () { //Reads how many splits there are, and spawns the bullets Spread degrees apart.
 
+    var i : int;
     var rotation : Quaternion = PlayerObject.transform.rotation;
 
     if (Split == 1) {
 
-        rotation *= Quaternion.Euler(0, 0, 2 * Spread);
-        Instantiate(Weapon, this.transform.position, rotation);
+        i = 2;
 
-        rotation = PlayerObject.transform.rotation;
-        rotation *= Quaternion.Euler(0, 0, 360 - (2 * Spread));
-        Instantiate(Weapon, this.transform.position, rotation);
+        while (i >= -2) {
+
+            rotation = PlayerObject.transform.rotation;
+            rotation *= Quaternion.Euler(0, 0, 360 - (i * Spread));
+
+            if (bottomGUI.GetComponent(itemStorage).energyEquip == 1)
+                Instantiate(EnergyWeapon, this.transform.position, rotation);
+            if (bottomGUI.GetComponent(itemStorage).missileEquip == 1)
+                Instantiate(MissileWeapon, this.transform.position, rotation);
+            
+            i -= 4;
+        }
     }
 
     if (Split == 2) {
 
-        Instantiate(Weapon, this.transform.position, rotation);
-
-        rotation *= Quaternion.Euler(0, 0, 2 * Spread);
-        Instantiate(Weapon, this.transform.position, rotation);
+        i = 2;
 
         rotation = PlayerObject.transform.rotation;
-        rotation *= Quaternion.Euler(0, 0, 360 - 2 * Spread);
-        Instantiate(Weapon, this.transform.position, rotation);
+        if (bottomGUI.GetComponent(itemStorage).energyEquip == 1)
+            Instantiate(EnergyWeapon, this.transform.position, rotation);
+        if (bottomGUI.GetComponent(itemStorage).missileEquip == 1)
+            Instantiate(MissileWeapon, this.transform.position, rotation);
+
+        while (i >= -2) {
+
+            rotation = PlayerObject.transform.rotation;
+            rotation *= Quaternion.Euler(0, 0, 360 - (i * Spread));
+
+            if (bottomGUI.GetComponent(itemStorage).energyEquip == 1)
+                Instantiate(EnergyWeapon, this.transform.position, rotation);
+            if (bottomGUI.GetComponent(itemStorage).missileEquip == 1)
+                Instantiate(MissileWeapon, this.transform.position, rotation);
+
+            i -= 4;
+        }
     }
 
     if (Split == 4) {
 
-    Instantiate(Weapon, this.transform.position, rotation);
+        i = 6;
 
-    rotation *= Quaternion.Euler(0, 0, 2 * Spread);
-    Instantiate(Weapon, this.transform.position, rotation);
+        rotation = PlayerObject.transform.rotation;
+        if (bottomGUI.GetComponent(itemStorage).energyEquip == 1)
+            Instantiate(EnergyWeapon, this.transform.position, rotation);
+        if (bottomGUI.GetComponent(itemStorage).missileEquip == 1)
+            Instantiate(MissileWeapon, this.transform.position, rotation);
 
-    rotation = PlayerObject.transform.rotation;
-    rotation *= Quaternion.Euler(0, 0, 4 * Spread);
-    Instantiate(Weapon, this.transform.position, rotation);
+        while (i >= -6) {
 
-    rotation = PlayerObject.transform.rotation;
-    rotation *= Quaternion.Euler(0, 0, 360 - (2 * Spread));
-    Instantiate(Weapon, this.transform.position, rotation);
+            rotation = PlayerObject.transform.rotation;
+            rotation *= Quaternion.Euler(0, 0, 360 - (i * Spread));
 
-    rotation = PlayerObject.transform.rotation;
-    rotation *= Quaternion.Euler(0, 0, 360 - (4 * Spread));
-    Instantiate(Weapon, this.transform.position, rotation);
+            if (bottomGUI.GetComponent(itemStorage).energyEquip == 1)
+                Instantiate(EnergyWeapon, this.transform.position, rotation);
+            if (bottomGUI.GetComponent(itemStorage).missileEquip == 1)
+                Instantiate(MissileWeapon, this.transform.position, rotation);
+
+            i -= 4;
+        }
     }
 }

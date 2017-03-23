@@ -262,8 +262,6 @@ function PlayerDestruction() {
         dustCount--;
         Instantiate(shipDust, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
     }
-
-    Debug.Log("Hit!");
 }
 
 function DustSpawn (dustCount : int) {

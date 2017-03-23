@@ -17,35 +17,15 @@ Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\
 Loading C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.039 seconds
+- Completed reload, in  0.147 seconds
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.603787 ms
+UnloadTime: 1.651562 ms
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\Boo.Lang.dll (this message is harmless)
-Hit!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 12.557147 ms
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 670.
-Total: 0.250258 ms (FindLiveObjects: 0.050920 ms CreateObjectMapping: 0.026446 ms MarkObjects: 0.165391 ms  DeleteObjects: 0.005526 ms)
-
-Hit!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 9.738380 ms
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 670.
-Total: 0.253021 ms (FindLiveObjects: 0.037499 ms CreateObjectMapping: 0.052893 ms MarkObjects: 0.157497 ms  DeleteObjects: 0.004342 ms)
-
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1264 -> priority: 1 
+  Thread -> id: 14c4 -> priority: 1 

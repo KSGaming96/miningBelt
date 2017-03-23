@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/19/2017
+//Last Modified: 03/22/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -33,52 +33,15 @@ static var Crystal : int = 0;
 static var Magnesium : int = 0;
 static var Fluorite : int = 0;
 
-public var CameraObject : GameObject;
-public var GUI : GameObject;
-public var Items : GameObject;
-
 public var TempRB : Rigidbody2D;
-public var GUIRB : Rigidbody2D;
-public var ItemsRB : Rigidbody2D;
-public var CameraRB : Rigidbody2D;
 
-var fontStyle : GUIStyle;
-
-function Start () {
-	
-    var Camera : Component = CameraObject.GetComponent("mainCamera");
-}
+static var speedVector : Vector2;
 
 function Update () { // Movement. Upward thrust and references RotateAround
 
+    speedVector = TempRB.velocity;
     var RotationUpRange : Quaternion = Quaternion.Euler(0, 0, 4);
     var RotationDownRange : Quaternion = Quaternion.Euler(0, 0, -4);
-	
-    if (Input.GetAxis("Vertical") == 1) {
-
-        TempRB.AddForce(transform.up * (50 * Speed) * Input.GetAxis("Vertical") * Time.deltaTime);
-        GUIRB.AddForce(transform.up * (50 * Speed) * Input.GetAxis("Vertical") * Time.deltaTime);
-        CameraRB.AddForce(transform.up * (50 * Speed) * Input.GetAxis("Vertical") * Time.deltaTime);
-        ItemsRB.AddForce(transform.up * (50 * Speed) * Input.GetAxis("Vertical") * Time.deltaTime);
-    
-        if (Input.GetAxis("Horizontal") != 0) {
-
-            RotateAround();
-        }  
-    }
-
-    else {
-
-        RotateAround();
-    }   
-} 
-
-function RotateAround() { //Player rotation function.
-
-    transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
-    CameraObject.transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
-    GUI.transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
-    Items.transform.RotateAround(transform.position, Vector3.forward, (50 * Mobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.

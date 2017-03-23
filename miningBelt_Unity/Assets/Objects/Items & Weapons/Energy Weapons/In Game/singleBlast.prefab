@@ -98,10 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8340b8289fe1bbe49b1682985d472311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1812436260988790, guid: 47ebdbed72a148c4d9c8da81039f9957,
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
-  Collision: {fileID: 1554891138686332, guid: 364d0afe01450a0438c23f6a24df353e, type: 2}
-  TempRB: {fileID: 50809366265545506}
+  Direction: {fileID: 1788632405628506, guid: d894a2b7622d6214a951f32beb12e4a4, type: 2}
   weaponDust: {fileID: 1264625337499736, guid: 15e1b1d43f40e1d43957879a7272d9e5, type: 2}
   weaponParticle: {fileID: 1772877475724672, guid: 8fc8332c5e5a2eb4791def638a1254fe,
     type: 2}
