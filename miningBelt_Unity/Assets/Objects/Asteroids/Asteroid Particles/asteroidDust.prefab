@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114161392680501674}
   m_Layer: 0
   m_Name: asteroidDust
-  m_TagString: asteroidParticle
+  m_TagString: particleDust
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,7 +1,7 @@
 ﻿//File: energyEquip.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/22/2017
+//Last Modified: 03/23/2017
 
 /*
 --Script with interaction to itemStorage for smart item stacking. Reads tag and assigns everything for weapon spawning and storage organization.
@@ -98,6 +98,8 @@ function setWeapon() {
 
             weaponSpawn.GetComponent(projectileSpawn).EnergyWeapon = weaponArray[0].gameObject;
             weaponSpawn.GetComponent(projectileSpawn).energyFireRate = PlayerObject.GetComponent(Player).FireRate;
+            weaponSpawn.GetComponent(projectileSpawn).energySplit = 0;
+            weaponSpawn.GetComponent(projectileSpawn).energySpread = 0;
             state = 1;
         }
 
@@ -105,7 +107,8 @@ function setWeapon() {
 
             weaponSpawn.GetComponent(projectileSpawn).EnergyWeapon = weaponArray[1].gameObject;
             weaponSpawn.GetComponent(projectileSpawn).energyFireRate = PlayerObject.GetComponent(Player).FireRate / 2.0;
-            weaponSpawn.GetComponent(projectileSpawn).Burst = 2;
+            weaponSpawn.GetComponent(projectileSpawn).energySplit = 2;
+            weaponSpawn.GetComponent(projectileSpawn).energySpread = 2;
             state = 1;
         }
 
@@ -113,6 +116,8 @@ function setWeapon() {
 
             weaponSpawn.GetComponent(projectileSpawn).EnergyWeapon = weaponArray[2].gameObject;
             weaponSpawn.GetComponent(projectileSpawn).energyFireRate = PlayerObject.GetComponent(Player).FireRate / 20.0;
+            weaponSpawn.GetComponent(projectileSpawn).energySplit = 0;
+            weaponSpawn.GetComponent(projectileSpawn).energySpread = 0;
             state = 1;
         }
     }
@@ -126,6 +131,8 @@ function setWeapon() {
 
             weaponSpawn.GetComponent(projectileSpawn).MissileWeapon = weaponArray[3].gameObject;
             weaponSpawn.GetComponent(projectileSpawn).missileFireRate = PlayerObject.GetComponent(Player).FireRate * 2.0;
+            weaponSpawn.GetComponent(projectileSpawn).missileSplit = 0;
+            weaponSpawn.GetComponent(projectileSpawn).missileSpread = 0;
             state = 2;
         }
     }

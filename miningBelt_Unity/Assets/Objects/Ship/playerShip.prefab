@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58743402321877224}
   - component: {fileID: 212999583990866528}
   - component: {fileID: 114804723096235874}
+  - component: {fileID: 114589238723548374}
   m_Layer: 0
   m_Name: playerShip
   m_TagString: Player
@@ -77,6 +78,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.22146757
+--- !u!114 &114589238723548374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1525386156040004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275aece005d12c644a9380b6e9e2a8ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004}
+  TempRB: {fileID: 50620520063444366}
 --- !u!114 &114804723096235874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,14 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a8ce72b1fe96f4d902e06845290f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraObject: {fileID: 0}
-  GUI: {fileID: 0}
-  Items: {fileID: 0}
-  weaponDirection: {fileID: 0}
   TempRB: {fileID: 50620520063444366}
-  GUIRB: {fileID: 0}
-  ItemsRB: {fileID: 0}
-  CameraRB: {fileID: 0}
+  DirectionObject: {fileID: 1788632405628506, guid: d894a2b7622d6214a951f32beb12e4a4,
+    type: 2}
 --- !u!212 &212999583990866528
 SpriteRenderer:
   m_ObjectHideFlags: 1

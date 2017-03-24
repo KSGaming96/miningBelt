@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4739303210184192}
   - component: {fileID: 212906632652365176}
   - component: {fileID: 50483514754882682}
+  - component: {fileID: 114507120794566506}
   m_Layer: 0
   m_Name: smallStar
   m_TagString: Untagged
@@ -61,6 +62,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114507120794566506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135948166658302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d30920fe52036743a5bfb3fa2bc2513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
 --- !u!212 &212906632652365176
 SpriteRenderer:
   m_ObjectHideFlags: 1

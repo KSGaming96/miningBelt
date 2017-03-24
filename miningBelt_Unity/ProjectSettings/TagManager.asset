@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - Energy
   - Missile
+  - particleDust
   layers:
   - Default
   - TransparentFX

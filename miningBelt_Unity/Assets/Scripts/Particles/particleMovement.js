@@ -14,13 +14,12 @@ private var rand : Random;
 
 function Start () { //Assigns unique transforms depending on particle type.
 
-    var Life : int;
+    var Life : int = 0;
 
     if (this.tag == "asteroidParticle") {
 
         RB.AddForce(transform.up * rand.Range(20.0, 40.0));
         RB.AddTorque(rand.Range(-200.0, 200.0));
-        Life = rand.Range(2.0, 5.0);
     }
 
     if (this.tag == "shipParticle") {
@@ -35,6 +34,13 @@ function Start () { //Assigns unique transforms depending on particle type.
         RB.AddForce(transform.up * rand.Range(10.0, 50.0));
         RB.AddTorque(rand.Range(-300.0, 300.0));
         Life = rand.Range(1.0, 3.0);
+    }
+
+    if (this.tag == "particleDust") {
+
+        RB.AddForce(transform.up * rand.Range(10.0, 50.0));
+        RB.AddTorque(rand.Range(-300.0, 300.0));
+        Life = rand.Range(2.0, 5.0);
     }
 
     if (this.tag == "Ore") {

@@ -1,7 +1,7 @@
 ﻿//File: particleDestroy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/12/2017
+//Last Modified: 03/23/2017
 
 /*
 --Assigns all particle objects, and destroys object with "flare" :D
@@ -41,9 +41,9 @@ public var largeShipParticle1 : GameObject;
 public var largeShipParticle2 : GameObject;
 public var largeShipParticle3 : GameObject;
 
-var rand : Random;
-var direction : Transform;
-var spawn : int = 0;
+private var rand : Random;
+private var direction : Transform;
+private var spawn : int = 0;
 
 private var smallParticleCount : int;
 private var mediumParticleCount : int;
@@ -57,13 +57,15 @@ function OnTriggerEnter2D (temp : Collider2D) {
 
         if (this.name == "smallAsteroid(Clone)") {
 
+            smallParticleCount = rand.Range(2,8);
             SmallDestruction(0);
-
             Destroy(gameObject);
         }
 
         if (this.name == "mediumAsteroid(Clone)") {
 
+            smallParticleCount = rand.Range(2,8);
+            mediumParticleCount = rand.Range(1,6);
             MediumDestruction(0);
             SmallDestruction(7);
 
@@ -72,11 +74,39 @@ function OnTriggerEnter2D (temp : Collider2D) {
 
         if (this.name == "largeAsteroid(Clone)") {
 
+            smallParticleCount = rand.Range(2,8);
+            mediumParticleCount = rand.Range(1,6);
+            largeParticleCount = rand.Range(1,3);
             LargeDestruction(0);
             MediumDestruction(12);
             SmallDestruction(16);
 
             Destroy(gameObject);
+        }
+
+        if (this.tag == "asteroidParticle") {
+
+            if (this.name == "asteroidPieceSmall1(Clone)" || this.name == "asteroidPieceSmall2(Clone)" || this.name == "asteroidPieceSmall3(Clone)") {
+
+                DustSpawn(15);
+                Destroy(gameObject);
+            }
+
+            if (this.name == "asteroidPiece1(Clone)" || this.name == "asteroidPiece2(Clone)" || this.name == "asteroidPiece3(Clone)") {
+
+                smallParticleCount = rand.Range(0,3);
+                SmallDestruction(2);
+                Destroy(gameObject);
+            }
+
+            if (this.name == "asteroidPieceLarge1(Clone)" || this.name == "asteroidPieceLarge2(Clone)" || this.name == "asteroidPieceLarge3(Clone)") {
+
+                smallParticleCount = rand.Range(0,3);
+                mediumParticleCount = rand.Range(0,2);
+                MediumDestruction(2);
+                SmallDestruction(2);
+                Destroy(gameObject);
+            }
         }
 
         if (temp.gameObject.name == "playerShip") {
@@ -91,7 +121,6 @@ function OnTriggerEnter2D (temp : Collider2D) {
 function SmallDestruction (spread : int) {
 
     var temp : int;
-    smallParticleCount = rand.Range(1, 8);
 
     if (spread == 0) {
 
@@ -131,7 +160,6 @@ function SmallDestruction (spread : int) {
 function MediumDestruction (spread : int) {
 
     var temp : int;
-    mediumParticleCount = rand.Range(1, 6);
 
     if (spread == 0) {
 
@@ -171,7 +199,6 @@ function MediumDestruction (spread : int) {
 function LargeDestruction (spread : int) {
 
     var temp : int;
-    largeParticleCount = rand.Range(1, 3);
 
     if (spread == 0) {
 

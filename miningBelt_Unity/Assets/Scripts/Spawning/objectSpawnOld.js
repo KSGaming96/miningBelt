@@ -11,17 +11,22 @@
 public var StarSpawnRate : int = 500;
 public var AsteroidSpawnRate : int = 200;
 public var SpawnRange : float = 25.0;
+private var temp : Vector3;
 
+public var PlayerObject : GameObject;
 public var SmallStar : GameObject;
 public var MediumStar : GameObject;
 public var SmallAsteroid : GameObject;
 public var MediumAsteroid : GameObject;
 public var LargeAsteroid : GameObject;
 
+
 private var rand : Random;
+private var i : int = 0;
 
 function Start () {
-	
+
+    temp = new Vector3(PlayerObject.transform.position.x, PlayerObject.transform.position.y, 0);
     starSpawn();
     asteroidSpawn();
 }
@@ -29,7 +34,6 @@ function Start () {
 function starSpawn() {
 
     var size : int;
-    var temp : Vector3 = new Vector3(this.transform.position.x, this.transform.position.y, 0);
 
     while (0 <= StarSpawnRate) {
 
@@ -50,14 +54,13 @@ function starSpawn() {
             StarSpawnRate--;
         }
 
-        temp = new Vector3(this.transform.position.x, this.transform.position.y, 0);
+        temp = PlayerObject.transform.position;
     }
 }
 
 function asteroidSpawn() {
 
     var size : int;
-    var temp : Vector3 = new Vector3(this.transform.position.x, this.transform.position.y, 0);
 
     while (0 <= AsteroidSpawnRate) {
 
@@ -87,6 +90,7 @@ function asteroidSpawn() {
             AsteroidSpawnRate--;
         }
 
-        temp = new Vector3(this.transform.position.x, this.transform.position.y, 0);
+        temp = PlayerObject.transform.position;
     }
 }
+

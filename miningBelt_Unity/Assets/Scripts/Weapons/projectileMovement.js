@@ -1,7 +1,7 @@
 ﻿//File: projectileMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/22/2017
+//Last Modified: 03/23/2017
 
 /*
 --Attaches to all bullet prefabs. The script moves bullets forward, then destroys them.
@@ -12,6 +12,7 @@
 #pragma strict
 
 public var PlayerObject : GameObject;
+public var DirectionObject : GameObject;
 public var weaponDust : GameObject;
 public var weaponParticle : GameObject;
 
@@ -52,7 +53,11 @@ function Update () { //Complex movement for projectile speed adjusting to Player
 
     floatRotation = 1.0 - Mathf.Abs(rotationDifference / 180);
     relativeSpeed = (overallSpeed * floatRotation) + Speed;
-    transform.Translate(transform.position.up * relativeSpeed * Time.deltaTime);
+
+    if (gameObject.name == "streamLaser(Clone)")
+        transform.Translate(PlayerObject.transform.up * relativeSpeed * Time.deltaTime);
+    else
+        transform.Translate(PlayerObject.transform.up * relativeSpeed * Time.deltaTime);
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Reads collisions with destructible objects. Spawns weapon particles here.
@@ -60,7 +65,7 @@ function OnTriggerEnter2D (temp : Collider2D) { //Reads collisions with destruct
     var dustCount = 50;
     var particleCount = 10;
 
-    if (temp.gameObject.tag == "Destructible") {
+    if (temp.gameObject.tag == "Destructible" || temp.gameObject.tag == "asteroidParticle") {
 
         while (dustCount >= 0) {
 

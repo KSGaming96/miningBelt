@@ -21,7 +21,9 @@ GameObject:
   - component: {fileID: 4442291376370002}
   - component: {fileID: 212477051223268556}
   - component: {fileID: 50158022906339806}
+  - component: {fileID: 60919328158336490}
   - component: {fileID: 114006417799505088}
+  - component: {fileID: 114510809749937324}
   m_Layer: 0
   m_Name: asteroidPiece2
   m_TagString: asteroidParticle
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010817516068696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 0.98, z: 0}
+  m_LocalPosition: {x: 0.07932286, y: 0.63816804, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,6 +64,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &60919328158336490
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010817516068696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.031235173, y: 0.08349067}
+      - {x: -0.02463274, y: 0.08328289}
+      - {x: -0.052906938, y: 0.051612973}
+      - {x: -0.058282945, y: -0.037840128}
+      - {x: -0.018585272, y: -0.0849244}
+      - {x: 0.023509696, y: -0.085745156}
+      - {x: 0.05335851, y: -0.050971925}
+      - {x: 0.056641445, y: 0.0553779}
 --- !u!114 &114006417799505088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +98,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 50158022906339806}
+--- !u!114 &114510809749937324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010817516068696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8bfba7f616c2a41a15a9c581208c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallAsteroid: {fileID: 1554891138686332, guid: 364d0afe01450a0438c23f6a24df353e,
+    type: 2}
+  mediumAsteroid: {fileID: 1878500486975354, guid: 947cd016615693942aad818305a22694,
+    type: 2}
+  particleDust: {fileID: 1957506126804354, guid: 35a955a6a805ca347a8df5eb38e019c1,
+    type: 2}
+  smallParticle1: {fileID: 1206037664294184, guid: e66eaca90410b2f4a93900a22b748fe9,
+    type: 2}
+  smallParticle2: {fileID: 1248307827142074, guid: cd51b291bb3ad2f45a0ce37f9680dc7c,
+    type: 2}
+  smallParticle3: {fileID: 1987046406971836, guid: 0541d6767e2cd844ab7b874ac2f918ea,
+    type: 2}
+  particle1: {fileID: 1772420140640314, guid: 2f70b4b2172d2ea4c82224e3b9072147, type: 2}
+  particle2: {fileID: 1010817516068696}
+  particle3: {fileID: 1408707454859330, guid: 597cce7247c64254c952f45cd0c7d10d, type: 2}
+  largeParticle1: {fileID: 1479543148225600, guid: dee8d1db72bb7584880284abed4196eb,
+    type: 2}
+  largeParticle2: {fileID: 1290265831531850, guid: 2f673eecc873fbd49816fae64251faa5,
+    type: 2}
+  largeParticle3: {fileID: 1956673202483688, guid: f8db6583ff3f66242a60d23c060bd2fa,
+    type: 2}
+  shipDust: {fileID: 1088993144971258, guid: ea680d0f279b91f4ba6bbab8564490b8, type: 2}
+  smallShipParticle1: {fileID: 1551857378853200, guid: 17f29ffced3f16b44a73f7f11f05fd38,
+    type: 2}
+  smallShipParticle2: {fileID: 1886382581494576, guid: 3a4938bb8a63ef44e8936e6fa7209dbd,
+    type: 2}
+  smallShipParticle3: {fileID: 1793069531138152, guid: 2d96f85ed95ad1f43a337023ad64d6f1,
+    type: 2}
+  shipParticle1: {fileID: 1841280008193952, guid: c6ae8d98aea57a940bb34564702c8d87,
+    type: 2}
+  shipParticle2: {fileID: 1616593568510692, guid: 38cd9b5abff806149a198798cc4e48fa,
+    type: 2}
+  shipParticle3: {fileID: 1933332696316628, guid: 550e9e751cf90534d9dd5e2a45385ab1,
+    type: 2}
+  largeShipParticle1: {fileID: 1327764232935252, guid: ae4f8c98d14b21044ba701c309d228df,
+    type: 2}
+  largeShipParticle2: {fileID: 1491310357999360, guid: 5974c7a6a737f0740b4da2d38d23e40c,
+    type: 2}
+  largeShipParticle3: {fileID: 1381724452579368, guid: 186c2668e9d2f1b46828be2724c9673e,
+    type: 2}
 --- !u!212 &212477051223268556
 SpriteRenderer:
   m_ObjectHideFlags: 1

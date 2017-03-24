@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
+  DirectionObject: {fileID: 1788632405628506, guid: d894a2b7622d6214a951f32beb12e4a4,
+    type: 2}
   weaponDust: {fileID: 1835890337974826, guid: 7dfc329f42d6c074590f7e95e1c3fbb7, type: 2}
   weaponParticle: {fileID: 1394480953824482, guid: 561fa2ec44ca8dd408bdc08a3ed4e48a,
     type: 2}

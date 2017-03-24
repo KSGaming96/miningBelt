@@ -34,8 +34,9 @@ static var Magnesium : int = 0;
 static var Fluorite : int = 0;
 
 public var TempRB : Rigidbody2D;
-
 static var speedVector : Vector2;
+static var spawnRangeX : Vector2;
+static var spawnRangeY : Vector2;
 
 function Update () { // Movement. Upward thrust and references RotateAround
 
