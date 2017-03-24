@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 60052069502799906}
   - component: {fileID: 114417284515880026}
   - component: {fileID: 114741772794618058}
+  - component: {fileID: 114491042671237080}
   m_Layer: 0
   m_Name: largeAsteroid
   m_TagString: Destructible
@@ -143,8 +144,19 @@ MonoBehaviour:
     type: 2}
   largeShipParticle3: {fileID: 1381724452579368, guid: 186c2668e9d2f1b46828be2724c9673e,
     type: 2}
-  direction: {fileID: 0}
-  spawn: 0
+--- !u!114 &114491042671237080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993472821836478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d30920fe52036743a5bfb3fa2bc2513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
 --- !u!114 &114741772794618058
 MonoBehaviour:
   m_ObjectHideFlags: 1

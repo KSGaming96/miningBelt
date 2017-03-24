@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 60389604184614136}
   - component: {fileID: 114286482992277990}
   - component: {fileID: 114693629620041148}
+  - component: {fileID: 114971618665192334}
   m_Layer: 0
   m_Name: smallAsteroid
   m_TagString: Destructible
@@ -139,8 +140,6 @@ MonoBehaviour:
     type: 2}
   largeShipParticle3: {fileID: 1381724452579368, guid: 186c2668e9d2f1b46828be2724c9673e,
     type: 2}
-  direction: {fileID: 0}
-  spawn: 0
 --- !u!114 &114693629620041148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,6 +161,19 @@ MonoBehaviour:
   magnesiumOre: {fileID: 1931389680646802, guid: 98fa214f8c84cba43b918655520dd7a7,
     type: 2}
   fluoriteOre: {fileID: 1236096419932066, guid: ece07cee640b1bb45ad76c5aacff8308,
+    type: 2}
+--- !u!114 &114971618665192334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554891138686332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d30920fe52036743a5bfb3fa2bc2513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
 --- !u!212 &212560894082815190
 SpriteRenderer:

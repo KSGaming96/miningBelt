@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 60784534123269404}
   - component: {fileID: 114640393501996456}
   - component: {fileID: 114313176143556040}
+  - component: {fileID: 114772978537959044}
   m_Layer: 0
   m_Name: asteroidPieceSmall3
   m_TagString: asteroidParticle
@@ -145,6 +146,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 50776339877111240}
+--- !u!114 &114772978537959044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987046406971836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d30920fe52036743a5bfb3fa2bc2513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
 --- !u!212 &212031186260213604
 SpriteRenderer:
   m_ObjectHideFlags: 1

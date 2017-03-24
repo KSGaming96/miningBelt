@@ -34,9 +34,9 @@ static var Magnesium : int = 0;
 static var Fluorite : int = 0;
 
 public var TempRB : Rigidbody2D;
-static var speedVector : Vector2;
-static var spawnRangeX : Vector2;
-static var spawnRangeY : Vector2;
+static var speedVector : Vector2; //Global speed for projectileMovement. Adjusts paarticle speed with player speed.
+static var spawnRangeX : Vector2; //Global spawnRangeX for closeSpawn and despawnRange. Denotes square spawn area.
+static var spawnRangeY : Vector2; //Global spawnRangeY for closeSpawn and despawnRange. Denotes square spawn area.
 
 function Update () { // Movement. Upward thrust and references RotateAround
 
