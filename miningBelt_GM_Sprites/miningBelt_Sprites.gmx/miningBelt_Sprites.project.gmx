@@ -151,6 +151,7 @@
         <sprites name="In Game">
           <sprite>sprites\singleBlast</sprite>
           <sprite>sprites\streamLaser</sprite>
+          <sprite>sprites\streamShield</sprite>
           <sprite>sprites\dualBlast</sprite>
         </sprites>
       </sprites>
@@ -197,6 +198,7 @@
           <sprite>sprites\singleBlastParticle</sprite>
           <sprite>sprites\streamLaserParticle</sprite>
           <sprite>sprites\dualBlastParticle</sprite>
+          <sprite>sprites\largeDustTrail</sprite>
         </sprites>
         <sprites name="Missile">
           <sprite>sprites\smallMissileDust</sprite>

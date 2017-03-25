@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50809366265545506}
   - component: {fileID: 60753300213655244}
   - component: {fileID: 114161051252744948}
+  - component: {fileID: 114659165468016606}
   m_Layer: 0
   m_Name: singleBlast
   m_TagString: Projectile
@@ -107,6 +108,20 @@ MonoBehaviour:
     type: 2}
   Speed: 2
   Life: 1
+--- !u!114 &114659165468016606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1733890514333496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e155511fe1e0f47a92925435e6e405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyDust: {fileID: 1264625337499736, guid: 15e1b1d43f40e1d43957879a7272d9e5, type: 2}
+  energyTrail: {fileID: 1772877475724672, guid: 8fc8332c5e5a2eb4791def638a1254fe,
+    type: 2}
 --- !u!212 &212405007125856186
 SpriteRenderer:
   m_ObjectHideFlags: 1

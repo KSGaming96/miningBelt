@@ -1,7 +1,12 @@
 ﻿#pragma strict
 
 public var PlayerObject : GameObject;
-public var TempRB : Rigidbody2D;
+private var TempRB : Rigidbody2D;
+
+function Start () {
+
+    TempRB = this.GetComponent(Rigidbody2D);
+}
 
 function Update () {
 

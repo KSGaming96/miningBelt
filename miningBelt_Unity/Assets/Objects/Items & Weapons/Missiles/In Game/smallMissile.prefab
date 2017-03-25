@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50785387148808254}
   - component: {fileID: 60726181549444756}
   - component: {fileID: 114529214456748056}
+  - component: {fileID: 114716132308865482}
   m_Layer: 0
   m_Name: smallMissile
   m_TagString: Projectile
@@ -102,12 +103,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
-  Direction: {fileID: 1788632405628506, guid: d894a2b7622d6214a951f32beb12e4a4, type: 2}
+  DirectionObject: {fileID: 0}
   weaponDust: {fileID: 1640149223477500, guid: 2f6727da218e70140a10b0b3f82890ac, type: 2}
   weaponParticle: {fileID: 1628735509783742, guid: fcc5b9b00e8df5342ac85e81b3388be7,
     type: 2}
   Speed: 1
   Life: 2
+--- !u!114 &114716132308865482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565156892557048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e155511fe1e0f47a92925435e6e405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyDust: {fileID: 1640149223477500, guid: 2f6727da218e70140a10b0b3f82890ac, type: 2}
+  energyTrail: {fileID: 1628735509783742, guid: fcc5b9b00e8df5342ac85e81b3388be7,
+    type: 2}
 --- !u!212 &212415415486134730
 SpriteRenderer:
   m_ObjectHideFlags: 1

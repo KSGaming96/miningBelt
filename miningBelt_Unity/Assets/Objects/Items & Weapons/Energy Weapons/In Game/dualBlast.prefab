@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50569297600166112}
   - component: {fileID: 60860174355203474}
   - component: {fileID: 114614813582356186}
+  - component: {fileID: 114463832644387754}
   m_Layer: 0
   m_Name: dualBlast
   m_TagString: Projectile
@@ -87,6 +88,20 @@ PolygonCollider2D:
       - {x: 0.05755067, y: 0.026956797}
       - {x: 0.017834663, y: 0.06992656}
       - {x: -0.018954277, y: 0.071045816}
+--- !u!114 &114463832644387754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748507391475070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e155511fe1e0f47a92925435e6e405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyDust: {fileID: 1835890337974826, guid: 7dfc329f42d6c074590f7e95e1c3fbb7, type: 2}
+  energyTrail: {fileID: 1394480953824482, guid: 561fa2ec44ca8dd408bdc08a3ed4e48a,
+    type: 2}
 --- !u!114 &114614813582356186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,7 +121,7 @@ MonoBehaviour:
   weaponParticle: {fileID: 1394480953824482, guid: 561fa2ec44ca8dd408bdc08a3ed4e48a,
     type: 2}
   Speed: 3
-  Life: 0.75
+  Life: 0.4
 --- !u!212 &212351943921651224
 SpriteRenderer:
   m_ObjectHideFlags: 1

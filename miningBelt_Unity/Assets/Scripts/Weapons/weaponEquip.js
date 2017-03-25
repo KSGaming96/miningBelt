@@ -108,7 +108,7 @@ function setWeapon() {
             weaponSpawn.GetComponent(projectileSpawn).EnergyWeapon = weaponArray[1].gameObject;
             weaponSpawn.GetComponent(projectileSpawn).energyFireRate = PlayerObject.GetComponent(Player).FireRate / 2.0;
             weaponSpawn.GetComponent(projectileSpawn).energySplit = 2;
-            weaponSpawn.GetComponent(projectileSpawn).energySpread = 2;
+            weaponSpawn.GetComponent(projectileSpawn).energySpread = 4;
             state = 1;
         }
 

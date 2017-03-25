@@ -24,7 +24,7 @@ private var relativeSpeed : int;
 private var rotationDifference : int;
 private var floatRotation : int;
 private var playerRotation : float;
-private var overallSpeed : int;
+private var overallSpeed : float;
 private var rand : Random;
 private var temp : int = 1;
 
@@ -37,10 +37,10 @@ function Start () {
 
 function Update () { //Complex movement for projectile speed adjusting to Player velocity until Destroy.
 
-     playerRotation = PlayerObject.transform.rotation.z;
-     overallSpeed = (Mathf.Abs(PlayerObject.GetComponent(Player).speedVector.y) + Mathf.Abs(PlayerObject.GetComponent(Player).speedVector.x)) * PlayerObject.GetComponent(Player).Speed;
-
-     if (Input.GetAxis("Vertical") == 1)
+    playerRotation = PlayerObject.transform.rotation.z;
+    overallSpeed = (Speed + PlayerObject.GetComponent(Player).Speed) + (Mathf.Abs(PlayerObject.GetComponent(Player).speedVector.y) + Mathf.Abs(PlayerObject.GetComponent(Player).speedVector.x));
+    
+    if (Input.GetAxis("Vertical") == 1)
          rotation = transform.rotation.z;
 
     if (rotation >= 0.0 || rotation < 0.0) { //Checks all rotations from -180.0 to 180.0
@@ -53,11 +53,11 @@ function Update () { //Complex movement for projectile speed adjusting to Player
 
     floatRotation = 1.0 - Mathf.Abs(rotationDifference / 180);
     relativeSpeed = (overallSpeed * floatRotation) + Speed;
-
-    if (gameObject.name == "streamLaser(Clone)")
-        transform.Translate(PlayerObject.transform.up * relativeSpeed * Time.deltaTime);
+    
+    if (gameObject.name == "streamShield(Clone)")
+        transform.Translate(PlayerObject.transform.up * (overallSpeed * Time.deltaTime));
     else
-        transform.Translate(PlayerObject.transform.up * relativeSpeed * Time.deltaTime);
+        transform.Translate(PlayerObject.transform.up * (overallSpeed * Time.deltaTime));
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Reads collisions with destructible objects. Spawns weapon particles here.
