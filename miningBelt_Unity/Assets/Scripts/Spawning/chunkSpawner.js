@@ -1,7 +1,7 @@
 ﻿//File: closeSpawn.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/24/2017
+//Last Modified: 03/26/2017
 
 /*
 --As the ship moves stars and asteroids will be spawned around it. This will save memory but look totally random. Will use for all background particles.
@@ -14,7 +14,7 @@ public var SmallStar : GameObject;
 public var MediumStar : GameObject;
 public var SmallAsteroid : GameObject;
 public var MediumAsteroid : GameObject;
-private var player : Player;
+private var playerScript : player;
 public var temp : Vector3;
 
 static var spawnRange : float = 10.0; // Changes size of active chunk.
@@ -24,46 +24,45 @@ private var rand : Random;
 
 function Start () {
 
-    player = PlayerObject.GetComponent(Player);
-    player.spawnRangeX = new Vector2(PlayerObject.transform.position.x - spawnRange, PlayerObject.transform.position.x + spawnRange);
-    player.spawnRangeY = new Vector2(PlayerObject.transform.position.y - spawnRange, PlayerObject.transform.position.y + spawnRange);
+    playerScript = PlayerObject.GetComponent(player);
+    playerScript.spawnRangeX = new Vector2(PlayerObject.transform.position.x - spawnRange, PlayerObject.transform.position.x + spawnRange);
+    playerScript.spawnRangeY = new Vector2(PlayerObject.transform.position.y - spawnRange, PlayerObject.transform.position.y + spawnRange);
     Spawn(3); //First objects
     Spawn(3); //First objects
 }
 
-function FixedUpdate () {
+function Update () {
 
-    player = PlayerObject.GetComponent(Player);
-    if (transform.position.x > player.spawnRangeX.y - (spawnRange / 2)) { //Positive X Spawn Right
+    if (transform.position.x > playerScript.spawnRangeX.y - (spawnRange / 2)) { //Positive X Spawn Right
 
         state = 1;
         Spawn(0);
-        player.spawnRangeX.x += spawnRange;
-        player.spawnRangeX.y += spawnRange;
+        playerScript.spawnRangeX.x += spawnRange;
+        playerScript.spawnRangeX.y += spawnRange;
     }
 
-    if (transform.position.x < player.spawnRangeX.x + (spawnRange / 2)) { //Negative X Spawn Left
+    if (transform.position.x < playerScript.spawnRangeX.x + (spawnRange / 2)) { //Negative X Spawn Left
 
         state = 0;
         Spawn(0);
-        player.spawnRangeX.x -= spawnRange;
-        player.spawnRangeX.y -= spawnRange;
+        playerScript.spawnRangeX.x -= spawnRange;
+        playerScript.spawnRangeX.y -= spawnRange;
     }
 
-    if (transform.position.y > player.spawnRangeY.y - (spawnRange / 2)) { //Positive Y Spawn Up
+    if (transform.position.y > playerScript.spawnRangeY.y - (spawnRange / 2)) { //Positive Y Spawn Up
 
         state = 1;
         Spawn(1);
-        player.spawnRangeY.x += spawnRange;
-        player.spawnRangeY.y += spawnRange;
+        playerScript.spawnRangeY.x += spawnRange;
+        playerScript.spawnRangeY.y += spawnRange;
     }
 
-    if (transform.position.y < player.spawnRangeY.x + (spawnRange / 2)) { //Negative Y Spawn Down
+    if (transform.position.y < playerScript.spawnRangeY.x + (spawnRange / 2)) { //Negative Y Spawn Down
 
         state = 0;
         Spawn(1);
-        player.spawnRangeY.x -= spawnRange;
-        player.spawnRangeY.y -= spawnRange;
+        playerScript.spawnRangeY.x -= spawnRange;
+        playerScript.spawnRangeY.y -= spawnRange;
     }
 }
 
@@ -78,18 +77,18 @@ function Spawn(direction : int) {
         if (direction == 1) { //Y Calls
 
             if (state == 0) //Negative Y call
-                temp = new Vector3(transform.position.x + rand.Range(spawnRange, -spawnRange), player.spawnRangeY.x - rand.Range(0.0, spawnRange), 0.0);
+                temp = new Vector3(transform.position.x + rand.Range(spawnRange, -spawnRange), playerScript.spawnRangeY.x - rand.Range(0.0, spawnRange), 0.0);
             if (state == 1) //Positive Y call
-                temp = new Vector3(transform.position.x + rand.Range(spawnRange, -spawnRange), player.spawnRangeY.y + rand.Range(0.0, spawnRange), 0.0);
+                temp = new Vector3(transform.position.x + rand.Range(spawnRange, -spawnRange), playerScript.spawnRangeY.y + rand.Range(0.0, spawnRange), 0.0);
                 
         }
 
         if (direction == 0) { //X Calls
 
             if (state == 0) //Negative X call
-                temp = new Vector3(player.spawnRangeX.x - rand.Range(0.0, spawnRange), transform.position.y + rand.Range(spawnRange, -spawnRange), 0.0);
+                temp = new Vector3(playerScript.spawnRangeX.x - rand.Range(0.0, spawnRange), transform.position.y + rand.Range(spawnRange, -spawnRange), 0.0);
             if (state == 1) //Positive X call
-                temp = new Vector3(player.spawnRangeX.y + rand.Range(0.0, spawnRange), transform.position.y + rand.Range(spawnRange, -spawnRange), 0.0);
+                temp = new Vector3(playerScript.spawnRangeX.y + rand.Range(0.0, spawnRange), transform.position.y + rand.Range(spawnRange, -spawnRange), 0.0);
         }
 
         if (direction == 3) //Start Parameters

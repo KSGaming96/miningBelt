@@ -10,13 +10,17 @@
 #pragma strict
 
 public var PlayerObject : GameObject;
+private var playerScript : player;
 
-function FixedUpdate () {
+function Start () {
 
-    var player : Player = PlayerObject.GetComponent(Player);
+    playerScript = PlayerObject.GetComponent(player);
+}
+
+function Update () {
 	
-    if (transform.position.x <= player.spawnRangeX.y && transform.position.x >= player.spawnRangeX.x &&
-        transform.position.y <= player.spawnRangeY.y && transform.position.y >= player.spawnRangeY.x) {
+    if (transform.position.x <= playerScript.spawnRangeX.y && transform.position.x >= playerScript.spawnRangeX.x &&
+        transform.position.y <= playerScript.spawnRangeY.y && transform.position.y >= playerScript.spawnRangeY.x) {
 
         //Inside Spawn Range
     }

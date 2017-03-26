@@ -248,6 +248,7 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\rotationMath</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

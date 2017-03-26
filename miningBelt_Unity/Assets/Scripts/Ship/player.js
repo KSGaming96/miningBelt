@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/22/2017
+//Last Modified: 03/26/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -33,16 +33,22 @@ static var Crystal : int = 0;
 static var Magnesium : int = 0;
 static var Fluorite : int = 0;
 
-public var TempRB : Rigidbody2D;
+private var TempRB : Rigidbody2D;
+static var playerDirection : float; //Global direction for projectileMovement. Holds last known rotation for player thrust.
 static var speedVector : Vector2; //Global speed for projectileMovement. Adjusts paarticle speed with player speed.
 static var spawnRangeX : Vector2; //Global spawnRangeX for closeSpawn and despawnRange. Denotes square spawn area.
 static var spawnRangeY : Vector2; //Global spawnRangeY for closeSpawn and despawnRange. Denotes square spawn area.
 
-function Update () { // Movement. Upward thrust and references RotateAround
+function Start () {
 
+    TempRB = this.GetComponent(Rigidbody2D); //Assigns own Rigidbody2D for easy script assigning.
+}
+
+function Update () {
+
+    if (Input.GetAxis("Vertical") == 1)
+        playerDirection = transform.rotation.z;
     speedVector = TempRB.velocity;
-    var RotationUpRange : Quaternion = Quaternion.Euler(0, 0, 4);
-    var RotationDownRange : Quaternion = Quaternion.Euler(0, 0, -4);
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
