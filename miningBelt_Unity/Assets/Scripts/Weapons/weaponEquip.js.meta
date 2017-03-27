@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: e3c55669ea50d9a43b9bddbb0c857453
-timeCreated: 1489619845
+timeCreated: 1490515035
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+      type: 2}
+  - bottomGUI: {instanceID: 0}
+  - weaponSpawner: {instanceID: 0}
+  - energyItemHolder: {instanceID: 0}
+  - missileItemHolder: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

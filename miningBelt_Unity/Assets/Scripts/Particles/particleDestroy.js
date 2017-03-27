@@ -1,7 +1,7 @@
 ﻿//File: particleDestroy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/12/2017
+//Last Modified: 03/27/2017
 
 /*
 --Assigns all particle objects, and destroys object with "flare" :D
@@ -14,256 +14,143 @@
 
 #pragma strict
 
-public var smallAsteroid : GameObject;
-public var mediumAsteroid : GameObject;
-
 //Object Particles
-public var particleDust : GameObject;
-public var smallParticle1 : GameObject;
-public var smallParticle2 : GameObject;
-public var smallParticle3 : GameObject;
-public var particle1 : GameObject;
-public var particle2 : GameObject;
-public var particle3 : GameObject;
-public var largeParticle1 : GameObject;
-public var largeParticle2 : GameObject;
-public var largeParticle3 : GameObject;
+public var objectParticles : GameObject[] = new GameObject[10]; //0 is Dust, 1-3 are small, 4-6 are medium, 7-9 are large
 
 //Ship Particles
-public var shipDust : GameObject;
-public var smallShipParticle1 : GameObject;
-public var smallShipParticle2 : GameObject;
-public var smallShipParticle3 : GameObject;
-public var shipParticle1 : GameObject;
-public var shipParticle2 : GameObject;
-public var shipParticle3 : GameObject;
-public var largeShipParticle1 : GameObject;
-public var largeShipParticle2 : GameObject;
-public var largeShipParticle3 : GameObject;
+public var shipParticles : GameObject[] = new GameObject[10]; //0 is Dust, 1-3 are small, 4-6 are medium, 7-9 are large
+private var tempArray : GameObject[];
 
-var rand : Random;
-var direction : Transform;
-var spawn : int = 0;
+private var rand : Random;
+private var direction : Transform;
+private var spawn : int = 0;
+private var spread : int;
 
-private var smallParticleCount : int;
-private var mediumParticleCount : int;
-private var largeParticleCount : int;
+private var particleCount : int;
 
 function OnTriggerEnter2D (temp : Collider2D) {
 
     direction = temp.transform;
+    tempArray = objectParticles; //Defaults to objectParticles. Changes to shipParticles later if needed.
 
     if (temp.gameObject.tag == "Projectile" || temp.gameObject.tag == "Player") {
 
-        if (this.name == "smallAsteroid(Clone)") {
+        if (name == "smallAsteroid(Clone)") {
 
-            SmallDestruction(0);
-
-            Destroy(gameObject);
-        }
-
-        if (this.name == "mediumAsteroid(Clone)") {
-
-            MediumDestruction(0);
-            SmallDestruction(7);
+            particleCount = rand.Range(2,8);
+            spread = 0;
+            destruction(1);
 
             Destroy(gameObject);
         }
 
-        if (this.name == "largeAsteroid(Clone)") {
+        if (name == "mediumAsteroid(Clone)") {
 
-            LargeDestruction(0);
-            MediumDestruction(12);
-            SmallDestruction(16);
+            particleCount = rand.Range(2,8);
+            spread = 7;
+            destruction(1);
+
+            particleCount = rand.Range(1,6);
+            spread = 0;
+            destruction(0);
 
             Destroy(gameObject);
+        }
+
+        if (name == "largeAsteroid(Clone)") {
+
+            particleCount = rand.Range(2,8);
+            spread = 16;
+            destruction(1);
+
+            particleCount = rand.Range(1,6);
+            spread = 12;
+            destruction(4);
+
+            particleCount = rand.Range(1,3);
+            spread = 0;
+            destruction(0);
+
+            Destroy(gameObject);
+        }
+
+        if (tag == "asteroidParticle") {
+
+            if (name == "asteroidPieceSmall1(Clone)" || name == "asteroidPieceSmall2(Clone)" || name == "asteroidPieceSmall3(Clone)") {
+
+                DustSpawn(15);
+                Destroy(gameObject);
+            }
+
+            if (name == "asteroidPiece1(Clone)" || name == "asteroidPiece2(Clone)" || name == "asteroidPiece3(Clone)") {
+
+                spread = 2;
+                particleCount = rand.Range(0,3);
+                destruction(1);
+
+                Destroy(gameObject);
+            }
+
+            if (name == "asteroidPieceLarge1(Clone)" || name == "asteroidPieceLarge2(Clone)" || name == "asteroidPieceLarge3(Clone)") {
+
+                spread = 2;
+                particleCount = rand.Range(0,3);
+                destruction(1);
+
+                particleCount = rand.Range(0,2);
+                destruction(4);
+                
+                Destroy(gameObject);
+            }
         }
 
         if (temp.gameObject.name == "playerShip") {
 
-            PlayerDestruction();
+            tempArray = shipParticles; //Assign correct particles.
+            particleCount = rand.Range(50, 150);
+            spread = 0;
+            destruction(1); //Small.
+            destruction(4); //Medium.
+            destruction(7); //Large
+
+            var dustCount : int = 200;
+
+            while (dustCount >= 0) {
+
+                dustCount--;
+                Instantiate(tempArray[0], transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
+            }
         }
 
         Destroy(temp.gameObject);
     }
 }
 
-function SmallDestruction (spread : int) {
+function destruction (arrayLocation : int) {
 
     var temp : int;
-    smallParticleCount = rand.Range(1, 8);
 
     if (spread == 0) {
 
-        while (smallParticleCount >= 0) {
+        while (particleCount >= 0) {
 
-            temp = rand.Range(1.0, 3.0);
-            smallParticleCount--;
-
-            if (temp < 1)
-                Instantiate(smallParticle1, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(smallParticle2, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 2)
-                Instantiate(smallParticle3, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
+            temp = rand.Range(arrayLocation, arrayLocation + 2);
+            particleCount--;
+            Instantiate(tempArray[arrayLocation], transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
         }
     }
 
     else {
 
-        while (smallParticleCount >= 0) {
+        while (particleCount >= 0) {
 
-            temp = rand.Range(1.0, 3.0);
-            smallParticleCount--;
-
-            if (temp < 1)
-                Instantiate(smallParticle1, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(smallParticle2, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-            if (temp >= 2)
-                Instantiate(smallParticle3, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
+            temp = rand.Range(arrayLocation, arrayLocation + 2);
+            particleCount--;
+            Instantiate(tempArray[arrayLocation], transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
         }
     }
 
     DustSpawn(50);
-}
-
-function MediumDestruction (spread : int) {
-
-    var temp : int;
-    mediumParticleCount = rand.Range(1, 6);
-
-    if (spread == 0) {
-
-        while (mediumParticleCount >= 0) {
-
-            temp = rand.Range(1.0, 3.0);
-            mediumParticleCount--;
-
-            if (temp < 1)
-                Instantiate(particle1, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(particle2, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 2)
-                Instantiate(particle3, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-        }
-    }
-
-    else {
-
-        while (mediumParticleCount >= 0) {
-
-            temp = rand.Range(1.0, 3.0);
-            mediumParticleCount--;
-
-            if (temp < 1)
-                Instantiate(particle1, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(particle2, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-            if (temp >= 2)
-                Instantiate(particle3, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-        }
-    }
-
-    DustSpawn(75);
-}
-
-function LargeDestruction (spread : int) {
-
-    var temp : int;
-    largeParticleCount = rand.Range(1, 3);
-
-    if (spread == 0) {
-
-        while (largeParticleCount >= 0) {
-
-            temp = rand.Range(1.0, 3.0);
-            largeParticleCount--;
-
-            if (temp < 1)
-                Instantiate(largeParticle1, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(largeParticle2, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 2)
-                Instantiate(largeParticle3, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-        }
-    }
-
-    else {
-
-        while (largeParticleCount >= 0) {
-
-            temp = rand.Range(1.0, 3.0);
-            largeParticleCount--;
-
-            if (temp < 1)
-                Instantiate(largeParticle1, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(largeParticle2, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-            if (temp >= 2)
-                Instantiate(largeParticle3, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-spread, spread)));
-        }
-    }
-
-    DustSpawn(100);
-}
-
-function PlayerDestruction() {
-
-    var temp : int;
-    var particleCount: int = rand.Range(100, 300);
-
-    while (particleCount >= 0) {
-
-        particleCount--;
-        temp = rand.Range(1, 10);
-
-        if (temp <= 5) {
-
-            temp = rand.Range(1.0, 3.0);
-
-            if (temp < 1)
-                Instantiate(smallShipParticle1, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(smallShipParticle2, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 2)
-                Instantiate(smallShipParticle3, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-        }
-        
-        else if (temp > 5 && temp < 9) {
-
-            temp = rand.Range(0, 3);
-
-            if (temp < 1)
-                Instantiate(shipParticle1, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(shipParticle2, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 2)
-                Instantiate(shipParticle3, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-        }
-
-        else if (temp >= 9) {
-
-            temp = rand.Range(0, 3);
-
-            if (temp < 1)
-                Instantiate(largeShipParticle1, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 1 && temp < 2)
-                Instantiate(largeShipParticle2, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-            if (temp >= 2)
-                Instantiate(largeShipParticle3, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-        }
-    }
-
-    var dustCount : int = 200;
-
-    while (dustCount >= 0) {
-
-        dustCount--;
-        Instantiate(shipDust, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
-    }
-
-    Debug.Log("Hit!");
 }
 
 function DustSpawn (dustCount : int) {
@@ -273,11 +160,11 @@ function DustSpawn (dustCount : int) {
     while (dustCount >= 0) {
 
         dustCount--;
-        temp = rand.Range(0, 6);
+        temp = rand.Range(1, 2);
 
-        if (temp >= 3)
-            Instantiate(particleDust, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-dustCount, dustCount)));
-        if (temp < 3)
-            Instantiate(particleDust, transform.position, Quaternion.Euler(0, 0, (direction.rotation.z * 180.0) - rand.Range(-dustCount, dustCount)));
+        if (temp == 1)
+            Instantiate(tempArray[0], transform.position, Quaternion.Euler(0, 0, (direction.rotation.z  * 180.0) + rand.Range(-dustCount, dustCount)));
+        if (temp == 2)
+            Instantiate(tempArray[0], transform.position, Quaternion.Euler(0, 0, (direction.rotation.z * 180.0) - rand.Range(-dustCount, dustCount)));
     }
 }

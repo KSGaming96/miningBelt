@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212912232252992576}
   - component: {fileID: 65598647472963890}
   - component: {fileID: 114810910779047142}
+  - component: {fileID: 114567615068605094}
   m_Layer: 0
   m_Name: singleBlastObject
   m_TagString: Energy
@@ -54,6 +55,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.18, y: 0.18, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114567615068605094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999172407866094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c4cdd77a1a97a429f4947373d5bea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1812436260988790, guid: 47ebdbed72a148c4d9c8da81039f9957,
+    type: 2}
+  bottomGUI: {fileID: 1556927386125618, guid: eb85d1fce279902469b1769df57628ac, type: 2}
 --- !u!114 &114810910779047142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +89,16 @@ MonoBehaviour:
   - {fileID: 1475636744436246, guid: 5f5f469d8ee5d834e932243a48c28f69, type: 2}
   - {fileID: 1924440918378500, guid: e94f8f6352ce34e4d9463a872472ebc8, type: 2}
   - {fileID: 1379460230994708, guid: c1b95222d478cb741b2901ae8323fcd7, type: 2}
+  weaponArray:
+  - {fileID: 1733890514333496, guid: 06960ceb1fad36241b7da32a766699b1, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PlayerObject: {fileID: 0}
   bottomGUI: {fileID: 1556927386125618, guid: eb85d1fce279902469b1769df57628ac, type: 2}
+  weaponSpawner: {fileID: 0}
+  energyItemHolder: {fileID: 0}
+  missileItemHolder: {fileID: 0}
   equipped: 0
 --- !u!212 &212912232252992576
 SpriteRenderer:

@@ -1,7 +1,7 @@
 ﻿//File: projectileMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/19/2017
+//Last Modified: 03/27/2017
 
 /*
 --Attaches to all bullet prefabs. The script moves bullets forward, then destroys them.
@@ -15,30 +15,39 @@ public var PlayerObject : GameObject;
 public var weaponDust : GameObject;
 public var weaponParticle : GameObject;
 
-public var Speed = 2;
-public var Life = 1;
+private var playerScript : player;
 private var rand : Random;
-private var Initiate : int = 1;
+
+public var Speed : float;
+public var Life : float;
+
+private var overallSpeed : float; //Bullet speed x player velocity.
+private var rotation : float; //The direction of the bullet.
+private var relativeSpeed : float; //Player speed x rotationDifference. Slows bullets when not going in player direction. (beta)
+private var rotationDifference : float; //Float between 0 and 1 that shows how far bullet's rotations are from player direction. (beta)
 
 function Start () {
-    
-    var Player : Component = GetComponent("playerShip");
-    
-    if (Life > 0) {
 
+    playerScript = PlayerObject.GetComponent(player);
+    rotation = transform.rotation.z;
+    if (Life > 0)
         Destroy(gameObject, Life);
-    }
 }
 
-function Update () { //Basic upwards movement until Destroy.
+function Update () { //Transform relating to rotationMath and overallSpeed.
+    
+    rotationMath();
+    transform.Translate(PlayerObject.transform.up * (relativeSpeed * Time.deltaTime));
+}
 
-    if (Initiate == 1) {
+function rotationMath () { //Beta. Running into so many issues with this.
 
-        var tempVector : Vector3 = Vector3.up;
-        Initiate = 0;
-    }
-
-    transform.Translate(Vector3.up * (Player.Speed + Speed) * Time.deltaTime);
+    overallSpeed = playerScript.Speed * Mathf.Abs(playerScript.speedVector.y) + Mathf.Abs(playerScript.speedVector.x);
+    rotationDifference = Mathf.Abs(playerScript.playerDirection - transform.localRotation.eulerAngles.z) / 180; //Finds Number of degrees between player and bullets.
+    if (rotationDifference > 1)
+        rotationDifference = Mathf.Abs(2 - rotationDifference);
+    rotationDifference = Mathf.Abs(1 - rotationDifference); //Flips from 0 - 1 to 1 - 0
+    relativeSpeed = (overallSpeed * rotationDifference) + Speed;
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Reads collisions with destructible objects. Spawns weapon particles here.
@@ -46,19 +55,17 @@ function OnTriggerEnter2D (temp : Collider2D) { //Reads collisions with destruct
     var dustCount = 50;
     var particleCount = 10;
 
-    if (temp.gameObject.tag == "Destructible") {
+    if (temp.gameObject.tag == "Destructible" || temp.gameObject.tag == "asteroidParticle") {
 
         while (dustCount >= 0) {
 
             dustCount--;
-
             Instantiate(weaponDust, transform.position, Quaternion.Euler(0, 0, (transform.rotation.z * 180.0) + rand.Range(-25.0, 25.0)));
         }
 
         while (particleCount >= 0) {
 
             particleCount--;
-
             Instantiate(weaponParticle, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
         }
     }

@@ -1,7 +1,7 @@
 ﻿//File: energyEquip.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/19/2017
+//Last Modified: 03/23/2017
 
 /*
 --Script with interaction to itemStorage for smart item stacking. Reads tag and assigns everything for weapon spawning and storage organization.
@@ -10,28 +10,41 @@
 #pragma strict
 
 public var storage : GameObject[] = new GameObject[8];
-private var weaponEquip : GameObject;
+public var weaponArray : GameObject[] = new GameObject[4];
+
+public var PlayerObject : GameObject;
 public var bottomGUI : GameObject;
+public var weaponSpawner : GameObject;
+public var energyItemHolder : GameObject;
+public var missileItemHolder : GameObject;
+private var weaponItemLocation : GameObject;
+
+private var playerScript : player;
+private var itemStorageScript : itemStorage;
+private var projectileSpawnScript : projectileSpawn;
+
+private var FireRate : int;
+private var Split : int = 0;
+private var Spread : int = 0;
+private var state : int;
 
 var equipped : int = 0;
 
-function Start () { //Changes initial slot state to 1 and finds type of weapon.
+function Start () { //Changes slot states to 1 when item is present.
 
     var temp : int;
-
-    if (gameObject.tag == "Energy")
-        weaponEquip = gameObject.Find("energyEquip");
-    if (gameObject.tag == "Missile") 
-        weaponEquip = gameObject.Find("missileEquip");
-
-    var i : int = 0;
     var change : int = 0;
+    var i : int = 0;
+    playerScript = bottomGUI.GetComponent(player);
+    itemStorageScript = bottomGUI.GetComponent(itemStorage);
+    projectileSpawnScript = weaponSpawner.GetComponent(projectileSpawn);
+    
 
     while (i < storage.length) {
 
-        if (transform.position == storage[i].transform.position && change == 0) {
+        if (this.transform.position == storage[i].transform.position && change == 0) {
 
-            bottomGUI.GetComponent(itemStorage).setArray1(i);
+            itemStorageScript.itemArray[i] = 1;
             change = 1;
         }
             
@@ -46,43 +59,91 @@ function OnMouseDown() { //Checks multiple variables to see where the item needs
     var change : int = 0;
 
     if (gameObject.tag == "Energy")
-        temp = bottomGUI.GetComponent(itemStorage).energyEquip;
+        temp = itemStorageScript.energyEquip;
     if (gameObject.tag == "Missile") 
-        temp = bottomGUI.GetComponent(itemStorage).missileEquip;
+        temp = itemStorageScript.missileEquip;
 
     if (temp == 0) {
 
-        while (i < bottomGUI.GetComponent(itemStorage).itemArray.length && change == 0) {
+        while (i < itemStorageScript.itemArray.length && change == 0) {
 
             if (transform.position == storage[i].transform.position) {
 
-                bottomGUI.GetComponent(itemStorage).itemArray[i] = 0;
-
-                if (gameObject.tag == "Energy")
-                    bottomGUI.GetComponent(itemStorage).setEnergyEquip(1);
-                else if (gameObject.tag == "Missile")
-                    bottomGUI.GetComponent(itemStorage).setMissileEquip(1);
-
+                setWeapon();
+                itemStorageScript.itemArray[i] = 0;
                 change = 1;
             }
                 
             i++;
         }
         
-        this.transform.position = weaponEquip.transform.position;
+        this.transform.position = weaponItemLocation.transform.position;
         equipped = 1;
     }
 
     else if (temp == 1 && equipped == 1) {
 
-        transform.position = storage[bottomGUI.GetComponent(itemStorage).openSlot()].transform.position;
-        bottomGUI.GetComponent(itemStorage).setArray1(bottomGUI.GetComponent(itemStorage).openSlot());
+        i = itemStorageScript.openSlot();
+
+        transform.position = storage[i].transform.position;
+        itemStorageScript.itemArray[i] = 1;
 
         if (gameObject.tag == "Energy")
-            bottomGUI.GetComponent(itemStorage).setEnergyEquip(0);
+            itemStorageScript.energyEquip = 0;
         else if (gameObject.tag == "Missile")
-            bottomGUI.GetComponent(itemStorage).setMissileEquip(0);
+            itemStorageScript.missileEquip = 0;
 
         equipped = 0;
+    }
+}
+
+function setWeapon() {
+
+    if (gameObject.tag == "Energy") {
+
+        weaponItemLocation = energyItemHolder;
+        itemStorageScript.energyEquip = 1;
+
+        if (gameObject.name == "singleBlastObject") {
+
+            projectileSpawnScript.EnergyWeapon = weaponArray[0].gameObject;
+            projectileSpawnScript.energyFireRate = playerScript.FireRate;
+            projectileSpawnScript.energySplit = 0;
+            projectileSpawnScript.energySpread = 0;
+            state = 1;
+        }
+
+        else if (gameObject.name == "dualBlastObject") {
+
+            projectileSpawnScript.EnergyWeapon = weaponArray[1].gameObject;
+            projectileSpawnScript.energyFireRate = playerScript.FireRate / 2.0;
+            projectileSpawnScript.energySplit = 2;
+            projectileSpawnScript.energySpread = 4;
+            state = 1;
+        }
+
+        else if (gameObject.name == "streamLaserObject") {
+
+            projectileSpawnScript.EnergyWeapon = weaponArray[2].gameObject;
+            projectileSpawnScript.energyFireRate = playerScript.FireRate / 10.0;
+            projectileSpawnScript.energySplit = 0;
+            projectileSpawnScript.energySpread = 0;
+            state = 1;
+        }
+    }
+        
+    if (gameObject.tag == "Missile") {
+
+        weaponItemLocation = missileItemHolder;
+        itemStorageScript.missileEquip = 1;
+
+        if (gameObject.name == "smallMissileObject") {
+
+            projectileSpawnScript.MissileWeapon = weaponArray[3].gameObject;
+            projectileSpawnScript.missileFireRate = playerScript.FireRate * 2.0;
+            projectileSpawnScript.missileSplit = 0;
+            projectileSpawnScript.missileSpread = 0;
+            state = 2;
+        }
     }
 }

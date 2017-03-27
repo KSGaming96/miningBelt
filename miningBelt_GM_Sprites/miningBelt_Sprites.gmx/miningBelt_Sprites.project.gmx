@@ -145,9 +145,14 @@
       <sprites name="Energy Weapons">
         <sprites name="Items">
           <sprite>sprites\singleBlastItem</sprite>
+          <sprite>sprites\streamLaserItem</sprite>
+          <sprite>sprites\dualBlastItem</sprite>
         </sprites>
         <sprites name="In Game">
           <sprite>sprites\singleBlast</sprite>
+          <sprite>sprites\streamLaser</sprite>
+          <sprite>sprites\streamShield</sprite>
+          <sprite>sprites\dualBlast</sprite>
         </sprites>
       </sprites>
       <sprites name="Missiles">
@@ -188,7 +193,12 @@
       <sprites name="Particles">
         <sprites name="Energy">
           <sprite>sprites\singleBlastDust</sprite>
+          <sprite>sprites\streamLaserDust</sprite>
+          <sprite>sprites\dualBlastDust</sprite>
           <sprite>sprites\singleBlastParticle</sprite>
+          <sprite>sprites\streamLaserParticle</sprite>
+          <sprite>sprites\dualBlastParticle</sprite>
+          <sprite>sprites\largeDustTrail</sprite>
         </sprites>
         <sprites name="Missile">
           <sprite>sprites\smallMissileDust</sprite>
@@ -238,6 +248,7 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprite>sprites\rotationMath</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
