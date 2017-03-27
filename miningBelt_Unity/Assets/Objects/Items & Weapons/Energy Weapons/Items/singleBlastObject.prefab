@@ -69,12 +69,6 @@ MonoBehaviour:
   PlayerObject: {fileID: 1812436260988790, guid: 47ebdbed72a148c4d9c8da81039f9957,
     type: 2}
   bottomGUI: {fileID: 1556927386125618, guid: eb85d1fce279902469b1769df57628ac, type: 2}
-  weaponArray:
-  - {fileID: 1733890514333496, guid: 06960ceb1fad36241b7da32a766699b1, type: 2}
-  - {fileID: 1575995622644818, guid: 68d8bda46a78fc8409647cdbb838812d, type: 2}
-  - {fileID: 1943142581634346, guid: 51dc35a3a101ac1438b22e9c435f6b04, type: 2}
-  - {fileID: 1565156892557048, guid: cd9aa3233a3a9e849bac7e9ff01bace8, type: 2}
-  Spawner: {fileID: 1028389426967216, guid: 865d25964fd19c847b3fec73cabbbac1, type: 2}
 --- !u!114 &114810910779047142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +89,16 @@ MonoBehaviour:
   - {fileID: 1475636744436246, guid: 5f5f469d8ee5d834e932243a48c28f69, type: 2}
   - {fileID: 1924440918378500, guid: e94f8f6352ce34e4d9463a872472ebc8, type: 2}
   - {fileID: 1379460230994708, guid: c1b95222d478cb741b2901ae8323fcd7, type: 2}
+  weaponArray:
+  - {fileID: 1733890514333496, guid: 06960ceb1fad36241b7da32a766699b1, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PlayerObject: {fileID: 0}
   bottomGUI: {fileID: 1556927386125618, guid: eb85d1fce279902469b1769df57628ac, type: 2}
+  weaponSpawner: {fileID: 0}
+  energyItemHolder: {fileID: 0}
+  missileItemHolder: {fileID: 0}
   equipped: 0
 --- !u!212 &212912232252992576
 SpriteRenderer:

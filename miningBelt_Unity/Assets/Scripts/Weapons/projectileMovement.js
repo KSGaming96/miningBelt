@@ -1,7 +1,7 @@
 ﻿//File: projectileMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/26/2017
+//Last Modified: 03/27/2017
 
 /*
 --Attaches to all bullet prefabs. The script moves bullets forward, then destroys them.
@@ -12,7 +12,6 @@
 #pragma strict
 
 public var PlayerObject : GameObject;
-public var DirectionObject : GameObject;
 public var weaponDust : GameObject;
 public var weaponParticle : GameObject;
 
@@ -35,20 +34,19 @@ function Start () {
         Destroy(gameObject, Life);
 }
 
-function Update () { //Complex movement for projectile speed adjusting to Player velocity until Destroy.
-
-    rotationMath();
+function Update () { //Transform relating to rotationMath and overallSpeed.
     
-    if (gameObject.name == "streamLaser(Clone)")
-        transform.Translate(PlayerObject.transform.up * (relativeSpeed * Time.deltaTime));
-    else
-        transform.Translate(PlayerObject.transform.up * ((overallSpeed + Speed) * Time.deltaTime));
+    rotationMath();
+    transform.Translate(PlayerObject.transform.up * (relativeSpeed * Time.deltaTime));
 }
 
 function rotationMath () { //Beta. Running into so many issues with this.
 
     overallSpeed = playerScript.Speed * Mathf.Abs(playerScript.speedVector.y) + Mathf.Abs(playerScript.speedVector.x);
-    rotationDifference = Mathf.Abs(1 - Mathf.Round(Mathf.Abs((playerScript.playerDirection - rotation) * 1000)) / 1000);
+    rotationDifference = Mathf.Abs(playerScript.playerDirection - transform.localRotation.eulerAngles.z) / 180; //Finds Number of degrees between player and bullets.
+    if (rotationDifference > 1)
+        rotationDifference = Mathf.Abs(2 - rotationDifference);
+    rotationDifference = Mathf.Abs(1 - rotationDifference); //Flips from 0 - 1 to 1 - 0
     relativeSpeed = (overallSpeed * rotationDifference) + Speed;
 }
 

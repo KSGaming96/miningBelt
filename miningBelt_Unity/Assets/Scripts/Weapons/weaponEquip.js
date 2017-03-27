@@ -125,7 +125,7 @@ function setWeapon() {
         else if (gameObject.name == "streamLaserObject") {
 
             projectileSpawnScript.EnergyWeapon = weaponArray[2].gameObject;
-            projectileSpawnScript.energyFireRate = playerScript.FireRate / 20.0;
+            projectileSpawnScript.energyFireRate = playerScript.FireRate / 10.0;
             projectileSpawnScript.energySplit = 0;
             projectileSpawnScript.energySpread = 0;
             state = 1;

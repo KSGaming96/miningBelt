@@ -10,14 +10,14 @@
 #pragma strict
 
 public var PlayerObject : GameObject;
-public var SmallStar : GameObject;
-public var MediumStar : GameObject;
-public var SmallAsteroid : GameObject;
-public var MediumAsteroid : GameObject;
+public var AsteroidParent : GameObject;
+public var StarParent : GameObject;
+public var Stars : GameObject[] = new GameObject[2];
+public var Asteroids : GameObject[] = new GameObject[3];
 private var playerScript : player;
 public var temp : Vector3;
 
-static var spawnRange : float = 10.0; // Changes size of active chunk.
+static var spawnRange : float = 20.0; // Changes size of active chunk.
 private var state : int; //Used for specifying positive and negative.
 
 private var rand : Random;
@@ -33,7 +33,7 @@ function Start () {
 
 function Update () {
 
-    if (transform.position.x > playerScript.spawnRangeX.y - (spawnRange / 2)) { //Positive X Spawn Right
+    if (transform.position.x > playerScript.spawnRangeX.y - 5) { //Positive X Spawn Right
 
         state = 1;
         Spawn(0);
@@ -41,7 +41,7 @@ function Update () {
         playerScript.spawnRangeX.y += spawnRange;
     }
 
-    if (transform.position.x < playerScript.spawnRangeX.x + (spawnRange / 2)) { //Negative X Spawn Left
+    if (transform.position.x < playerScript.spawnRangeX.x + 5) { //Negative X Spawn Left
 
         state = 0;
         Spawn(0);
@@ -49,7 +49,7 @@ function Update () {
         playerScript.spawnRangeX.y -= spawnRange;
     }
 
-    if (transform.position.y > playerScript.spawnRangeY.y - (spawnRange / 2)) { //Positive Y Spawn Up
+    if (transform.position.y > playerScript.spawnRangeY.y - 5) { //Positive Y Spawn Up
 
         state = 1;
         Spawn(1);
@@ -57,7 +57,7 @@ function Update () {
         playerScript.spawnRangeY.y += spawnRange;
     }
 
-    if (transform.position.y < playerScript.spawnRangeY.x + (spawnRange / 2)) { //Negative Y Spawn Down
+    if (transform.position.y < playerScript.spawnRangeY.x + 5) { //Negative Y Spawn Down
 
         state = 0;
         Spawn(1);
@@ -69,8 +69,10 @@ function Update () {
 function Spawn(direction : int) {
 
     var size : int;
+    var tempObject : GameObject;
     var starCount : int = spawnRange * 5;
     var asteroidCount : int = spawnRange * 2;
+    playerScript.despawn = 1; //Despawn objects out of spawnRange
 
     while (starCount > 0 || asteroidCount > 0) {
 
@@ -94,22 +96,18 @@ function Spawn(direction : int) {
         if (direction == 3) //Start Parameters
             temp = new Vector3(transform.position.x + rand.Range(-spawnRange, spawnRange), transform.position.y + rand.Range(spawnRange, -spawnRange), 0.0);
 
-        size = rand.Range(1, 8);
+        size = rand.Range(0, 1);
+        if (starCount > 0){
 
-        if (size <= 6) {
-
-            if (starCount > 0)
-                Instantiate(SmallStar, temp, Quaternion.identity);
-            if (asteroidCount > 0)
-                Instantiate(SmallAsteroid, temp, Quaternion.identity);
+            tempObject = Instantiate(Stars[size], temp, Quaternion.identity);
+            tempObject.transform.parent = StarParent.transform;
         }
 
-        if (size > 6 && size <= 8) {
+        size = rand.Range(0, 2);
+        if (asteroidCount > 0) {
 
-            if (starCount > 0)
-                Instantiate(MediumStar, temp, Quaternion.identity);
-            if (asteroidCount > 0)
-                Instantiate(MediumAsteroid, temp, Quaternion.identity);
+            tempObject = Instantiate(Asteroids[size], temp, Quaternion.identity);
+            tempObject.transform.parent = AsteroidParent.transform;
         }
 
         starCount--;
