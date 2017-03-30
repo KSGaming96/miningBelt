@@ -103,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
-  DirectionObject: {fileID: 0}
   weaponDust: {fileID: 1640149223477500, guid: 2f6727da218e70140a10b0b3f82890ac, type: 2}
   weaponParticle: {fileID: 1628735509783742, guid: fcc5b9b00e8df5342ac85e81b3388be7,
     type: 2}
@@ -153,7 +152,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3ef563358f9a31f40b30c2cb78b907f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

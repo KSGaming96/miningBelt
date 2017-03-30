@@ -70,7 +70,7 @@ function Spawn(direction : int) {
 
     var size : int;
     var tempObject : GameObject;
-    var starCount : int = spawnRange * 5;
+    var starCount : int = spawnRange * 10;
     var asteroidCount : int = spawnRange * 2;
     playerScript.despawn = 1; //Despawn objects out of spawnRange
 

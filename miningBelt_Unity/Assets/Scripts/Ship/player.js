@@ -47,9 +47,6 @@ function Start () {
 
 function Update () {
 
-    if (Input.GetAxis("Vertical") == 1)
-        playerDirection = transform.localRotation.eulerAngles.z;
-    speedVector = TempRB.velocity;
     despawn = 0; //Turns despawnRange script's memory off.
 }
 
