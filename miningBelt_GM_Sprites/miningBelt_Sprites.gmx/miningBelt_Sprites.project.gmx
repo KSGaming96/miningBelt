@@ -220,6 +220,7 @@
         <sprite>sprites\MiniMap</sprite>
         <sprite>sprites\Menu</sprite>
         <sprite>sprites\restart</sprite>
+        <sprite>sprites\Kascades</sprite>
       </sprites>
       <sprites name="Background Items">
         <sprites name="Stars">

@@ -1,7 +1,7 @@
 ﻿//File: particleDestroy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/27/2017
+//Last Modified: 04/02/2017
 
 /*
 --Assigns all particle objects, and destroys object with "flare" :D
@@ -32,6 +32,11 @@ function OnTriggerEnter2D (temp : Collider2D) {
 
     direction = temp.transform;
     tempArray = objectParticles; //Defaults to objectParticles. Changes to shipParticles later if needed.
+
+    if (temp.gameObject.name == "foundryRing1") { //Despawn asteroid if it spawns within foundry
+
+        Destroy(gameObject);
+    }
 
     if (temp.gameObject.tag == "Projectile" || temp.gameObject.tag == "Player") {
 
