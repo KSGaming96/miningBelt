@@ -247,6 +247,15 @@
         </sprites>
       </sprites>
       <sprites name="Mining Foundry">
+        <sprites name="Foundry GUI">
+          <sprite>sprites\foundryMenu</sprite>
+          <sprite>sprites\foundryOreMenu</sprite>
+          <sprite>sprites\storeButton</sprite>
+          <sprite>sprites\sellOreButton</sprite>
+          <sprite>sprites\SellOneButton</sprite>
+          <sprite>sprites\sellAllButton</sprite>
+          <sprite>sprites\oreBack</sprite>
+        </sprites>
         <sprite>sprites\foundryCenter</sprite>
         <sprite>sprites\foundryRing1</sprite>
         <sprite>sprites\foundryLocator</sprite>
