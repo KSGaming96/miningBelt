@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/27/2017
+//Last Modified: 04/02/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -14,6 +14,7 @@
 
 #pragma strict
 
+//Player base stat count
 static var Shield : int = 2;
 static var Hull : int = 1;
 static var Health : int = 120;
@@ -23,6 +24,7 @@ static var Mobility : int = 3;
 static var Cargo : int = 7;
 static var FireRate : int = 1;
 
+//Ore count
 static var Copper : int = 0;
 static var Silver : int = 0;
 static var Gold : int = 0;
@@ -33,10 +35,12 @@ static var Crystal : int = 0;
 static var Magnesium : int = 0;
 static var Fluorite : int = 0;
 
+static var Kascade : int = 0; //Kascade count (in-game currency)
+
 private var TempRB : Rigidbody2D;
 static var despawn : int = 0; //Tells stars when to despawn so memory isn't leaking everywhere.
 static var playerDirection : float; //Global direction for projectileMovement. Holds last known rotation for player thrust.
-static var speedVector : Vector2; //Global speed for projectileMovement. Adjusts paarticle speed with player speed.
+static var speedVector : Vector2; //Global speed for projectileMovement. Adjusts particle speed with player speed.
 static var spawnRangeX : Vector2; //Global spawnRangeX for closeSpawn and despawnRange. Denotes square spawn area.
 static var spawnRangeY : Vector2; //Global spawnRangeY for closeSpawn and despawnRange. Denotes square spawn area.
 
@@ -47,10 +51,21 @@ function Start () {
 
 function Update () {
 
-    if (Input.GetAxis("Vertical") == 1)
-        playerDirection = transform.localRotation.eulerAngles.z;
-    speedVector = TempRB.velocity;
     despawn = 0; //Turns despawnRange script's memory off.
+}
+
+function OnDestroy () { //Resets player variables. Death = fresh start.
+
+    Kascade = 0;
+    Copper = 0;
+    Silver = 0;
+    Gold = 0;
+    Diamond = 0;
+    Uranium = 0;
+    Silicon = 0;
+    Crystal = 0;
+    Magnesium = 0;
+    Fluorite = 0;
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
@@ -80,13 +95,30 @@ function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision an
     }
 }
 
-function OnGUI () { //Prints ore numbers on GUI
+function OnGUI () { //Prints ore numbers and Kascades on GUI.
 
     var gui : GUI; 
     
     var x : int = transform.position.x;
     var y : int = transform.position.y;
 
+    //Prints Kascade amount and offsets depending on size of number.
+    if (Kascade < 10)
+        gui.Label (Rect (185, 575, 185, 575), "" + Kascade);
+    if (Kascade >= 10 && Kascade < 100)
+        gui.Label (Rect (178, 575, 178, 575), "" + Kascade);
+    if (Kascade >= 100 && Kascade < 1000)
+        gui.Label (Rect (171, 575, 171, 575), "" + Kascade);
+    if (Kascade >= 1000 && Kascade < 10000)
+        gui.Label (Rect (164, 575, 164, 575), "" + Kascade);
+    if (Kascade >= 10000 && Kascade < 100000)
+        gui.Label (Rect (157, 575, 157, 575), "" + Kascade);
+    if (Kascade >= 100000 && Kascade < 1000000)
+        gui.Label (Rect (150, 575, 150, 575), "" + Kascade);
+    if (Kascade >= 1000000 && Kascade < 10000000)
+        gui.Label (Rect (143, 575, 143, 575), "" + Kascade);
+
+    //Prints ore number and offsets at 10 or above.
     if (Copper < 10)
         gui.Label (Rect (468, 534, 468, 534), "0" + Copper);
     if (Copper >= 10)

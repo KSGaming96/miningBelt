@@ -209,8 +209,6 @@
     <sprites name="Graphics">
       <sprites name="GUI">
         <sprite>sprites\Stats_GUI</sprite>
-        <sprite>sprites\grid</sprite>
-        <sprite>sprites\gridHighlight</sprite>
         <sprite>sprites\bottomGUI</sprite>
         <sprite>sprites\healthGUI</sprite>
         <sprite>sprites\energyChargeGUI</sprite>
@@ -221,6 +219,8 @@
         <sprite>sprites\Stats</sprite>
         <sprite>sprites\MiniMap</sprite>
         <sprite>sprites\Menu</sprite>
+        <sprite>sprites\restart</sprite>
+        <sprite>sprites\Kascades</sprite>
       </sprites>
       <sprites name="Background Items">
         <sprites name="Stars">
@@ -246,6 +246,20 @@
           <sprite>sprites\asteroidPieceLarge2</sprite>
           <sprite>sprites\asteroidPieceLarge3</sprite>
         </sprites>
+      </sprites>
+      <sprites name="Mining Foundry">
+        <sprites name="Foundry GUI">
+          <sprite>sprites\foundryMenu</sprite>
+          <sprite>sprites\foundryOreMenu</sprite>
+          <sprite>sprites\storeButton</sprite>
+          <sprite>sprites\sellOreButton</sprite>
+          <sprite>sprites\SellOneButton</sprite>
+          <sprite>sprites\sellAllButton</sprite>
+          <sprite>sprites\oreBack</sprite>
+        </sprites>
+        <sprite>sprites\foundryCenter</sprite>
+        <sprite>sprites\foundryRing1</sprite>
+        <sprite>sprites\foundryLocator</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\rotationMath</sprite>

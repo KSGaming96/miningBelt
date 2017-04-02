@@ -35,30 +35,33 @@ function Update () { //Checks if weapon is equipped depending on object tag. Spa
 
     if (Input.GetButton("Fire")) {
 
-        if (itemStorageScript.energyEquip == 1) {
+        if (PlayerObject != null) {
 
-            if (energyTime < Time.time) {
+            if (itemStorageScript.energyEquip == 1) {
 
-                energyTime = Time.time + energyFireRate;
+                if (energyTime < Time.time) {
+
+                    energyTime = Time.time + energyFireRate;
                 
-                if (energySplit == 0)
-                    energySpawn();
-                else 
-                    SplitSpawn();
-            } 
-        }
-
-        if (itemStorageScript.missileEquip == 1) {
-
-            if (missileTime < Time.time) {
-
-                missileTime = Time.time + missileFireRate;
-                if (missileSplit == 0)
-                    missileSpawn();
-                else 
-                    SplitSpawn();
+                    if (energySplit == 0)
+                        energySpawn();
+                    else 
+                        SplitSpawn();
+                } 
             }
-        }    
+
+            if (itemStorageScript.missileEquip == 1) {
+
+                if (missileTime < Time.time) {
+
+                    missileTime = Time.time + missileFireRate;
+                    if (missileSplit == 0)
+                        missileSpawn();
+                    else 
+                        SplitSpawn();
+                }
+            }
+        } 
     }
 }
 
