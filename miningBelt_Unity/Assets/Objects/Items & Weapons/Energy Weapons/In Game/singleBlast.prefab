@@ -120,6 +120,8 @@ MonoBehaviour:
   energyDust: {fileID: 1264625337499736, guid: 15e1b1d43f40e1d43957879a7272d9e5, type: 2}
   energyTrail: {fileID: 1772877475724672, guid: 8fc8332c5e5a2eb4791def638a1254fe,
     type: 2}
+  weaponParticles: {fileID: 1960037627539098, guid: c4f80296878a27b4685425c6ef91d864,
+    type: 2}
 --- !u!212 &212405007125856186
 SpriteRenderer:
   m_ObjectHideFlags: 1

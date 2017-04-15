@@ -1,7 +1,7 @@
 ﻿//File: foundry.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/29/2017
+//Last Modified: 04/14/2017
 
 /*
 --Basic spinning and menu movement with player collision.
@@ -13,10 +13,7 @@ public var PlayerObject : GameObject;
 public var foundryMenuObject : GameObject;
 public var foundryOreMenuObject : GameObject;
 public var foundryLocatorObject : GameObject;
-
-public var foundryGUIHolderObject : GameObject;
-public var foundryMenuHolderObject : GameObject;
-public var foundryOreHolderObject : GameObject;
+public var storeObject : GameObject;
 
 private var playerMovementScript : playerMovement;
 private var PlayerRB : Rigidbody2D;
@@ -31,22 +28,23 @@ function Start () { //Sets rotation and variables.
 
 function OnTriggerEnter2D (temp : Collider2D) { //Sets drag and moves menu when player is on the foundry so it'll stop.
 
-    if (temp.gameObject.name == "playerShip") {
+    if (temp.gameObject.tag == "shipPart") {
 
         playerMovementScript.linearDrag = 1;
-        foundryMenuObject.transform.position = foundryGUIHolderObject.transform.position;
-        foundryLocatorObject.transform.position = foundryOreHolderObject.transform.position;
+        foundryMenuObject.SetActive(true);
+        foundryLocatorObject.SetActive(false);
     }
         
 }
 
 function OnTriggerExit2D (temp : Collider2D) { //Changes drag back to normal for flying and removes menus when player leaves foundry.
 
-    if (temp.gameObject.name == "playerShip") {
+    if (temp.gameObject.tag == "shipPart") {
 
         playerMovementScript.linearDrag = 0.2;
-        foundryMenuObject.transform.position = foundryMenuHolderObject.transform.position;
-        foundryOreMenuObject.transform.position = foundryOreHolderObject.transform.position;
-        foundryLocatorObject.transform.position = PlayerObject.transform.position;
+        foundryMenuObject.SetActive(false);
+        foundryOreMenuObject.SetActive(false);
+        storeObject.SetActive(false);
+        foundryLocatorObject.SetActive(true);
     }
 }

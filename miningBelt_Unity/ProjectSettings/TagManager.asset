@@ -13,6 +13,7 @@ TagManager:
   - Energy
   - Missile
   - particleDust
+  - shipPart
   layers:
   - Default
   - TransparentFX

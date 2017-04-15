@@ -29,14 +29,6 @@
         <sprite>sprites\x_Factor</sprite>
       </sprites>
       <sprites name="Engines">
-        <sprites name="Left">
-          <sprite>sprites\hyperDriveL</sprite>
-          <sprite>sprites\ionWingL</sprite>
-          <sprite>sprites\microJouleL</sprite>
-          <sprite>sprites\pintThrowL</sprite>
-          <sprite>sprites\sideBurnerL</sprite>
-          <sprite>sprites\warpCoilL</sprite>
-        </sprites>
         <sprite>sprites\afterBurner</sprite>
         <sprite>sprites\corvetteEngine</sprite>
         <sprite>sprites\dualCoreEngine</sprite>
@@ -56,30 +48,6 @@
         <sprite>sprites\warpCoil</sprite>
       </sprites>
       <sprites name="Wings">
-        <sprites name="Left">
-          <sprite>sprites\ancientSwoopL</sprite>
-          <sprite>sprites\angelWingL</sprite>
-          <sprite>sprites\armoryWingL</sprite>
-          <sprite>sprites\backSlashL</sprite>
-          <sprite>sprites\batWingL</sprite>
-          <sprite>sprites\cobraWingL</sprite>
-          <sprite>sprites\contactClawL</sprite>
-          <sprite>sprites\cutlassWingL</sprite>
-          <sprite>sprites\deltaWingL</sprite>
-          <sprite>sprites\fangWingL</sprite>
-          <sprite>sprites\fighterWingL</sprite>
-          <sprite>sprites\hornWingL</sprite>
-          <sprite>sprites\piperL</sprite>
-          <sprite>sprites\pulsarL</sprite>
-          <sprite>sprites\macheteWingL</sprite>
-          <sprite>sprites\rathiaSlingL</sprite>
-          <sprite>sprites\razerWingL</sprite>
-          <sprite>sprites\ribbedWingL</sprite>
-          <sprite>sprites\spikeWingL</sprite>
-          <sprite>sprites\stockWingL</sprite>
-          <sprite>sprites\tentacleWingL</sprite>
-          <sprite>sprites\vWingL</sprite>
-        </sprites>
         <sprite>sprites\ancientSwoop</sprite>
         <sprite>sprites\angelWing</sprite>
         <sprite>sprites\armoryWing</sprite>
@@ -107,10 +75,10 @@
       <sprites name="Misc">
         <sprite>sprites\connector</sprite>
         <sprite>sprites\merge</sprite>
-        <sprite>sprites\mergeL</sprite>
         <sprite>sprites\spike</sprite>
         <sprite>sprites\directionBulletID</sprite>
         <sprite>sprites\directionID</sprite>
+        <sprite>sprites\edge</sprite>
       </sprites>
       <sprites name="Ships">
         <sprite>sprites\Ship1</sprite>
@@ -229,6 +197,231 @@
         </sprites>
       </sprites>
       <sprite>sprites\chunkSpace</sprite>
+      <sprites name="Store">
+        <sprites name="GUI">
+          <sprite>sprites\customizeBorder</sprite>
+          <sprite>sprites\levelBorder</sprite>
+          <sprite>sprites\shipUpgradesBorder</sprite>
+          <sprite>sprites\PartMenuBorder</sprite>
+        </sprites>
+        <sprites name="Level Indicator">
+          <sprite>sprites\level1G</sprite>
+          <sprite>sprites\level1R</sprite>
+          <sprite>sprites\level2G</sprite>
+          <sprite>sprites\level2R</sprite>
+          <sprite>sprites\level3G</sprite>
+          <sprite>sprites\level3R</sprite>
+        </sprites>
+        <sprites name="Ship Upgrades">
+          <sprite>sprites\statDecrement</sprite>
+          <sprite>sprites\statIncrement</sprite>
+        </sprites>
+        <sprites name="Part Menu">
+          <sprites name="Buttons">
+            <sprite>sprites\buttonIndicator</sprite>
+            <sprite>sprites\bodiesButton</sprite>
+            <sprite>sprites\wingsButton</sprite>
+            <sprite>sprites\enginesButton</sprite>
+            <sprite>sprites\miscButton</sprite>
+            <sprite>sprites\levelIndicator</sprite>
+            <sprite>sprites\level1Button</sprite>
+            <sprite>sprites\level2Button</sprite>
+            <sprite>sprites\level3Button</sprite>
+          </sprites>
+          <sprites name="Bodies">
+            <sprites name="Level 1">
+              <sprite>sprites\bodiesBorderLevel1</sprite>
+              <sprites name="Stats">
+                <sprite>sprites\acornPodStats</sprite>
+                <sprite>sprites\crewPodStats</sprite>
+                <sprite>sprites\deltaPodStats</sprite>
+                <sprite>sprites\phaserStats</sprite>
+                <sprite>sprites\sideSlingerStats</sprite>
+                <sprite>sprites\slimlineStats</sprite>
+                <sprite>sprites\vampireStats</sprite>
+              </sprites>
+              <sprites name="Extended">
+                <sprite>sprites\acornPodExtended</sprite>
+                <sprite>sprites\crewPodExtended</sprite>
+                <sprite>sprites\deltaPodExtended</sprite>
+                <sprite>sprites\phaserExtended</sprite>
+                <sprite>sprites\sideSlingerExtended</sprite>
+                <sprite>sprites\slimlineExtended</sprite>
+                <sprite>sprites\vampireExtended</sprite>
+              </sprites>
+            </sprites>
+            <sprites name="Level 2">
+              <sprite>sprites\bodiesBorderLevel2</sprite>
+              <sprites name="Stats">
+                <sprite>sprites\arachnidStats</sprite>
+                <sprite>sprites\barbStats</sprite>
+                <sprite>sprites\beastStats</sprite>
+                <sprite>sprites\cargoPodStats</sprite>
+                <sprite>sprites\cicadaStats</sprite>
+                <sprite>sprites\hawkTalonStats</sprite>
+                <sprite>sprites\sliceDroneStats</sprite>
+              </sprites>
+              <sprites name="Extended">
+                <sprite>sprites\arachnidExtended</sprite>
+                <sprite>sprites\barbExtended</sprite>
+                <sprite>sprites\beastExtended</sprite>
+                <sprite>sprites\cargoPodExtended</sprite>
+                <sprite>sprites\cicadaExtended</sprite>
+                <sprite>sprites\hawkTalonExtended</sprite>
+                <sprite>sprites\sliceDroneExtended</sprite>
+              </sprites>
+            </sprites>
+            <sprites name="Level 3">
+              <sprite>sprites\bodiesBorderLevel3</sprite>
+              <sprites name="Stats">
+                <sprite>sprites\midgeFlyStats</sprite>
+                <sprite>sprites\battleCryStats</sprite>
+                <sprite>sprites\toadstoolStats</sprite>
+                <sprite>sprites\vectorStats</sprite>
+                <sprite>sprites\x_FactorStats</sprite>
+              </sprites>
+              <sprites name="Extended">
+                <sprite>sprites\midgeFlyExtended</sprite>
+                <sprite>sprites\battleCryExtended</sprite>
+                <sprite>sprites\toadstoolExtended</sprite>
+                <sprite>sprites\vectorExtended</sprite>
+                <sprite>sprites\x_FactorExtended</sprite>
+              </sprites>
+            </sprites>
+          </sprites>
+          <sprites name="Wings">
+            <sprites name="Level 1">
+              <sprite>sprites\wingsBorderLevel1</sprite>
+              <sprites name="Extended">
+                <sprite>sprites\batWingExtended</sprite>
+                <sprite>sprites\hornWingExtended</sprite>
+                <sprite>sprites\piperExtended</sprite>
+                <sprite>sprites\spikeWingExtended</sprite>
+                <sprite>sprites\stockWingExtended</sprite>
+                <sprite>sprites\tailFinExtended</sprite>
+                <sprite>sprites\vWingExtended</sprite>
+              </sprites>
+              <sprites name="Stats">
+                <sprite>sprites\batWingStats</sprite>
+                <sprite>sprites\hornWingStats</sprite>
+                <sprite>sprites\piperStats</sprite>
+                <sprite>sprites\spikeWingStats</sprite>
+                <sprite>sprites\stockWingStats</sprite>
+                <sprite>sprites\tailFinStats</sprite>
+                <sprite>sprites\vWingStats</sprite>
+              </sprites>
+            </sprites>
+            <sprites name="Level 2">
+              <sprite>sprites\wingsBorderLevel2</sprite>
+              <sprites name="Extended">
+                <sprite>sprites\angelWingExtended</sprite>
+                <sprite>sprites\backSlashExtended</sprite>
+                <sprite>sprites\cutlassWingExtended</sprite>
+                <sprite>sprites\deltaWingExtended</sprite>
+                <sprite>sprites\fangWingExtended</sprite>
+                <sprite>sprites\macheteWingExtended</sprite>
+                <sprite>sprites\razerWingExtended</sprite>
+                <sprite>sprites\ribbedWingExtended</sprite>
+              </sprites>
+              <sprites name="Stats">
+                <sprite>sprites\angelWingStats</sprite>
+                <sprite>sprites\backSlashStats</sprite>
+                <sprite>sprites\deltaWingStats</sprite>
+                <sprite>sprites\macheteWingStats</sprite>
+                <sprite>sprites\fangWingStats</sprite>
+                <sprite>sprites\ribbedWingStats</sprite>
+                <sprite>sprites\cutlassWingStats</sprite>
+                <sprite>sprites\razerWingStats</sprite>
+                <sprite>sprites\tentacleWingStats</sprite>
+              </sprites>
+            </sprites>
+            <sprites name="Level 3">
+              <sprite>sprites\wingsBorderLevel3</sprite>
+              <sprites name="Extended">
+                <sprite>sprites\ancientSwoopExtended</sprite>
+                <sprite>sprites\armoryWingExtended</sprite>
+                <sprite>sprites\cobraWingExtended</sprite>
+                <sprite>sprites\contactClawExtended</sprite>
+                <sprite>sprites\fighterWingExtended</sprite>
+                <sprite>sprites\pulsarExtended</sprite>
+                <sprite>sprites\rathiaSlingExtended</sprite>
+                <sprite>sprites\tentacleWingExtended</sprite>
+              </sprites>
+              <sprites name="Stats">
+                <sprite>sprites\cobraWingStats</sprite>
+                <sprite>sprites\pulsarStats</sprite>
+                <sprite>sprites\armoryStats</sprite>
+                <sprite>sprites\rathiaSlingStats</sprite>
+                <sprite>sprites\fighterWingStats</sprite>
+                <sprite>sprites\ancientSwoopStats</sprite>
+                <sprite>sprites\contactClawStats</sprite>
+              </sprites>
+            </sprites>
+          </sprites>
+          <sprites name="Engines">
+            <sprites name="Level 1">
+              <sprite>sprites\enginesBorderLevel1</sprite>
+              <sprites name="Extended">
+                <sprite>sprites\afterBurnerExtended</sprite>
+                <sprite>sprites\corvetteEngineExtended</sprite>
+                <sprite>sprites\dualCoreEngineExtended</sprite>
+                <sprite>sprites\flammerExtended</sprite>
+                <sprite>sprites\flightEngineExtended</sprite>
+                <sprite>sprites\microBurstExtended</sprite>
+                <sprite>sprites\smplBurnerExtended</sprite>
+              </sprites>
+              <sprites name="Stats">
+                <sprite>sprites\afterBurnerStats</sprite>
+                <sprite>sprites\corvetteEngineStats</sprite>
+                <sprite>sprites\dualCoreStats</sprite>
+                <sprite>sprites\flammerStats</sprite>
+                <sprite>sprites\flightEngineStats</sprite>
+                <sprite>sprites\microBurstStats</sprite>
+                <sprite>sprites\smplBurnerStats</sprite>
+              </sprites>
+            </sprites>
+            <sprites name="Level 2">
+              <sprite>sprites\enginesBorderLevel2</sprite>
+              <sprites name="Extended">
+                <sprite>sprites\hyperDriveExtended</sprite>
+                <sprite>sprites\ionWingExtended</sprite>
+                <sprite>sprites\microJouleExtended</sprite>
+                <sprite>sprites\pintThrowExtended</sprite>
+                <sprite>sprites\sideBurnerExtended</sprite>
+                <sprite>sprites\warpCoilExtended</sprite>
+              </sprites>
+              <sprites name="Stats">
+                <sprite>sprites\pintThrowerStats</sprite>
+                <sprite>sprites\microJouleStats</sprite>
+                <sprite>sprites\warpCoilStats</sprite>
+                <sprite>sprites\sideBurnerStats</sprite>
+                <sprite>sprites\ionWingStats</sprite>
+                <sprite>sprites\hyperDriveStats</sprite>
+              </sprites>
+            </sprites>
+            <sprites name="Level 3">
+              <sprite>sprites\enginesBorderLevel3</sprite>
+              <sprites name="Extended">
+                <sprite>sprites\gigaDriveExtended</sprite>
+                <sprite>sprites\overdriveExtended</sprite>
+                <sprite>sprites\triThrusterExtended</sprite>
+                <sprite>sprites\knockbackThrusterExtended</sprite>
+              </sprites>
+              <sprites name="Stats">
+                <sprite>sprites\gigaDriveStats</sprite>
+                <sprite>sprites\knockbackThrusterStats</sprite>
+                <sprite>sprites\overdriveStats</sprite>
+                <sprite>sprites\triThrusterStats</sprite>
+              </sprites>
+            </sprites>
+          </sprites>
+          <sprites name="Misc">
+            <sprites name="Level 1"/>
+            <sprites name="Level 2"/>
+            <sprites name="Level 3"/>
+          </sprites>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Asteroids, Planets, Etc.">
       <sprites name="Asteroids">
@@ -252,6 +445,7 @@
           <sprite>sprites\foundryMenu</sprite>
           <sprite>sprites\foundryOreMenu</sprite>
           <sprite>sprites\storeButton</sprite>
+          <sprite>sprites\storeCloseButton</sprite>
           <sprite>sprites\sellOreButton</sprite>
           <sprite>sprites\SellOneButton</sprite>
           <sprite>sprites\sellAllButton</sprite>
@@ -263,178 +457,11 @@
       </sprites>
     </sprites>
     <sprite>sprites\rotationMath</sprite>
+    <sprite>sprites\Store</sprite>
+    <sprite>sprites\holder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <objects name="objects">
-    <objects name="Ship Sprites">
-      <objects name="Bodies">
-        <object>objects\oAcornPod</object>
-        <object>objects\oArachnid</object>
-        <object>objects\oBarb</object>
-        <object>objects\oBattleCry</object>
-        <object>objects\oBeast</object>
-        <object>objects\oCargoPod</object>
-        <object>objects\oCicada</object>
-        <object>objects\oCrewPod</object>
-        <object>objects\oDeltaPod</object>
-        <object>objects\oHawkTalon</object>
-        <object>objects\oMidgeFly</object>
-        <object>objects\oPhaser</object>
-        <object>objects\oSideSlinger</object>
-        <object>objects\oSliceDrone</object>
-        <object>objects\oSlimline</object>
-        <object>objects\oToadstool</object>
-        <object>objects\oVampire</object>
-        <object>objects\oVector</object>
-        <object>objects\oXFactor</object>
-      </objects>
-      <objects name="Engines">
-        <object>objects\oAfterBurner</object>
-        <object>objects\oCorvetteEngine</object>
-        <object>objects\oDualCoreEngine</object>
-        <object>objects\oFlammer</object>
-        <object>objects\oFlightEngine</object>
-        <object>objects\oGigaDrive</object>
-        <object>objects\oHyperDriveR</object>
-        <object>objects\oHyperDriveL</object>
-        <object>objects\oIonWingR</object>
-        <object>objects\oIonWingL</object>
-        <object>objects\oKnockbackThruster</object>
-        <object>objects\oMicroBurst</object>
-        <object>objects\oMicroJouleR</object>
-        <object>objects\oMicroJouleL</object>
-        <object>objects\oOverdrive</object>
-        <object>objects\oPintThrowR</object>
-        <object>objects\oPintThrowL</object>
-        <object>objects\oSMPLBurner</object>
-        <object>objects\oTriThruster</object>
-        <object>objects\oWarpCoilR</object>
-        <object>objects\oWarpCoilL</object>
-      </objects>
-      <objects name="Wings">
-        <object>objects\oAncientSwoopR</object>
-        <object>objects\oAncientSwoopL</object>
-        <object>objects\oAngelWingR</object>
-        <object>objects\oAngelWingL</object>
-        <object>objects\oArmoryWingR</object>
-        <object>objects\oArmoryWingL</object>
-        <object>objects\oBackSlashR</object>
-        <object>objects\oBackSlashL</object>
-        <object>objects\oBatWingR</object>
-        <object>objects\oBatWingL</object>
-        <object>objects\oCobraWingR</object>
-        <object>objects\oCobraWingL</object>
-        <object>objects\oContactClawR</object>
-        <object>objects\oContactClawL</object>
-        <object>objects\oCutlassWingR</object>
-        <object>objects\oCutlassWingL</object>
-        <object>objects\oDeltaWingR</object>
-        <object>objects\oDeltaWingL</object>
-        <object>objects\oFangWingR</object>
-        <object>objects\oFangWingL</object>
-        <object>objects\oFighterWingR</object>
-        <object>objects\oFighterWingL</object>
-        <object>objects\oHornWingR</object>
-        <object>objects\oHornWingL</object>
-        <object>objects\oMacheteWingR</object>
-        <object>objects\oMacheteWingL</object>
-        <object>objects\oPiperR</object>
-        <object>objects\oPiperL</object>
-        <object>objects\oPulsarR</object>
-        <object>objects\oPulsarL</object>
-        <object>objects\oRathiaSlingR</object>
-        <object>objects\oRathiaSlingL</object>
-        <object>objects\oRibbedWingR</object>
-        <object>objects\oRibbedWingL</object>
-        <object>objects\oSpikeWingR</object>
-        <object>objects\oSpikeWingL</object>
-        <object>objects\oStockWingR</object>
-        <object>objects\oStockWingL</object>
-        <object>objects\oTailFin</object>
-        <object>objects\oTentacleWingR</object>
-        <object>objects\oTentacleWingL</object>
-        <object>objects\oVWingR</object>
-        <object>objects\oVWingL</object>
-      </objects>
-      <objects name="Misc">
-        <object>objects\oConnector</object>
-        <object>objects\oMergeR</object>
-        <object>objects\oMergeL</object>
-        <object>objects\oSpike</object>
-      </objects>
-      <objects name="Ships">
-        <object>objects\oShip1</object>
-      </objects>
-    </objects>
-    <objects name="Items &amp; Weapons">
-      <objects name="Accessories">
-        <objects name="Items">
-          <object>objects\oSpreadGauntlet</object>
-          <object>objects\oChainLightning</object>
-        </objects>
-      </objects>
-      <objects name="Armor">
-        <objects name="Items">
-          <object>objects\oCentipedeTether</object>
-          <object>objects\oNanoHull</object>
-        </objects>
-      </objects>
-      <objects name="Energy Weapons">
-        <objects name="Items">
-          <object>objects\oSingleBlastItem</object>
-        </objects>
-        <objects name="In Game">
-          <object>objects\oSingleBlast</object>
-        </objects>
-      </objects>
-      <objects name="Missiles">
-        <objects name="Items">
-          <object>objects\oSmallMissileItem</object>
-        </objects>
-        <objects name="In Game">
-          <object>objects\oSmallMissile</object>
-        </objects>
-      </objects>
-      <objects name="Mods">
-        <objects name="Split">
-          <object>objects\oSplitV1</object>
-        </objects>
-        <objects name="Speed">
-          <object>objects\oSpeedV1</object>
-        </objects>
-        <objects name="Size">
-          <object>objects\oSizeV1</object>
-        </objects>
-      </objects>
-      <objects name="Shields">
-        <objects name="Items">
-          <object>objects\oSmallShield</object>
-        </objects>
-      </objects>
-    </objects>
-    <objects name="Graphics">
-      <objects name="GUI">
-        <object>objects\oStatsGUI</object>
-        <object>objects\oBottomGUI</object>
-        <object>objects\oHealthGUI</object>
-        <object>objects\oEnergyChargeGUI</object>
-        <object>objects\oMissileChargeGUI</object>
-        <object>objects\oExperienceGUI</object>
-      </objects>
-      <objects name="Background Items">
-        <objects name="Stars">
-          <object>objects\oStarMedium</object>
-          <object>objects\oStarSmall</object>
-        </objects>
-      </objects>
-    </objects>
-  </objects>
-  <rooms name="rooms">
-    <room>rooms\Ship_Editor</room>
-    <room>rooms\Game_Window</room>
-    <room>rooms\Empty_GUI</room>
-  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

@@ -1,7 +1,7 @@
 ﻿//File: particleDestroy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/02/2017
+//Last Modified: 04/14/2017
 
 /*
 --Assigns all particle objects, and destroys object with "flare" :D
@@ -38,7 +38,7 @@ function OnTriggerEnter2D (temp : Collider2D) {
         Destroy(gameObject);
     }
 
-    if (temp.gameObject.tag == "Projectile" || temp.gameObject.tag == "Player") {
+    if (temp.gameObject.tag == "Projectile" || temp.gameObject.tag == "shipPart") {
 
         if (name == "smallAsteroid(Clone)") {
 
@@ -109,14 +109,14 @@ function OnTriggerEnter2D (temp : Collider2D) {
             }
         }
 
-        if (temp.gameObject.name == "playerShip") {
+        if (temp.gameObject.tag == "shipPart") {
 
             tempArray = shipParticles; //Assign correct particles.
             particleCount = rand.Range(50, 150);
             spread = 0;
-            destruction(1); //Small.
-            destruction(4); //Medium.
-            destruction(7); //Large
+            destruction(1); //Small particles.
+            destruction(4); //Medium particles.
+            destruction(7); //Large particles.
 
             var dustCount : int = 200;
 

@@ -72,6 +72,5 @@ function trailSpawn () {
 
     var rotation : Quaternion = transform.rotation;
     rotation *= Quaternion.Euler(0, 0, 360 + rand.Range(-spread * 0.25, spread * 0.25));
-
     Instantiate(energyTrail, transform.position, rotation);
 }

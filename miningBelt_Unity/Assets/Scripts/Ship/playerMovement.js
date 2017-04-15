@@ -10,6 +10,7 @@
 #pragma strict
 
 public var PlayerObject : GameObject;
+public var PlayerParent : GameObject;
 private var playerScript : player;
 private var TempRB : Rigidbody2D;
 

@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/02/2017
+//Last Modified: 04/14/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -66,33 +66,6 @@ function OnDestroy () { //Resets player variables. Death = fresh start.
     Crystal = 0;
     Magnesium = 0;
     Fluorite = 0;
-}
-
-function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
-
-    if (temp.gameObject.tag == "Ore") {
-
-        if (temp.gameObject.name == "copperOre(Clone)")
-            Copper++;
-        if (temp.gameObject.name == "silverOre(Clone)")
-            Silver++;
-        if (temp.gameObject.name == "goldOre(Clone)")
-            Gold++;
-        if (temp.gameObject.name == "diamondOre(Clone)")
-            Diamond++;
-        if (temp.gameObject.name == "uraniumOre(Clone)")
-            Uranium++;
-        if (temp.gameObject.name == "siliconOre(Clone)")
-            Silicon++;
-        if (temp.gameObject.name == "crystalOre(Clone)")
-            Crystal++;
-        if (temp.gameObject.name == "magnesiumOre(Clone)")
-            Magnesium++;
-        if (temp.gameObject.name == "fluoriteOre(Clone)")
-            Fluorite++;
-        
-        Destroy(temp.gameObject);
-    }
 }
 
 function OnGUI () { //Prints ore numbers and Kascades on GUI.

@@ -1,7 +1,7 @@
 ﻿//File: foundryMenuButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/02/2017
+//Last Modified: 04/14/2017
 
 /*
 --Controls all foundry menu buttons
@@ -11,9 +11,8 @@
 
 public var PlayerObject : GameObject;
 public var foundryOreMenuObject : GameObject;
-
-public var foundryGUIHolderObject : GameObject;
-public var foundryOreHolderObject : GameObject;
+public var storeObject : GameObject;
+public var storeCloseButtonObject : GameObject;
 
 private var playerScript : player;
 
@@ -24,14 +23,26 @@ function Start () {
 
 function OnMouseDown () {
 
-    if (name == "sellOreButton") { //Makes ore menu visible
+    if (name == "storeButton") { //Shows store and close button
 
-        foundryOreMenuObject.transform.position = foundryGUIHolderObject.transform.position;
+        storeObject.SetActive(true);
+        storeCloseButtonObject.SetActive(true);
+    }
+
+    if (name == "storeCloseButton") { //Hides store and close button
+
+        storeObject.SetActive(false);
+        storeCloseButtonObject.SetActive(false);
+    }
+
+    if (name == "sellOreButton") { //Shows ore menu
+
+        foundryOreMenuObject.SetActive(true);
     }
 
     if (name == "oreBack") { //Hides ore menu
 
-        foundryOreMenuObject.transform.position = foundryOreHolderObject.transform.position;
+        foundryOreMenuObject.SetActive(false);
     }
 
     if (name == "sellAllButton") { //Decrement all ores and add Kascades
