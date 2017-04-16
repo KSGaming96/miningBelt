@@ -1,7 +1,7 @@
 ﻿//File: foundryMenuButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/14/2017
+//Last Modified: 04/15/2017
 
 /*
 --Controls all foundry menu buttons
@@ -13,20 +13,35 @@ public var PlayerObject : GameObject;
 public var foundryOreMenuObject : GameObject;
 public var storeObject : GameObject;
 public var storeCloseButtonObject : GameObject;
+public var largeMenuObject : GameObject;
 
 private var playerScript : player;
+static var innerCollider : int = 0;
 
 function Start () {
 
     playerScript = PlayerObject.GetComponent(player);
 }
 
+function Update () {
+
+    if (name == "storeCloseButton") {
+
+        if (innerCollider == 0)
+            storeCloseButtonObject.SetActive(false);
+    }
+}
+
 function OnMouseDown () {
 
     if (name == "storeButton") { //Shows store and close button
 
-        storeObject.SetActive(true);
-        storeCloseButtonObject.SetActive(true);
+        if (innerCollider == 1) {
+
+            storeObject.SetActive(true);
+            storeCloseButtonObject.SetActive(true);
+            largeMenuObject.SetActive(false);
+        }
     }
 
     if (name == "storeCloseButton") { //Hides store and close button

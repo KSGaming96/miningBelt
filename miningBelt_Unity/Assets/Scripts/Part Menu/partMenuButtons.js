@@ -1,13 +1,16 @@
 ﻿//File: partMenuButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/14/2017
+//Last Modified: 04/15/2017
 
 /*
 --Part menu button interactions.
 */
 
 #pragma strict
+
+public var PlayerObject : GameObject;
+private var playerScript : player;
 
 //Button Objects. Used for indicator movement, tab switching, and level selection.
 public var bodiesButtonObject : GameObject;
@@ -28,8 +31,16 @@ public var wingsLevel1Object : GameObject;
 public var wingsLevel2Object : GameObject;
 public var wingsLevel3Object : GameObject;
 
+public var level2BuyObject : GameObject;
+public var level3BuyObject : GameObject;
+
 public var buttonIndicatorObject : GameObject;
 public var levelIndicatorObject : GameObject;
+
+function Start () {
+
+    playerScript = PlayerObject.GetComponent(player);
+}
 
 function Update () {
 
@@ -139,8 +150,23 @@ function OnMouseDown () {
         buttonIndicatorObject.transform.position = transform.position;
     }
 
-    else if (name == "level1Button" || name == "level2Button" || name == "level3Button") { //Places levelIndicator on pressed level button.
+    else if (name == "level1Button") { //Places levelIndicator on pressed level button.
 
         levelIndicatorObject.transform.position = transform.position;
+    }
+
+    else if (name == "level2Button") {
+
+        if (playerScript.level2Bought == 1)
+            levelIndicatorObject.transform.position = transform.position;
+        else if (playerScript.level2Bought == 0)
+            level2BuyObject.SetActive(true);
+    }
+    else if (name == "level3Button") {
+
+        if (playerScript.level3Bought == 1)
+            levelIndicatorObject.transform.position = transform.position;
+        else if (playerScript.level3Bought == 0)
+            level3BuyObject.SetActive(true);
     }
 }

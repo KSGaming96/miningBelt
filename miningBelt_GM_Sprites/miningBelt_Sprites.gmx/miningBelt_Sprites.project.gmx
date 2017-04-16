@@ -415,11 +415,7 @@
               </sprites>
             </sprites>
           </sprites>
-          <sprites name="Misc">
-            <sprites name="Level 1"/>
-            <sprites name="Level 2"/>
-            <sprites name="Level 3"/>
-          </sprites>
+          <sprites name="Misc"/>
         </sprites>
       </sprites>
     </sprites>
@@ -459,6 +455,7 @@
     <sprite>sprites\rotationMath</sprite>
     <sprite>sprites\Store</sprite>
     <sprite>sprites\holder</sprite>
+    <sprite>sprites\playerLevel</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

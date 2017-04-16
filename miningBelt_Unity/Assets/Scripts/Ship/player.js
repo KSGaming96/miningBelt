@@ -1,28 +1,43 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/14/2017
+//Last Modified: 04/15/2017
 
 /*
 --Player.js holds player stats and controls game movement.
---
---17;34-- All global variables. Will add more function as game progresses.
---36;43-- All referenced objects.
---
---Turns ore into a variable on collision.
 */
 
 #pragma strict
 
 //Player base stat count
-static var Shield : int = 2;
-static var Hull : int = 1;
-static var Health : int = 120;
+static var Shield : int = 0;
+static var Hull : int = 0;
+static var Health : int = 100;
 static var Speed : int = 1;
 static var Attack : int = 1;
-static var Mobility : int = 3;
-static var Cargo : int = 7;
+static var Mobility : int = 1;
+static var Cargo : int = 5;
 static var FireRate : int = 1;
+
+//Player bonus stat count
+static var ShieldBonus : int = 0;
+static var HullBonus : int = 0;
+static var HealthBonus : int = 0;
+static var SpeedBonus : int = 0;
+static var AttackBonus : int = 0;
+static var MobilityBonus : int = 0;
+static var CargoBonus : int = 0;
+static var FireRateBonus : int = 0;
+
+//Player total stats.
+static var totalHealth : int = Health + HealthBonus;
+static var totalShield : int = Shield + ShieldBonus;
+static var totalAttack : int = Attack + AttackBonus;
+static var totalMobility : int = Mobility + MobilityBonus;
+static var totalHull : int = Hull + HullBonus;
+static var totalSpeed : int = Speed + SpeedBonus;
+static var totalCargo : int = Cargo + CargoBonus;
+static var totalFireRate : int = FireRate + FireRateBonus;
 
 //Ore count
 static var Copper : int = 0;
@@ -35,7 +50,14 @@ static var Crystal : int = 0;
 static var Magnesium : int = 0;
 static var Fluorite : int = 0;
 
-static var Kascade : int = 0; //Kascade count (in-game currency)
+static var Kascade : int = 250; //Kascade count (in-game currency)
+
+//Global variables for ship level.
+static var level2Bought = 0;
+static var level3Bought = 0;
+
+//Difference between respawning with ores and kascades or not.
+static var persistance = 1;
 
 private var TempRB : Rigidbody2D;
 static var despawn : int = 0; //Tells stars when to despawn so memory isn't leaking everywhere.
@@ -52,20 +74,52 @@ function Start () {
 function Update () {
 
     despawn = 0; //Turns despawnRange script's memory off.
+    totalHealth = Health + HealthBonus;
+    totalShield = Shield + ShieldBonus;
+    totalAttack = Attack + AttackBonus;
+    totalMobility = Mobility + MobilityBonus;
+    totalHull = Hull + HullBonus;
+    totalSpeed = Speed + SpeedBonus;
+    totalCargo = Cargo + CargoBonus;
+    totalFireRate = FireRate + FireRateBonus;
 }
 
-function OnDestroy () { //Resets player variables. Death = fresh start.
+function OnDestroy () { //Resets player variables. Death = fresh start unless developer mode is on.
 
-    Kascade = 0;
-    Copper = 0;
-    Silver = 0;
-    Gold = 0;
-    Diamond = 0;
-    Uranium = 0;
-    Silicon = 0;
-    Crystal = 0;
-    Magnesium = 0;
-    Fluorite = 0;
+    //Stats reset no matter what. As a developer ship parts will still be unlocked if they were purchased.
+    Shield = 0;
+    Hull = 0;
+    Health = 100;
+    Speed = 1;
+    Attack = 1;
+    Mobility = 1;
+    Cargo = 5;
+    FireRate = 1;
+    ShieldBonus = 0;
+    HullBonus = 0;
+    HealthBonus = 0;
+    SpeedBonus = 0;
+    AttackBonus = 0;
+    MobilityBonus = 0;
+    CargoBonus = 0;
+    FireRateBonus = 0;
+    Kascade = 250;
+
+    if (persistance == 1) {
+
+        level2Bought = 0;
+        level3Bought = 0;
+
+        Copper = 0;
+        Silver = 0;
+        Gold = 0;
+        Diamond = 0;
+        Uranium = 0;
+        Silicon = 0;
+        Crystal = 0;
+        Magnesium = 0;
+        Fluorite = 0;
+    }
 }
 
 function OnGUI () { //Prints ore numbers and Kascades on GUI.
@@ -74,6 +128,16 @@ function OnGUI () { //Prints ore numbers and Kascades on GUI.
     
     var x : int = transform.position.x;
     var y : int = transform.position.y;
+
+    //Prints total stats.
+    gui.Label (Rect (725, 279, 725, 279), "" + totalHealth);
+    gui.Label (Rect (725, 293, 725, 293), "" + totalShield);
+    gui.Label (Rect (725, 307, 725, 307), "" + totalAttack);
+    gui.Label (Rect (725, 321, 725, 321), "" + totalMobility);
+    gui.Label (Rect (725, 349, 725, 349), "" + totalHull);
+    gui.Label (Rect (725, 363, 725, 363), "" + totalSpeed);
+    gui.Label (Rect (725, 377, 725, 377), "" + totalCargo);
+    gui.Label (Rect (725, 391, 725, 391), "" + totalFireRate);
 
     //Prints Kascade amount and offsets depending on size of number.
     if (Kascade < 10)

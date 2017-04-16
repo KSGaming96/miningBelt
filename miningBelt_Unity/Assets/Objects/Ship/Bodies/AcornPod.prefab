@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4323908618537080}
   - component: {fileID: 212570395744570604}
   - component: {fileID: 60645239833249076}
+  - component: {fileID: 114297562196256036}
   m_Layer: 0
   m_Name: AcornPod
   m_TagString: shipPart
@@ -66,6 +67,21 @@ PolygonCollider2D:
       - {x: 0.08, y: -0.041072115}
       - {x: 0.081257746, y: 0.044845305}
       - {x: 0.039814394, y: 0.025288574}
+--- !u!114 &114297562196256036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780718794253074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed4df003ac3fc4eb81b1b968102930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  shipEdgeObject: {fileID: 1168233702254600, guid: d4177a3da0ec60f47937d87cc92ca363,
+    type: 2}
 --- !u!212 &212570395744570604
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -96,7 +112,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5abfab20471ce4d4885b5d8079e42973, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

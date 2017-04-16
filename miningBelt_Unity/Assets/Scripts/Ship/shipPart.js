@@ -1,7 +1,7 @@
 ﻿//File: shipPart.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/14/2017
+//Last Modified: 04/15/2017
 
 /*
 --Controls ship parts.
@@ -9,12 +9,34 @@
 
 #pragma strict
 
-public var playerObject : GameObject;
+public var PlayerObject : GameObject;
 private var playerScript : player;
+
+public var shipEdgeObject : GameObject;
+
+private var shipPartsParent : GameObject;
+private var tempVector : Vector3;
+private var tempObject : GameObject;
 
 function Start () {
 
-    playerScript = playerObject.GetComponent(player);
+    shipPartsParent = GameObject.Find("ShipParts");
+    playerScript = PlayerObject.GetComponent(player);
+    tempVector = transform.position;
+
+    if (name == "AcornPod") {
+
+        playerScript.Speed += 1;
+        playerScript.Mobility += 1;
+
+        tempVector.x -= 0.087;
+        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, 90), shipPartsParent.transform);
+        tempVector.x += 0.174;
+        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, -90), shipPartsParent.transform);
+        tempVector.x = 0;
+        tempVector.y -= 0.087;
+        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, 180), shipPartsParent.transform);
+    }
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
