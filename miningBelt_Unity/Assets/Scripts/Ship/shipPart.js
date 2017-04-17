@@ -39,6 +39,12 @@ function Start () {
     }
 }
 
+function Update () {
+
+    if (PlayerObject == null)
+        gameObject.Destroy(this);
+}
+
 function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
 
     if (temp.gameObject.tag == "Ore") {

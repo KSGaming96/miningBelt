@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/15/2017
+//Last Modified: 04/16/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -55,9 +55,9 @@ static var Kascade : int = 250; //Kascade count (in-game currency)
 //Global variables for ship level.
 static var level2Bought = 0;
 static var level3Bought = 0;
+static var selectedLevel : int = 1; //Lets objects read what level is currently selected.
 
-//Difference between respawning with ores and kascades or not.
-static var persistance = 1;
+static var persistance = 1; //Perdidtance. Edited by developerButton.
 
 private var TempRB : Rigidbody2D;
 static var despawn : int = 0; //Tells stars when to despawn so memory isn't leaking everywhere.
@@ -103,13 +103,12 @@ function OnDestroy () { //Resets player variables. Death = fresh start unless de
     MobilityBonus = 0;
     CargoBonus = 0;
     FireRateBonus = 0;
-    Kascade = 250;
 
-    if (persistance == 1) {
+    if (persistance == 1) { //Normal reset. Sets you cank to total defaults.
 
         level2Bought = 0;
         level3Bought = 0;
-
+        Kascade = 250;
         Copper = 0;
         Silver = 0;
         Gold = 0;
