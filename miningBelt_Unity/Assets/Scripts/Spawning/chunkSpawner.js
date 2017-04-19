@@ -10,16 +10,16 @@
 #pragma strict
 
 public var PlayerObject : GameObject;
+private var playerScript : player;
+
 public var AsteroidParent : GameObject;
 public var StarParent : GameObject;
 public var Stars : GameObject[] = new GameObject[2];
 public var Asteroids : GameObject[] = new GameObject[3];
-private var playerScript : player;
-public var temp : Vector3;
 
 static var spawnRange : float = 20.0; // Changes size of active chunk.
 private var state : int; //Used for specifying positive and negative.
-
+private var temp : Vector3;
 private var rand : Random;
 
 function Start () {
@@ -69,7 +69,6 @@ function Update () {
 function Spawn(direction : int) {
 
     var size : int;
-    var tempObject : GameObject;
     var starCount : int = spawnRange * 10;
     var asteroidCount : int = spawnRange * 2;
     playerScript.despawn = 1; //Despawn objects out of spawnRange
@@ -82,7 +81,6 @@ function Spawn(direction : int) {
                 temp = new Vector3(transform.position.x + rand.Range(spawnRange, -spawnRange), playerScript.spawnRangeY.x - rand.Range(0.0, spawnRange), 0.0);
             if (state == 1) //Positive Y call
                 temp = new Vector3(transform.position.x + rand.Range(spawnRange, -spawnRange), playerScript.spawnRangeY.y + rand.Range(0.0, spawnRange), 0.0);
-                
         }
 
         if (direction == 0) { //X Calls
@@ -96,21 +94,26 @@ function Spawn(direction : int) {
         if (direction == 3) //Start Parameters
             temp = new Vector3(transform.position.x + rand.Range(-spawnRange, spawnRange), transform.position.y + rand.Range(spawnRange, -spawnRange), 0.0);
 
-        size = rand.Range(0, 1);
         if (starCount > 0){
 
-            tempObject = Instantiate(Stars[size], temp, Quaternion.identity);
-            tempObject.transform.parent = StarParent.transform;
-        }
+            size = rand.Range(0, 2);
+            Instantiate(Stars[size], temp, Quaternion.Euler(0, 0, rand.Range(0,360)), StarParent.transform);
 
-        size = rand.Range(0, 2);
+            starCount--;
+        }
+        
         if (asteroidCount > 0) {
 
-            tempObject = Instantiate(Asteroids[size], temp, Quaternion.identity);
-            tempObject.transform.parent = AsteroidParent.transform;
-        }
+            size = rand.Range(0.0, 10.0);
+            if (size <= 5)
+                size = 0; //Spawn small (50% chance).
+            if (size < 8 && size > 5)
+                size = 1; //Spawn medium (30% chance).
+            if (size >= 8)
+                size = 2; //Spawn large (20% chance).
 
-        starCount--;
-        asteroidCount--;
+            Instantiate(Asteroids[size], temp, Quaternion.Euler(0, 0, rand.Range(0,360)), AsteroidParent.transform);
+            asteroidCount--;
+        }
     }
 }

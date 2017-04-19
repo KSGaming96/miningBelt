@@ -1,7 +1,7 @@
 ﻿//File: playerMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/15/2017
+//Last Modified: 04/17/2017
 
 /*
 --Attaches to any object that uses the same transforms as player. GUI, Items, Spawners, etc.
@@ -32,7 +32,7 @@ function FixedUpdate () { //Movement
     }
 
     if (Input.GetAxis("Horizontal") != 0 && PlayerObject != null)
-        transform.RotateAround(PlayerObject.transform.position, Vector3.forward, (50 * playerScript.totalMobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
+        transform.RotateAround(PlayerObject.transform.position, Vector3.forward, (10 * playerScript.totalMobility) * -Input.GetAxis("Horizontal") * Time.deltaTime);
 }
 
 function Update () { //Drag change from Foundry.

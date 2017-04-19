@@ -1,10 +1,27 @@
 fileFormatVersion: 2
 guid: 8d1fc2f77d829ab418fafcb36bd6591b
-timeCreated: 1489371358
+timeCreated: 1492575088
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - copperOre: {fileID: 1978676777764050, guid: 20710073e02fdcf48bc4a6544175209f,
+      type: 2}
+  - silverOre: {fileID: 1515686122880620, guid: 082f0c2f650ab1b40a991f4585794de4,
+      type: 2}
+  - goldOre: {fileID: 1060538619786056, guid: a772b434b466daf47b4a0a915cf9bc90, type: 2}
+  - diamondOre: {fileID: 1318953245563792, guid: 3975f00af44d6074083cec8dfa37b3d6,
+      type: 2}
+  - uraniumOre: {fileID: 1038801451002000, guid: 75531e49b190204488508410bbff305b,
+      type: 2}
+  - siliconOre: {fileID: 1819921066526588, guid: efdb1a7c9c649b141b6056a29f1ed591,
+      type: 2}
+  - crystalOre: {fileID: 1331074651898510, guid: e4d61446c961383409e078bcfa660cc6,
+      type: 2}
+  - magnesiumOre: {fileID: 1931389680646802, guid: 98fa214f8c84cba43b918655520dd7a7,
+      type: 2}
+  - fluoriteOre: {fileID: 1236096419932066, guid: ece07cee640b1bb45ad76c5aacff8308,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

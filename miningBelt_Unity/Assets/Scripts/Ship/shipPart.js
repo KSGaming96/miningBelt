@@ -1,7 +1,7 @@
 ﻿//File: shipPart.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/15/2017
+//Last Modified: 04/18/2017
 
 /*
 --Controls ship parts.
@@ -41,33 +41,59 @@ function Start () {
 
 function Update () {
 
-    if (PlayerObject == null)
-        gameObject.Destroy(this);
+    if (playerScript.currentHealth <= 0)
+        shipPartsParent.SetActive(false);
 }
 
-function OnTriggerEnter2D (temp : Collider2D) { //Increments ore on collision and destroys ore.
+function OnTriggerEnter2D (temp : Collider2D) { //Collisions. Health is decremented when player hits a destructible object. Ore increments counts.
+
+    if (temp.gameObject.tag == "Destructible" || temp.gameObject.tag == "asteroidParticle") { //Sets amount of health taken by object.
+
+        var healthDecrement : int;
+        if (temp.gameObject.name == "smallAsteroid(Clone)")
+            healthDecrement = 100;
+        if (temp.gameObject.name == "mediumAsteroid(Clone)")
+            healthDecrement = 300;
+        if (temp.gameObject.name == "largeAsteroid(Clone)")
+            healthDecrement = 500;
+        if (temp.gameObject.name == "asteroidPieceSmall1(Clone)" || temp.gameObject.name == "asteroidPieceSmall2(Clone)" || temp.gameObject.name == "asteroidPieceSmall3(Clone)")
+            healthDecrement = 50;
+        if (temp.gameObject.name == "asteroidPiece1(Clone)" || temp.gameObject.name == "asteroidPiece2(Clone)" || temp.gameObject.name == "asteroidPiece3(Clone)")
+            healthDecrement = 80;
+        if (temp.gameObject.name == "asteroidPieceLarge1(Clone)" || temp.gameObject.name == "asteroidPieceLarge2(Clone)" || temp.gameObject.name == "asteroidPieceLarge3(Clone)")
+            healthDecrement = 200;
+
+        if (playerScript.currentHull > 0) {
+            healthDecrement = healthDecrement / 2;
+            playerScript.currentHull--;
+        }
+
+        playerScript.currentHealth -= healthDecrement;
+    }
 
     if (temp.gameObject.tag == "Ore") {
-
-        if (temp.gameObject.name == "copperOre(Clone)")
-            playerScript.Copper++;
-        if (temp.gameObject.name == "silverOre(Clone)")
-            playerScript.Silver++;
-        if (temp.gameObject.name == "goldOre(Clone)")
-            playerScript.Gold++;
-        if (temp.gameObject.name == "diamondOre(Clone)")
-            playerScript.Diamond++;
-        if (temp.gameObject.name == "uraniumOre(Clone)")
-            playerScript.Uranium++;
-        if (temp.gameObject.name == "siliconOre(Clone)")
-            playerScript.Silicon++;
-        if (temp.gameObject.name == "crystalOre(Clone)")
-            playerScript.Crystal++;
-        if (temp.gameObject.name == "magnesiumOre(Clone)")
-            playerScript.Magnesium++;
-        if (temp.gameObject.name == "fluoriteOre(Clone)")
-            playerScript.Fluorite++;
+        if (playerScript.heldOre < playerScript.totalCargo) {
+            if (temp.gameObject.name == "copperOre(Clone)")
+                playerScript.Copper++;
+            if (temp.gameObject.name == "silverOre(Clone)")
+                playerScript.Silver++;
+            if (temp.gameObject.name == "goldOre(Clone)")
+                playerScript.Gold++;
+            if (temp.gameObject.name == "diamondOre(Clone)")
+                playerScript.Diamond++;
+            if (temp.gameObject.name == "uraniumOre(Clone)")
+                playerScript.Uranium++;
+            if (temp.gameObject.name == "siliconOre(Clone)")
+                playerScript.Silicon++;
+            if (temp.gameObject.name == "crystalOre(Clone)")
+                playerScript.Crystal++;
+            if (temp.gameObject.name == "magnesiumOre(Clone)")
+                playerScript.Magnesium++;
+            if (temp.gameObject.name == "fluoriteOre(Clone)")
+                playerScript.Fluorite++;
         
-        Destroy(temp.gameObject);
+            playerScript.heldOre += 1;
+            Destroy(temp.gameObject);
+        }
     }
 }

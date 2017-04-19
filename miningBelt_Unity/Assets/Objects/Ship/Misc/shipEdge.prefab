@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4470919731239206}
   - component: {fileID: 212132522742910954}
   - component: {fileID: 61057594479597300}
+  - component: {fileID: 114760232902747914}
   m_Layer: 0
   m_Name: shipEdge
-  m_TagString: Untagged
+  m_TagString: shipPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,6 +56,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.0039334893}
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.017866984}
+--- !u!114 &114760232902747914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168233702254600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ed4df003ac3fc4eb81b1b968102930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  shipEdgeObject: {fileID: 0}
 --- !u!212 &212132522742910954
 SpriteRenderer:
   m_ObjectHideFlags: 1

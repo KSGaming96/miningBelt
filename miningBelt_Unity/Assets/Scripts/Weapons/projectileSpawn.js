@@ -1,16 +1,23 @@
 ﻿//File: projectileSpawn.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/26/2017
+//Last Modified: 04/18/2017
 
 /*
 --Spawns weapon object. Instantiates according to tag and equip states in itemStorage. Attaches to weapon item.
+--
+--Prints weapon reload on status bars.
 */
 
 #pragma strict
 
 public var PlayerObject : GameObject;
+private var playerScript : player;
+
 public var bottomGUI : GameObject;
+public var barScalerObject : GameObject;
+private var statusBarScaleScript : statusBarScale;
+
 static var EnergyWeapon : GameObject;
 static var MissileWeapon : GameObject;
 
@@ -23,26 +30,23 @@ static var missileSpread : int = 0;
 static var Burst : int = 0;
 static var energyFireRate : float;
 static var missileFireRate : float;
-private var energyTime : float = 0.0;
-private var missileTime : float = 0.0;
 
 function Start () {
 
+    playerScript = PlayerObject.GetComponent(player);
+    statusBarScaleScript = barScalerObject.GetComponent(statusBarScale);
     itemStorageScript = bottomGUI.GetComponent(itemStorage);
 }
 
 function Update () { //Checks if weapon is equipped depending on object tag. Spawns weapons if not unequipped.
 
-    if (Input.GetButton("Fire")) {
-
+    if (Input.GetButton("Fire")) { //If reloading is finished fires bullet. If not waits until it's done.
         if (PlayerObject != null) {
 
             if (itemStorageScript.energyEquip == 1) {
+                if (statusBarScaleScript.energyReloaded == 1) {
+                    statusBarScaleScript.energyReloaded = 0;
 
-                if (energyTime < Time.time) {
-
-                    energyTime = Time.time + energyFireRate;
-                
                     if (energySplit == 0)
                         energySpawn();
                     else 
@@ -51,10 +55,9 @@ function Update () { //Checks if weapon is equipped depending on object tag. Spa
             }
 
             if (itemStorageScript.missileEquip == 1) {
-
-                if (missileTime < Time.time) {
-
-                    missileTime = Time.time + missileFireRate;
+                if (statusBarScaleScript.energyReloaded == 1) {
+                    statusBarScaleScript.energyReloaded = 0;
+                    
                     if (missileSplit == 0)
                         missileSpawn();
                     else 

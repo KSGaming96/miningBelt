@@ -1,7 +1,7 @@
-﻿//File: partMenuBuy.js
+﻿//File: shipLevelBuy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/16/2017
+//Last Modified: 04/17/2017
 
 /*
 --Buying menu for level buttons. Scales buy timer until player buys upgrade, or object deactivates itself.

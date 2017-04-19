@@ -1,7 +1,7 @@
 ﻿//File: partMenuButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/16/2017
+//Last Modified: 04/17/2017
 
 /*
 --Part menu button interactions. Attached to store tabs.
@@ -17,8 +17,13 @@ public var buttonIndicatorObject : GameObject;
 public var localPartLevel1Menu : GameObject; //Set to buttons menus. IE bodiesButton assigns bodiesLevel1 etc.
 public var localPartLevel2Menu : GameObject; //
 public var localPartLevel3Menu : GameObject; //
+public var localBuyButton : GameObject;
 
 private var selectedButton : int = 0;
+static var purchasedBodies : int = 1; //Local variable showing what parts have been purchased.
+static var purchasedWings : int = 0; //
+static var purchasedEngines : int = 0; //
+static var purchasedMisc : int = 0; //
 
 function Start () {
 
@@ -44,5 +49,35 @@ function Update () { //Resets all menus, then activates one.
 
 function OnMouseDown () { //Places buttonIndicator on pressed part button and tells what button is pressed.
 
-    buttonIndicatorObject.transform.position = transform.position;
+    if (name == "bodiesButton") {
+
+        if (purchasedBodies == 1)
+            buttonIndicatorObject.transform.position = transform.position;
+        else if (purchasedBodies == 0)
+            localBuyButton.SetActive(true);
+    }
+
+    if (name == "enginesButton") {
+
+        if (purchasedEngines == 1)
+            buttonIndicatorObject.transform.position = transform.position;
+        else if (purchasedEngines == 0)
+            localBuyButton.SetActive(true);
+    }
+
+    if (name == "wingsButton") {
+
+        if (purchasedWings == 1)
+            buttonIndicatorObject.transform.position = transform.position;
+        else if (purchasedWings == 0)
+            localBuyButton.SetActive(true);
+    }
+
+    if (name == "miscButton") {
+
+        if (purchasedMisc == 1)
+            buttonIndicatorObject.transform.position = transform.position;
+        else if (purchasedMisc == 0)
+            localBuyButton.SetActive(true);
+    }
 }

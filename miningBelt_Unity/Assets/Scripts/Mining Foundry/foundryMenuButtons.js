@@ -65,54 +65,63 @@ function OnMouseDown () {
         while (playerScript.Copper > 0) {
 
             playerScript.Copper--;
+            playerScript.heldOre--;
             playerScript.Kascade += 1;
         }
 
         while (playerScript.Silver > 0) {
 
             playerScript.Silver--;
+            playerScript.heldOre--;
             playerScript.Kascade += 5;
         }
 
         while (playerScript.Gold > 0) {
 
             playerScript.Gold--;
+            playerScript.heldOre--;
             playerScript.Kascade += 10;
         }
 
         while (playerScript.Diamond > 0) {
 
             playerScript.Diamond--;
+            playerScript.heldOre--;
             playerScript.Kascade += 35;
         }
 
         while (playerScript.Uranium > 0) {
 
             playerScript.Uranium--;
+            playerScript.heldOre--;
             playerScript.Kascade += 50;
         }
 
         while (playerScript.Silicon > 0) {
 
             playerScript.Silicon--;
+            playerScript.heldOre--;
             playerScript.Kascade += 75;
         }
 
         while (playerScript.Crystal > 0) {
 
             playerScript.Crystal--;
+            playerScript.heldOre--;
             playerScript.Kascade += 100;
         }
 
         while (playerScript.Magnesium > 0) {
 
             playerScript.Magnesium--;
+            playerScript.heldOre--;
             playerScript.Kascade += 200;
         }
 
         while (playerScript.Fluorite > 0) {
 
             playerScript.Fluorite--;
+            playerScript.heldOre--;
             playerScript.Kascade += 500;
         }
     }
@@ -122,6 +131,7 @@ function OnMouseDown () {
         if (playerScript.Copper > 0) {
 
             playerScript.Copper--;
+            playerScript.heldOre--;
             playerScript.Kascade += 1;
         }
     }
@@ -131,6 +141,7 @@ function OnMouseDown () {
         if (playerScript.Silver > 0) {
 
             playerScript.Silver--;
+            playerScript.heldOre--;
             playerScript.Kascade += 5;
         }
     }
@@ -140,6 +151,7 @@ function OnMouseDown () {
         if (playerScript.Gold > 0) {
 
             playerScript.Gold--;
+            playerScript.heldOre--;
             playerScript.Kascade += 10;
         }
     }
@@ -149,6 +161,7 @@ function OnMouseDown () {
         if (playerScript.Diamond > 0) {
 
             playerScript.Diamond--;
+            playerScript.heldOre--;
             playerScript.Kascade += 35;
         }
     }
@@ -158,6 +171,7 @@ function OnMouseDown () {
         if (playerScript.Uranium > 0) {
 
             playerScript.Uranium--;
+            playerScript.heldOre--;
             playerScript.Kascade += 50;
         }
     }
@@ -167,6 +181,7 @@ function OnMouseDown () {
         if (playerScript.Silicon > 0) {
 
             playerScript.Silicon--;
+            playerScript.heldOre--;
             playerScript.Kascade += 75;
         }
     }
@@ -176,6 +191,7 @@ function OnMouseDown () {
         if (playerScript.Crystal > 0) {
 
             playerScript.Crystal--;
+            playerScript.heldOre--;
             playerScript.Kascade += 100;
         }
     }
@@ -185,6 +201,7 @@ function OnMouseDown () {
         if (playerScript.Magnesium > 0) {
 
             playerScript.Magnesium--;
+            playerScript.heldOre--;
             playerScript.Kascade += 200;
         }
     }
@@ -194,6 +211,7 @@ function OnMouseDown () {
         if (playerScript.Fluorite > 0) {
 
             playerScript.Fluorite--;
+            playerScript.heldOre--;
             playerScript.Kascade += 500;
         }
     }

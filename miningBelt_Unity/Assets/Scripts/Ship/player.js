@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/16/2017
+//Last Modified: 04/17/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -30,7 +30,7 @@ static var CargoBonus : int = 0;
 static var FireRateBonus : int = 0;
 
 //Player total stats.
-static var totalHealth : int = Health + HealthBonus;
+static var totalHealth : int = Health + (HealthBonus * 50);
 static var totalShield : int = Shield + ShieldBonus;
 static var totalAttack : int = Attack + AttackBonus;
 static var totalMobility : int = Mobility + MobilityBonus;
@@ -49,8 +49,12 @@ static var Silicon : int = 0;
 static var Crystal : int = 0;
 static var Magnesium : int = 0;
 static var Fluorite : int = 0;
+static var heldOre : int; //How much ore you have in the cargo bay. Can't be more than totalCargo.
 
 static var Kascade : int = 250; //Kascade count (in-game currency)
+static var currentHealth : int = 100;
+static var currentHull : int = totalHull;
+static var currentShield : int = totalShield;
 
 //Global variables for ship level.
 static var level2Bought = 0;
@@ -74,7 +78,7 @@ function Start () {
 function Update () {
 
     despawn = 0; //Turns despawnRange script's memory off.
-    totalHealth = Health + HealthBonus;
+    totalHealth = Health + (HealthBonus * 50);
     totalShield = Shield + ShieldBonus;
     totalAttack = Attack + AttackBonus;
     totalMobility = Mobility + MobilityBonus;
@@ -86,7 +90,7 @@ function Update () {
 
 function OnDestroy () { //Resets player variables. Death = fresh start unless developer mode is on.
 
-    //Stats reset no matter what. As a developer ship parts will still be unlocked if they were purchased.
+    //Base stats reset no matter what since they depend on equipped parts. As a developer ship parts will still be unlocked if they were purchased.
     Shield = 0;
     Hull = 0;
     Health = 100;
@@ -95,14 +99,6 @@ function OnDestroy () { //Resets player variables. Death = fresh start unless de
     Mobility = 1;
     Cargo = 5;
     FireRate = 1;
-    ShieldBonus = 0;
-    HullBonus = 0;
-    HealthBonus = 0;
-    SpeedBonus = 0;
-    AttackBonus = 0;
-    MobilityBonus = 0;
-    CargoBonus = 0;
-    FireRateBonus = 0;
 
     if (persistance == 1) { //Normal reset. Sets you cank to total defaults.
 
@@ -118,6 +114,16 @@ function OnDestroy () { //Resets player variables. Death = fresh start unless de
         Crystal = 0;
         Magnesium = 0;
         Fluorite = 0;
+        heldOre = 0;
+
+        ShieldBonus = 0;
+        HullBonus = 0;
+        HealthBonus = 0;
+        SpeedBonus = 0;
+        AttackBonus = 0;
+        MobilityBonus = 0;
+        CargoBonus = 0;
+        FireRateBonus = 0;
     }
 }
 

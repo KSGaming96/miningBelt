@@ -37,14 +37,14 @@ function Start () { //Assigns unique transforms depending on particle type.
 
     if (this.tag == "particleDust") {
 
-        RB.AddForce(transform.up * rand.Range(10.0, 50.0));
+        RB.AddForce(transform.up * rand.Range(5.0, 25.0));
         RB.AddTorque(rand.Range(-300.0, 300.0));
         Life = rand.Range(2.0, 5.0);
     }
 
     if (this.tag == "particleDustLarge") {
 
-        RB.AddForce(transform.up * rand.Range(10.0, 50.0));
+        RB.AddForce(transform.up * rand.Range(5.0, 25.0));
         RB.AddTorque(rand.Range(-300.0, 300.0));
         Life = rand.Range(2.0, 3.0);
     }

@@ -1,7 +1,7 @@
 ﻿//File: projectileMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/27/2017
+//Last Modified: 04/18/2017
 
 /*
 --Attaches to all bullet prefabs. The script moves bullets forward, then destroys them.
@@ -68,5 +68,7 @@ function OnTriggerEnter2D (temp : Collider2D) { //Reads collisions with destruct
             particleCount--;
             Instantiate(weaponParticle, transform.position, Quaternion.Euler(0, 0, rand.Range(0.0, 360.0)));
         }
+
+        Destroy(gameObject);
     }
 }

@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8bfba7f616c2a41a15a9c581208c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
   objectParticles:
   - {fileID: 1957506126804354, guid: 35a955a6a805ca347a8df5eb38e019c1, type: 2}
   - {fileID: 1206037664294184, guid: e66eaca90410b2f4a93900a22b748fe9, type: 2}
