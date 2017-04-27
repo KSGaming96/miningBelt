@@ -58,6 +58,7 @@ function OnMouseDown () {
 
             playerScript.Kascade -= 1000;
             buttonIndicatorObject.transform.position = transform.position;
+            buttonIndicatorObject.transform.position.z += .1;
             localBuyPeriod.SetActive(false);
             gameObject.SetActive(false);
         }

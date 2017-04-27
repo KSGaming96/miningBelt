@@ -1,7 +1,7 @@
 ﻿//File: shipUpgradeButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/18/2017
+//Last Modified: 04/27/2017
 
 /*
 --Interactions on ship upgrade buttons. All prices and refunds are set. Objects edit respective stats.
@@ -11,6 +11,8 @@
 
 public var PlayerObject : GameObject;
 private var playerScript : player;
+
+public var tempMenuObject : GameObject;
 
 private var localStat : int;
 private var buttonDirection : int; //0 for decrement, 1 for increment.
@@ -147,14 +149,12 @@ function OnMouseDown () {
 
             if (buttonDirection == 0) {
                 playerScript.HullBonus -= 1;
-                yield;
                 playerScript.currentHull -= 1;
                 if (playerScript.currentHull < 0)
                     playerScript.currentHull = 0;
             }
             if (buttonDirection == 1) {
                 playerScript.HullBonus += 1;
-                yield;
                 playerScript.currentHull += 1;
             }
         }
@@ -181,6 +181,79 @@ function OnMouseDown () {
                 playerScript.FireRateBonus -= 1;
             if (buttonDirection == 1)
                 playerScript.FireRateBonus += 1;
+        }
+    }
+
+    if (name == "shipRepairHealthButton" || name == "shipRepairHullButton" || name == "shipRepairShieldButton")
+        tempMenuObject.SetActive(true);
+
+    if (name == "shipRepairHealthBackButton" || name == "shipRepairHullBackButton" || name == "shipRepairShieldBackButton")
+        tempMenuObject.SetActive(false);
+
+    if (name == "shipRepairAllButton") {
+        if (playerScript.currentHealth < playerScript.totalHealth || playerScript.currentHull < playerScript.totalHull || playerScript.currentShield < playerScript.totalShield) {
+            if (playerScript.Kascade >= playerScript.repairHealthPrice + playerScript.repairHullPrice + playerScript.repairShieldPrice) {
+                playerScript.Kascade -= playerScript.repairHealthPrice;
+                playerScript.currentHealth += (playerScript.totalHealth - playerScript.currentHealth);
+                playerScript.Kascade -= playerScript.repairHullPrice;
+                playerScript.currentHull += (playerScript.totalHull - playerScript.currentHull);
+                playerScript.Kascade -= playerScript.repairShieldPrice;
+                playerScript.currentShield += (playerScript.totalShield - playerScript.currentShield);
+            }
+        }
+    }
+
+    if (playerScript.currentHealth < playerScript.totalHealth) {
+
+        if (name == "shipRepairAllHealthButton") {
+
+            if (playerScript.Kascade >= playerScript.repairHealthPrice) {
+                playerScript.Kascade -= playerScript.repairHealthPrice;
+                playerScript.currentHealth += playerScript.totalHealth - playerScript.currentHealth;
+            }
+        }
+
+        if (name == "shipRepair50HealthButton") {
+            if (playerScript.Kascade >= 50) {
+                playerScript.Kascade -= 50;
+                playerScript.currentHealth += 50;
+                if (playerScript.currentHealth > playerScript.totalHealth)
+                    playerScript.currentHealth = playerScript.totalHealth;
+            }
+        }
+    }
+
+    if (playerScript.currentHull < playerScript.totalHull) {
+
+        if (name == "shipRepairAllHullButton") {
+            if (playerScript.Kascade >= playerScript.repairHullPrice) {
+                playerScript.Kascade -= playerScript.repairHullPrice;
+                playerScript.currentHull += playerScript.totalHull - playerScript.currentHull;
+            }
+        }
+
+        if (name == "shipRepair1HullButton") {
+           if (playerScript.Kascade >= 50) {
+                playerScript.Kascade -= 50;
+                playerScript.currentHull += 1;
+            }
+        }
+    }
+
+    if (playerScript.currentShield < playerScript.totalShield) {
+
+        if (name == "shipRepairAllShieldButton") {
+            if (playerScript.Kascade >= playerScript.repairShieldPrice) {
+                playerScript.Kascade -= playerScript.repairShieldPrice;
+                playerScript.currentShield += playerScript.totalShield - playerScript.currentShield;
+            }
+        }
+
+        if (name == "shipRepair1ShieldButton") {
+            if (playerScript.Kascade >= 50) {
+                playerScript.Kascade -= 50;
+                playerScript.currentHull += 1;
+            }
         }
     }
 }

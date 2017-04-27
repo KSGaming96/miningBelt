@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/17/2017
+//Last Modified: 04/27/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -56,6 +56,12 @@ static var currentHealth : int = 100;
 static var currentHull : int = totalHull;
 static var currentShield : int = totalShield;
 
+//Updated values for the prices written on GUI.
+static var repairAllPrice : int = 0;
+static var repairHealthPrice : int = 0;
+static var repairHullPrice : int = 0;
+static var repairShieldPrice : int = 0;
+
 //Global variables for ship level.
 static var level2Bought = 0;
 static var level3Bought = 0;
@@ -86,6 +92,11 @@ function Update () {
     totalSpeed = Speed + SpeedBonus;
     totalCargo = Cargo + CargoBonus;
     totalFireRate = FireRate + FireRateBonus;
+
+    repairHealthPrice = totalHealth - currentHealth;
+    repairHullPrice = 50 * (totalHull - currentHull);
+    repairShieldPrice = 50 * (totalShield - currentShield);
+    repairAllPrice = repairHealthPrice + repairHealthPrice + repairShieldPrice;
 }
 
 function OnDestroy () { //Resets player variables. Death = fresh start unless developer mode is on.
@@ -125,76 +136,4 @@ function OnDestroy () { //Resets player variables. Death = fresh start unless de
         CargoBonus = 0;
         FireRateBonus = 0;
     }
-}
-
-function OnGUI () { //Prints ore numbers and Kascades on GUI.
-
-    var gui : GUI; 
-    
-    var x : int = transform.position.x;
-    var y : int = transform.position.y;
-
-    //Prints total stats.
-    gui.Label (Rect (725, 279, 725, 279), "" + totalHealth);
-    gui.Label (Rect (725, 293, 725, 293), "" + totalShield);
-    gui.Label (Rect (725, 307, 725, 307), "" + totalAttack);
-    gui.Label (Rect (725, 321, 725, 321), "" + totalMobility);
-    gui.Label (Rect (725, 349, 725, 349), "" + totalHull);
-    gui.Label (Rect (725, 363, 725, 363), "" + totalSpeed);
-    gui.Label (Rect (725, 377, 725, 377), "" + totalCargo);
-    gui.Label (Rect (725, 391, 725, 391), "" + totalFireRate);
-
-    //Prints Kascade amount and offsets depending on size of number.
-    if (Kascade < 10)
-        gui.Label (Rect (185, 575, 185, 575), "" + Kascade);
-    if (Kascade >= 10 && Kascade < 100)
-        gui.Label (Rect (178, 575, 178, 575), "" + Kascade);
-    if (Kascade >= 100 && Kascade < 1000)
-        gui.Label (Rect (171, 575, 171, 575), "" + Kascade);
-    if (Kascade >= 1000 && Kascade < 10000)
-        gui.Label (Rect (164, 575, 164, 575), "" + Kascade);
-    if (Kascade >= 10000 && Kascade < 100000)
-        gui.Label (Rect (157, 575, 157, 575), "" + Kascade);
-    if (Kascade >= 100000 && Kascade < 1000000)
-        gui.Label (Rect (150, 575, 150, 575), "" + Kascade);
-    if (Kascade >= 1000000 && Kascade < 10000000)
-        gui.Label (Rect (143, 575, 143, 575), "" + Kascade);
-
-    //Prints ore number and offsets at 10 or above.
-    if (Copper < 10)
-        gui.Label (Rect (468, 534, 468, 534), "0" + Copper);
-    if (Copper >= 10)
-        gui.Label (Rect (468, 534, 468, 534), "" + Copper);
-    if (Silver < 10)
-        gui.Label (Rect (468, 547, 468, 547), "0" + Silver);
-    if (Silver >= 10)
-        gui.Label (Rect (468, 547, 468, 547), "" + Silver);
-    if (Gold < 10)
-        gui.Label (Rect (468, 560, 468, 560), "0" + Gold);
-    if (Gold >= 10)
-        gui.Label (Rect (468, 560, 468, 560), "" + Gold);
-    if (Diamond < 10)
-        gui.Label (Rect (468, 573, 468, 573), "0" + Diamond);
-    if (Diamond >= 10)
-        gui.Label (Rect (468, 573, 468, 573), "" + Diamond);
-    if (Uranium < 10)
-        gui.Label (Rect (560, 521, 560, 521), "0" + Uranium);
-    if (Uranium >= 10)
-        gui.Label (Rect (560, 521, 560, 521), "" + Uranium);
-    if (Silicon < 10)
-        gui.Label (Rect (560, 534, 560, 534), "0" + Silicon);
-    if (Silicon >= 10)
-        gui.Label (Rect (560, 534, 560, 534), "" + Silicon);
-    if (Crystal < 10)
-        gui.Label (Rect (560, 547, 560, 534), "0" + Crystal);
-    if (Crystal >= 10)
-        gui.Label (Rect (560, 547, 560, 534), "" + Crystal);
-    if (Magnesium < 10)
-        gui.Label (Rect (560, 560, 560, 560), "0" + Magnesium);
-    if (Magnesium >= 10)
-        gui.Label (Rect (560, 560, 560, 560), "" + Magnesium);
-    if (Fluorite < 10)
-        gui.Label (Rect (560, 573, 560, 573), "0" + Fluorite);
-    if (Fluorite >= 10)
-        gui.Label (Rect (560, 573, 560, 573), "" + Fluorite);
 }
