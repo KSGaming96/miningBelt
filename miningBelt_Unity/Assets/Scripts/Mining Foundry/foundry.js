@@ -44,6 +44,7 @@ function OnTriggerEnter2D (temp : Collider2D) { //Sets drag and moves menu when 
         
         if (name == "foundryInnerCollider") {
 
+            playerMovementScript.linearDrag = 2;
             storeButtonObject.GetComponent(foundryMenuButtons).innerCollider = 1;
         }
     }
@@ -64,6 +65,7 @@ function OnTriggerExit2D (temp : Collider2D) { //Changes drag back to normal for
 
         if (name == "foundryInnerCollider") {
 
+            playerMovementScript.linearDrag = 1;
             storeObject.SetActive(false);
             storeButtonObject.GetComponent(foundryMenuButtons).innerCollider = 0;
         }

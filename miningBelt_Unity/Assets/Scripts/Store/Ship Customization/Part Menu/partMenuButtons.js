@@ -1,7 +1,7 @@
 ﻿//File: partMenuButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/17/2017
+//Last Modified: 05/01/2017
 
 /*
 --Part menu button interactions. Attached to store tabs.
@@ -18,6 +18,7 @@ public var localPartLevel1Menu : GameObject; //Set to buttons menus. IE bodiesBu
 public var localPartLevel2Menu : GameObject; //
 public var localPartLevel3Menu : GameObject; //
 public var localBuyButton : GameObject;
+public var partStatsIndicatorObject : GameObject;
 
 private var selectedButton : int = 0;
 static var purchasedBodies : int = 1; //Local variable showing what parts have been purchased.
@@ -80,4 +81,6 @@ function OnMouseDown () { //Places buttonIndicator on pressed part button and te
         else if (purchasedMisc == 0)
             localBuyButton.SetActive(true);
     }
+
+    partStatsIndicatorObject.SetActive(false);
 }

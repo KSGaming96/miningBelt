@@ -1,7 +1,7 @@
 ﻿//File: playerMovement.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/17/2017
+//Last Modified: 05/01/2017
 
 /*
 --Attaches to any object that uses the same transforms as player. GUI, Items, Spawners, etc.
@@ -39,6 +39,8 @@ function Update () { //Drag change from Foundry.
 
     if (linearDrag == 1)
         TempRB.drag = 1;
+    else if (linearDrag == 2)
+        TempRB.drag = 2;
     else
         TempRB.drag = 0.2;
     playerScript.speedVector = TempRB.velocity;

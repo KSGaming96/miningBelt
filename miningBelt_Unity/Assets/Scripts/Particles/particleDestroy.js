@@ -38,9 +38,11 @@ function OnTriggerEnter2D (temp : Collider2D) {
 
     direction = temp.transform;
 
-    if (temp.gameObject.name == "foundryRing1") { //Despawn asteroid if it spawns within foundry
-
-        preDestruction();
+    if (temp.gameObject.name == "foundryRing1") { 
+        if (Time.time <= 5) //Despawn asteroid if it spawns within foundry.
+            Destroy(gameObject);
+        else 
+            preDestruction(); //Destroys asteroid if it hit foundry.
     }
 
     if (temp.gameObject.tag == "Projectile") {

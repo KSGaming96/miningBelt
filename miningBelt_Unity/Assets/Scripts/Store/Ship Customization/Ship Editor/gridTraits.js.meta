@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8e1d8dcf83fd34846a587587f6f9b7fd
+timeCreated: 1493665705
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - RedGridObject: {instanceID: 0}
+  - GreenGridObject: {instanceID: 0}
+  - MagentaGridObject: {instanceID: 0}
+  - RedGrid: {fileID: 21300000, guid: 4ae4278ce433ce64e9cc352d5de55c19, type: 3}
+  - GreenGrid: {fileID: 21300000, guid: 603d791d4da3d2643802d3a18901a4af, type: 3}
+  - MagentaGrid: {fileID: 21300000, guid: cb4594eabb91ba14d9e394c5a6d07534, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

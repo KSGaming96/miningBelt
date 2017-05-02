@@ -1,7 +1,7 @@
 ﻿//File: shipLevelBuy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/17/2017
+//Last Modified: 05/01/2017
 
 /*
 --Buying menu for level buttons. Scales buy timer until player buys upgrade, or object deactivates itself.
@@ -56,8 +56,8 @@ function OnMouseDown () {
             return; //Not enough money? Just goes back
 
     if (name == "level3Buy")
-        if (playerScript.Kascade >= 10000) {
-
+        if (playerScript.Kascade >= 10000 && playerScript.level2Bought == 1) {
+            
             playerScript.Kascade -= 10000;
             playerScript.selectedLevel = 3;
             playerScript.level3Bought = 1;

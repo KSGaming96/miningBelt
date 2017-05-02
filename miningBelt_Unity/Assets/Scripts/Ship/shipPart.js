@@ -14,13 +14,11 @@ private var playerScript : player;
 
 public var shipEdgeObject : GameObject;
 
-private var shipPartsParent : GameObject;
 private var tempVector : Vector3;
 private var tempObject : GameObject;
 
-function Start () {
+function Start () { //Set variables and spawn edges.
 
-    shipPartsParent = GameObject.Find("ShipParts");
     playerScript = PlayerObject.GetComponent(player);
     tempVector = transform.position;
 
@@ -30,19 +28,19 @@ function Start () {
         playerScript.Mobility += 1;
 
         tempVector.x -= 0.087;
-        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, 90), shipPartsParent.transform);
+        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, 90), gameObject.transform);
         tempVector.x += 0.174;
-        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, -90), shipPartsParent.transform);
+        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, -90), gameObject.transform);
         tempVector.x = 0;
         tempVector.y -= 0.087;
-        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, 180), shipPartsParent.transform);
+        Instantiate(shipEdgeObject, tempVector, Quaternion.Euler(0, 0, 180), gameObject.transform);
     }
 }
 
 function Update () {
 
     if (playerScript.currentHealth <= 0)
-        shipPartsParent.SetActive(false);
+        gameObject.SetActive(false);
 }
 
 function OnTriggerEnter2D (temp : Collider2D) { //Collisions. Health is decremented when player hits a destructible object. Ore increments counts.

@@ -1,7 +1,7 @@
 ﻿//File: partMenuBuy.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/17/2017
+//Last Modified: 05/01/2017
 
 /*
 --Buying buttons for part menu.

@@ -1,7 +1,7 @@
 ﻿//File: storeMenuButtons.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/16/2017
+//Last Modified: 05/01/2017
 
 /*
 --Store menu button interactions.
@@ -14,6 +14,7 @@ private var playerScript : player;
 
 public var localButtonActiveObject : GameObject; //Set to local button's active object.
 public var localMenuObject : GameObject; //Set to local button's respective menu.
+public var partStatsIndicatorObject : GameObject;
 
 //Level Button Objects.
 public var localLevelBuyObject : GameObject;
@@ -44,6 +45,8 @@ function OnMouseDown () {
 
         playerScript.selectedLevel = 1;
         levelIndicatorObject.transform.position = transform.position;
+
+        partStatsIndicatorObject.SetActive(false);
     }
 
     else if (name == "level2Button") { //If this level has been bought moves levelIndicator and changes playerScript.selectedLevel. Else spawns level buy button.
@@ -56,6 +59,8 @@ function OnMouseDown () {
             
         else if (playerScript.level2Bought == 0)
             localLevelBuyObject.SetActive(true);
+
+        partStatsIndicatorObject.SetActive(false);
     }
 
     else if (name == "level3Button") { //If this level has been bought moves levelIndicator and changes playerScript.selectedLevel. Else spawns level buy button.
@@ -68,6 +73,8 @@ function OnMouseDown () {
             
         else if (playerScript.level3Bought == 0)
             localLevelBuyObject.SetActive(true);
+
+        partStatsIndicatorObject.SetActive(false);
     }
 }
 

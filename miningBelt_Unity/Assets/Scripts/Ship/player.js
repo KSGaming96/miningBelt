@@ -67,7 +67,7 @@ static var level2Bought = 0;
 static var level3Bought = 0;
 static var selectedLevel : int = 1; //Lets objects read what level is currently selected.
 
-static var persistance = 1; //Perdidtance. Edited by developerButton.
+static var persistance = 1; //Persistance. Edited by developerButton.
 
 private var TempRB : Rigidbody2D;
 static var despawn : int = 0; //Tells stars when to despawn so memory isn't leaking everywhere.
