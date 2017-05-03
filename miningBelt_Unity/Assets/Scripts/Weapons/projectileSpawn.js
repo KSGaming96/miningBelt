@@ -55,8 +55,8 @@ function Update () { //Checks if weapon is equipped depending on object tag. Spa
             }
 
             if (itemStorageScript.missileEquip == 1) {
-                if (statusBarScaleScript.energyReloaded == 1) {
-                    statusBarScaleScript.energyReloaded = 0;
+                if (statusBarScaleScript.missileReloaded == 1) {
+                    statusBarScaleScript.missileReloaded = 0;
                     
                     if (missileSplit == 0)
                         missileSpawn();

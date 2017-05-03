@@ -75,7 +75,7 @@ function Update () {
 
     else {
 
-        missileTime = missileReload;
+        missileTime = 0.0;
         missileReloaded = 1;
     }
 

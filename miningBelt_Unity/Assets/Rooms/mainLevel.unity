@@ -183,11 +183,18 @@ MonoBehaviour:
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
   buttonIndicatorObject: {fileID: 1660576330}
+  partStatsIndicatorObject: {fileID: 1983994017}
   localPartLevel1Menu: {fileID: 1196981198}
   localPartLevel2Menu: {fileID: 2034880539}
   localPartLevel3Menu: {fileID: 119421064}
-  localBuyButton: {fileID: 1025320489}
-  partStatsIndicatorObject: {fileID: 1983994017}
+  localBuyPeriod: {fileID: 1112676452}
+  localButtonSprite: {fileID: 21300000, guid: 542dbbf0b7148b5469414cb2c31412e7, type: 3}
+  localBuySprite: {fileID: 21300000, guid: c8e4cf4843568a043b8c2aeb987fd533, type: 3}
+  statsIndicatorObject: {fileID: 0}
+  partDescriptionObject: {fileID: 0}
+  partDescriptionSprite: {fileID: 0}
+  extendedPartObject: {fileID: 0}
+  extendedPartSprite: {fileID: 0}
 --- !u!1 &11697819
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &49967380
 Prefab:
@@ -517,10 +524,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 51994896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 569816cab25d8a242b1b4bcac68c92f0,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: de0cc235aa59caf4f8e6c5611355ecf0, type: 3}
 --- !u!65 &51994900
@@ -609,10 +629,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 60064200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 22f9f3948ffe54342afea9bca27b9408,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 2da38d1b0654cdd4cacf3d4cdd9baef0, type: 3}
 --- !u!65 &60064204
@@ -1441,10 +1474,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 103823261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 4d222e215ac0eab43add3e0ad186ab4f,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: cde6e17edceb08043bb9a26a83fdc98e, type: 3}
 --- !u!65 &103823265
@@ -1721,10 +1767,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 115680705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 3f10a5b29919a5d469321d146f27f099,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 73167079db39b074bab249c6f68743e9, type: 3}
 --- !u!65 &115680709
@@ -2022,10 +2081,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 125124782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 2e65e8a6f1f4f0341b7350257d5e7133,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 38895ff9a38f4dc4d901ddc286e0aa8d, type: 3}
 --- !u!65 &125124786
@@ -2512,100 +2584,6 @@ Transform:
   m_Father: {fileID: 950587254}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &147234532
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 147234533}
-  - component: {fileID: 147234535}
-  - component: {fileID: 147234534}
-  - component: {fileID: 147234536}
-  m_Layer: 0
-  m_Name: level3Buy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &147234533
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 147234532}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.03, y: 2.87, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 828039239}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &147234534
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 147234532}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.74, y: 0.29, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &147234535
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 147234532}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 95ff210bf2e9ed54689da4c5110c540b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!114 &147234536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 147234532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf43d0d7ffecd447969d2542893f0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
-    type: 2}
-  localShipLevelLocked: {fileID: 318152181}
-  levelIndicatorObject: {fileID: 352783114}
-  localLevelBuyPeriod: {fileID: 2082946687}
 --- !u!1 &147517860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,10 +2845,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 164364462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 3a77a7b569155144a921d2be27ba4997,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 82fccc5f6439e9e49a3ad014d7942257, type: 3}
 --- !u!65 &164364466
@@ -3645,10 +3636,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 228563077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: c271d1676c6a14244877c2b812e3ecd9,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: b53de69bb0284844992271844b9695d1, type: 3}
 --- !u!65 &228563081
@@ -3918,10 +3922,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 255928246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: c7cc4f18a486b874eb7caaed6ae4ac23,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 4342ee7db51564745bb517ca4b2eb822, type: 3}
 --- !u!65 &255928250
@@ -4335,10 +4352,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 273603072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 72cd0f91af80b3343a6deef1358380c7,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 391ab9989f3c5b145ab30bbc04f8f25f, type: 3}
 --- !u!65 &273603076
@@ -4650,10 +4680,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 314018486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: fe757d011295e1a409c5698f61ad8085,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: a9950a20d6979324bb5c329103d9c471, type: 3}
 --- !u!65 &314018490
@@ -4708,7 +4751,7 @@ GameObject:
   - component: {fileID: 318152182}
   - component: {fileID: 318152183}
   m_Layer: 0
-  m_Name: shipLevel3Locked
+  m_Name: shipLevel3Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4725,7 +4768,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828039239}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &318152183
 SpriteRenderer:
@@ -4836,10 +4879,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 323217769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: bd9831d27ff8852488644ac79b27ab2f,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 1a5ea88bd094b3549a8bc14391b7399d, type: 3}
 --- !u!65 &323217773
@@ -4928,10 +4984,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 329540812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: cf6948cade61be140b39b93a83dab348,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: c8987b2d50c87b0428408c67b70a6f37, type: 3}
 --- !u!65 &329540816
@@ -5062,10 +5131,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 339111496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 27b3fce0ea6814a4bb6c2d7f05e67b64,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 4dc1e187f2fa1ad4b8d6d098c80ac2f1, type: 3}
 --- !u!65 &339111500
@@ -5154,10 +5236,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 340084800}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 46080e0a5a5959342885e5f118c019ac,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 6260f8ccdb3051548979956f126a6588, type: 3}
 --- !u!65 &340084804
@@ -5246,10 +5341,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 345242332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 710160a1aa308104aa1dec43a105e033,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: be3c4365e5a69434480e3f7b24ceacc6, type: 3}
 --- !u!65 &345242336
@@ -5264,70 +5372,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.26, y: 0.4, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &347633693
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 347633694}
-  - component: {fileID: 347633695}
-  m_Layer: 0
-  m_Name: shipLevel2Unlocked
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &347633694
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 347633693}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 3.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 828039239}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &347633695
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 347633693}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: bc7544433f33c924d9b5e0781ae8cbb7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &352783114
 GameObject:
   m_ObjectHideFlags: 0
@@ -5590,10 +5634,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 380754499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: c648435774d214643b0560b504176762,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: a62236b24a9fd0d43a6532da7a830e63, type: 3}
 --- !u!65 &380754503
@@ -5635,7 +5692,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &382050219
 SpriteRenderer:
@@ -5701,7 +5758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151726771}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &385852220
 BoxCollider:
@@ -5764,11 +5821,18 @@ MonoBehaviour:
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
   buttonIndicatorObject: {fileID: 1660576330}
+  partStatsIndicatorObject: {fileID: 1983994017}
   localPartLevel1Menu: {fileID: 1012842132}
   localPartLevel2Menu: {fileID: 1426260638}
   localPartLevel3Menu: {fileID: 850621405}
-  localBuyButton: {fileID: 913286139}
-  partStatsIndicatorObject: {fileID: 1983994017}
+  localBuyPeriod: {fileID: 1894533861}
+  localButtonSprite: {fileID: 21300000, guid: 6f68e8ec8e83eb947aa24ff10eb5dda8, type: 3}
+  localBuySprite: {fileID: 21300000, guid: c8e4cf4843568a043b8c2aeb987fd533, type: 3}
+  statsIndicatorObject: {fileID: 0}
+  partDescriptionObject: {fileID: 0}
+  partDescriptionSprite: {fileID: 0}
+  extendedPartObject: {fileID: 0}
+  extendedPartSprite: {fileID: 0}
 --- !u!1001 &398373097
 Prefab:
   m_ObjectHideFlags: 0
@@ -5778,7 +5842,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4364499825752028, guid: 392bf96a098035b45bdbc2eea1fd4834, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.28
+      value: 3.442
       objectReference: {fileID: 0}
     - target: {fileID: 4364499825752028, guid: 392bf96a098035b45bdbc2eea1fd4834, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5999,6 +6063,70 @@ MonoBehaviour:
   RedGrid: {fileID: 21300000, guid: 4ae4278ce433ce64e9cc352d5de55c19, type: 3}
   GreenGrid: {fileID: 21300000, guid: 603d791d4da3d2643802d3a18901a4af, type: 3}
   MagentaGrid: {fileID: 21300000, guid: cb4594eabb91ba14d9e394c5a6d07534, type: 3}
+--- !u!1 &412895180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 412895181}
+  - component: {fileID: 412895182}
+  m_Layer: 0
+  m_Name: partDescription
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412895181
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412895180}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.055, y: 1.845, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2065434969}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &412895182
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412895180}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 46080e0a5a5959342885e5f118c019ac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &416491671
 GameObject:
   m_ObjectHideFlags: 0
@@ -6073,10 +6201,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 416491671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 7abc0632c0cc6424d91ed7a4a07e613f,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 000d1eb568c1bfb4aab5b103cdca253e, type: 3}
 --- !u!65 &416491675
@@ -6200,10 +6341,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 421254432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 8f3574c201aab21429b456ee95347f52,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: e355fccb6da581347972940458fca6aa, type: 3}
 --- !u!65 &421254436
@@ -6424,11 +6578,18 @@ MonoBehaviour:
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
   buttonIndicatorObject: {fileID: 1660576330}
+  partStatsIndicatorObject: {fileID: 1983994017}
   localPartLevel1Menu: {fileID: 1007297140}
   localPartLevel2Menu: {fileID: 1044971925}
   localPartLevel3Menu: {fileID: 1066846942}
-  localBuyButton: {fileID: 0}
-  partStatsIndicatorObject: {fileID: 1983994017}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
+  statsIndicatorObject: {fileID: 0}
+  partDescriptionObject: {fileID: 0}
+  partDescriptionSprite: {fileID: 0}
+  extendedPartObject: {fileID: 0}
+  extendedPartSprite: {fileID: 0}
 --- !u!1 &455488082
 GameObject:
   m_ObjectHideFlags: 0
@@ -7004,10 +7165,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 494826526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: bbaab03efbe4fb54d865353f5f079634,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 4552b40cfecb7034ea32c6b99f320908, type: 3}
 --- !u!65 &494826530
@@ -7096,10 +7270,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 494900778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: cab44b2cf5dba1d49adab870a4ba9c12,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 18c504f1c2634c642a31d72c6a715fff, type: 3}
 --- !u!65 &494900782
@@ -7654,10 +7841,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 554711137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: a81ced837f1087e4d9e1429c6ca13b26,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: dcd73cf10dfec594a87794449e5885b3, type: 3}
 --- !u!65 &554711141
@@ -7701,7 +7901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828039239}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &556757030
 BoxCollider:
@@ -7766,8 +7966,15 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 0}
   localMenuObject: {fileID: 0}
   partStatsIndicatorObject: {fileID: 1983994017}
-  localLevelBuyObject: {fileID: 147234532}
   levelIndicatorObject: {fileID: 352783114}
+  localLevelBuyPeriod: {fileID: 2082946687}
+  localLevelButtonSprite: {fileID: 21300000, guid: 3994ca23db4b9c04795fe57e4da89101,
+    type: 3}
+  localLevelBuySprite: {fileID: 21300000, guid: 95ff210bf2e9ed54689da4c5110c540b,
+    type: 3}
+  localLevelIndicatorObject: {fileID: 318152181}
+  localLevelIndicatorSprite: {fileID: 21300000, guid: f84f11f18fa234041af7c741866a5f79,
+    type: 3}
 --- !u!1 &570678307
 GameObject:
   m_ObjectHideFlags: 0
@@ -8042,10 +8249,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 590901964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f0238ade47f6de149bd4719d9b3a0376,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 16bef952d65fce2478aa6ee59beab009, type: 3}
 --- !u!65 &590901968
@@ -8087,7 +8307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &592122850
 SpriteRenderer:
@@ -8120,7 +8340,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6260f8ccdb3051548979956f126a6588, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8416,10 +8636,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 635539193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 82ecbc1f6ac03f442ae93f58eb02c603,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 9e0d6b9f95dbf824abc98df1e2e4c5c3, type: 3}
 --- !u!65 &635539197
@@ -8508,10 +8741,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 640879816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f45b26845eda59442bb7168069fedd4a,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 61dbefad0ea6b2e4480ee5f863d78953, type: 3}
 --- !u!65 &640879820
@@ -8667,8 +8913,12 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 1180916152}
   localMenuObject: {fileID: 0}
   partStatsIndicatorObject: {fileID: 0}
-  localLevelBuyObject: {fileID: 0}
   levelIndicatorObject: {fileID: 0}
+  localLevelBuyPeriod: {fileID: 0}
+  localLevelButtonSprite: {fileID: 0}
+  localLevelBuySprite: {fileID: 0}
+  localLevelIndicatorObject: {fileID: 0}
+  localLevelIndicatorSprite: {fileID: 0}
 --- !u!65 &651373372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8795,10 +9045,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 656744235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f709f797d7425364a887d44c4f39a892,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 1f96e8514241516469a50cab9b8412b8, type: 3}
 --- !u!65 &656744239
@@ -8860,8 +9123,12 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 1697421957}
   localMenuObject: {fileID: 1845830015}
   partStatsIndicatorObject: {fileID: 0}
-  localLevelBuyObject: {fileID: 0}
   levelIndicatorObject: {fileID: 0}
+  localLevelBuyPeriod: {fileID: 0}
+  localLevelButtonSprite: {fileID: 0}
+  localLevelBuySprite: {fileID: 0}
+  localLevelIndicatorObject: {fileID: 0}
+  localLevelIndicatorSprite: {fileID: 0}
 --- !u!65 &657094126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9025,10 +9292,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 661313453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 0b9a28e7982525f45aa61a5efe7158ea,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 08015ac255be58a49b54beea930a5cad, type: 3}
 --- !u!65 &661313457
@@ -9105,7 +9385,7 @@ Transform:
   m_LocalScale: {x: 15, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828039239}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667515855
 GameObject:
@@ -9627,7 +9907,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4406143582950042, guid: 7a1ed707cdf463f409d06fbd483f84b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.28
+      value: 3.442
       objectReference: {fileID: 0}
     - target: {fileID: 4406143582950042, guid: 7a1ed707cdf463f409d06fbd483f84b0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10019,10 +10299,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 802657293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 3cec6a7b5e5dd8e4980f3ffe0d5e0566,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 6ba81e97ce6c50a47ae5319be894ec00, type: 3}
 --- !u!65 &802657297
@@ -10202,15 +10495,11 @@ Transform:
   - {fileID: 352783115}
   - {fileID: 1285223832}
   - {fileID: 1571385229}
-  - {fileID: 556757029}
-  - {fileID: 1429041321}
   - {fileID: 666276394}
-  - {fileID: 147234533}
+  - {fileID: 556757029}
   - {fileID: 2082946689}
   - {fileID: 955531716}
-  - {fileID: 347633694}
   - {fileID: 1399956950}
-  - {fileID: 1836900530}
   - {fileID: 318152182}
   m_Father: {fileID: 1775390638}
   m_RootOrder: 1
@@ -11248,100 +11537,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4259090446840936, guid: cc8a4cc2bc40e2b4fb7b3003e1a82058,
     type: 2}
   m_PrefabInternal: {fileID: 333661117}
---- !u!1 &913286139
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 913286140}
-  - component: {fileID: 913286143}
-  - component: {fileID: 913286142}
-  - component: {fileID: 913286141}
-  m_Layer: 0
-  m_Name: enginesButtonBuy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &913286140
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 913286139}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.495, y: 3.09, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1151726771}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &913286141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 913286139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bbec30ffe3ea84199f28f6ca235409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
-    type: 2}
-  buttonIndicatorObject: {fileID: 1660576330}
-  localButtonObject: {fileID: 385852218}
-  localBuyPeriod: {fileID: 1894533861}
---- !u!65 &913286142
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 913286139}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99, y: 0.3, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &913286143
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 913286139}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: c8e4cf4843568a043b8c2aeb987fd533, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &918375332
 GameObject:
   m_ObjectHideFlags: 0
@@ -11508,7 +11703,7 @@ Transform:
   m_LocalScale: {x: 21.199999, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151726771}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &921191464
 SpriteRenderer:
@@ -11686,7 +11881,7 @@ GameObject:
   - component: {fileID: 955531716}
   - component: {fileID: 955531717}
   m_Layer: 0
-  m_Name: shipLevel1Unlocked
+  m_Name: shipLevel1Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11703,7 +11898,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828039239}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &955531717
 SpriteRenderer:
@@ -11814,10 +12009,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 957878269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 315547da6729cca49ae5453c1f23b571,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 3b114fbb5efe0e941b6dd6d201028d19, type: 3}
 --- !u!65 &957878273
@@ -12000,10 +12208,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 975927419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f2994de6a6fa83d4b9095a40b06530b1,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 7355eafa0e56baf4eb0e945109070544, type: 3}
 --- !u!65 &975927423
@@ -12222,10 +12443,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007525445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: e0b32f29d31a0a4458a180b1bd84e3b1,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: a53a6276dc43de146a1e6659f803d4ee, type: 3}
 --- !u!65 &1007525449
@@ -12368,100 +12602,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4406143582950042, guid: 7a1ed707cdf463f409d06fbd483f84b0,
     type: 2}
   m_PrefabInternal: {fileID: 745835863}
---- !u!1 &1025320489
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1025320490}
-  - component: {fileID: 1025320493}
-  - component: {fileID: 1025320492}
-  - component: {fileID: 1025320491}
-  m_Layer: 0
-  m_Name: wingsButtonBuy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1025320490
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025320489}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.605, y: 3.48, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1151726771}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1025320491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025320489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bbec30ffe3ea84199f28f6ca235409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
-    type: 2}
-  buttonIndicatorObject: {fileID: 1660576330}
-  localButtonObject: {fileID: 3959654}
-  localBuyPeriod: {fileID: 1112676452}
---- !u!65 &1025320492
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025320489}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99, y: 0.3, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &1025320493
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025320489}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: c8e4cf4843568a043b8c2aeb987fd533, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &1034579123
 GameObject:
   m_ObjectHideFlags: 0
@@ -13228,10 +13368,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094694867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f87da2b5b5675c64d9873ac8c7dc0c27,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 33d43fe77780b214f948ba26bcddeb64, type: 3}
 --- !u!65 &1094694871
@@ -13320,10 +13473,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1100701559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: b549977d437972b4e8c129af72ebc594,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 5bfc1e8d06a18e841afbcaf1802907ca, type: 3}
 --- !u!65 &1100701563
@@ -13365,7 +13531,7 @@ Transform:
   m_LocalScale: {x: 21.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151726771}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1112676454
 SpriteRenderer:
@@ -13431,7 +13597,7 @@ Transform:
   - {fileID: 1044971926}
   - {fileID: 1066846943}
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116440869
 GameObject:
@@ -13507,10 +13673,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1116440869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 9d2398762cca6394a8c33c11547ceafa,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 33c0dbcd410d2fe498d51112a51e7ef3, type: 3}
 --- !u!65 &1116440873
@@ -13740,13 +13919,10 @@ Transform:
   m_Children:
   - {fileID: 454099132}
   - {fileID: 3959655}
-  - {fileID: 1025320490}
   - {fileID: 1112676453}
   - {fileID: 385852219}
-  - {fileID: 913286140}
   - {fileID: 1894533862}
   - {fileID: 1275806928}
-  - {fileID: 2076220946}
   - {fileID: 921191463}
   - {fileID: 1660576331}
   m_Father: {fileID: 2065434969}
@@ -13809,7 +13985,7 @@ GameObject:
   - component: {fileID: 1167635122}
   - component: {fileID: 1167635123}
   m_Layer: 0
-  m_Name: partMenuBorder
+  m_Name: partMenuButtonsBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14793,7 +14969,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151726771}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1275806929
 BoxCollider:
@@ -14856,11 +15032,18 @@ MonoBehaviour:
   PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
     type: 2}
   buttonIndicatorObject: {fileID: 1660576330}
+  partStatsIndicatorObject: {fileID: 1983994017}
   localPartLevel1Menu: {fileID: 35775410}
   localPartLevel2Menu: {fileID: 35775410}
   localPartLevel3Menu: {fileID: 35775410}
-  localBuyButton: {fileID: 2076220945}
-  partStatsIndicatorObject: {fileID: 1983994017}
+  localBuyPeriod: {fileID: 921191462}
+  localButtonSprite: {fileID: 21300000, guid: 509c8416139992e499517c52b631788f, type: 3}
+  localBuySprite: {fileID: 21300000, guid: c8e4cf4843568a043b8c2aeb987fd533, type: 3}
+  statsIndicatorObject: {fileID: 0}
+  partDescriptionObject: {fileID: 0}
+  partDescriptionSprite: {fileID: 0}
+  extendedPartObject: {fileID: 0}
+  extendedPartSprite: {fileID: 0}
 --- !u!1 &1285223831
 GameObject:
   m_ObjectHideFlags: 0
@@ -14955,8 +15138,12 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 0}
   localMenuObject: {fileID: 0}
   partStatsIndicatorObject: {fileID: 1983994017}
-  localLevelBuyObject: {fileID: 0}
   levelIndicatorObject: {fileID: 352783114}
+  localLevelBuyPeriod: {fileID: 0}
+  localLevelButtonSprite: {fileID: 0}
+  localLevelBuySprite: {fileID: 0}
+  localLevelIndicatorObject: {fileID: 0}
+  localLevelIndicatorSprite: {fileID: 0}
 --- !u!1 &1295615380
 GameObject:
   m_ObjectHideFlags: 0
@@ -15125,10 +15312,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297309232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: cd98bb78c69e48641a55cdc18feb5172,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 604f60f43293aff49b8b1c1177e41efa, type: 3}
 --- !u!65 &1297309236
@@ -15440,7 +15640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1339561788
 SpriteRenderer:
@@ -15741,10 +15941,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1376915307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f4735053f06b364418169515134e9226,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: e0fd3d52f5a9eeb4f95a06a338fadced, type: 3}
 --- !u!65 &1376915311
@@ -15955,10 +16168,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386700432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 94b5902152305c64ca9403aaa4e7ff5d,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 1fdca1a47716c904f83695388b5f5000, type: 3}
 --- !u!65 &1386700436
@@ -16169,7 +16395,7 @@ GameObject:
   - component: {fileID: 1399956950}
   - component: {fileID: 1399956951}
   m_Layer: 0
-  m_Name: shipLevel2Locked
+  m_Name: shipLevel2Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16186,7 +16412,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828039239}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1399956951
 SpriteRenderer:
@@ -16524,100 +16750,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &1429041318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1429041321}
-  - component: {fileID: 1429041320}
-  - component: {fileID: 1429041319}
-  - component: {fileID: 1429041322}
-  m_Layer: 0
-  m_Name: level2Buy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &1429041319
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1429041318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.74, y: 0.29, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &1429041320
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1429041318}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 3a163124ae81bd249a0efae5800a98ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
---- !u!4 &1429041321
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1429041318}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.03, y: 3.2, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 828039239}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1429041322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1429041318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf43d0d7ffecd447969d2542893f0b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
-    type: 2}
-  localShipLevelLocked: {fileID: 1399956949}
-  levelIndicatorObject: {fileID: 352783114}
-  localLevelBuyPeriod: {fileID: 666276392}
 --- !u!1 &1433021575
 GameObject:
   m_ObjectHideFlags: 0
@@ -16784,10 +16916,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1433992117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 8a33b705494b4d94a8899dcba5057049,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 9f3bc3631282be1429ae637f0ed21fda, type: 3}
 --- !u!65 &1433992121
@@ -16864,7 +17009,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 9f5f15810ef6b824392bfa9652af1d8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90d7b93209575f14aa72f3617eda9198, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16876,10 +17021,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1437409306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f02276e49d39750469b37f3cc3234ca9,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 5668718ca7a1b5d4cbb75661a0403c6d, type: 3}
 --- !u!65 &1437409310
@@ -16968,10 +17126,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1447901000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: fd6aebc65e671374ca9662b62192fa3d,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: b4788a479e7ef2740bee44c4a9a52e60, type: 3}
 --- !u!65 &1447901004
@@ -17060,10 +17231,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1477911027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 9ac9b6314fe84a142a797cd74069c22d,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 3459371db542d2443a330674b56c81d7, type: 3}
 --- !u!65 &1477911031
@@ -17216,10 +17400,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1501140018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 207f1fa45cf821d4f8e3de6fac2cd4cf,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 6cc6d9c40fa882a4fbfb2aba643ef0a6, type: 3}
 --- !u!65 &1501140022
@@ -18111,8 +18308,15 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 0}
   localMenuObject: {fileID: 0}
   partStatsIndicatorObject: {fileID: 1983994017}
-  localLevelBuyObject: {fileID: 1429041318}
   levelIndicatorObject: {fileID: 352783114}
+  localLevelBuyPeriod: {fileID: 666276392}
+  localLevelButtonSprite: {fileID: 21300000, guid: a3c46da34d6cb1445b760cb309b38f75,
+    type: 3}
+  localLevelBuySprite: {fileID: 21300000, guid: 3a163124ae81bd249a0efae5800a98ad,
+    type: 3}
+  localLevelIndicatorObject: {fileID: 1399956949}
+  localLevelIndicatorSprite: {fileID: 21300000, guid: bc7544433f33c924d9b5e0781ae8cbb7,
+    type: 3}
 --- !u!1001 &1575974196
 Prefab:
   m_ObjectHideFlags: 0
@@ -18235,10 +18439,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1589467612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: dad63edaff3be5247bb30850f7c86f77,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 128daf6de9d21a14b80285eb9b06c990, type: 3}
 --- !u!65 &1589467616
@@ -18543,7 +18760,7 @@ Transform:
   - {fileID: 1426260639}
   - {fileID: 850621406}
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642639387
 GameObject:
@@ -18619,10 +18836,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1642639387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 7d0cd5d2005470043854e4884f6760fc,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 573910377f5f25d4a912b7ea7448b93c, type: 3}
 --- !u!65 &1642639391
@@ -18758,7 +18988,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151726771}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1660576332
 SpriteRenderer:
@@ -18933,10 +19163,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1670269976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 4d082ea041de1d2468c6e3880e40f0ca,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 4b42f98cb49d7494fbe05102f89cfe4c, type: 3}
 --- !u!65 &1670269980
@@ -19025,10 +19268,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1671235532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: ef268716419072a42be8d4b8d7b10e63,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 504f91e2711970c49958c9a7572f76bd, type: 3}
 --- !u!65 &1671235536
@@ -19216,10 +19472,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675801533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 4128a0a1570dd4244b9d3128f23ae905,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 445ab03a814cd4141b649b5df3b554b0, type: 3}
 --- !u!65 &1675801537
@@ -19533,10 +19802,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1723096273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 93c1b5ee6730e6443976fdda137c02ce,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 18251307adac22e4f93a3756aa4a8918, type: 3}
 --- !u!65 &1723096277
@@ -19717,10 +19999,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728032095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: f577e21564efac94da26cc2d214859ef,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 65f6bc0d870d15546979f9ea1a003279, type: 3}
 --- !u!65 &1728032099
@@ -19903,10 +20198,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1732848644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: d79ae1d898a6178499c7c5e704ae3ffa,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: e7858b1b5f9ffc940a3ff5ba485f8952, type: 3}
 --- !u!65 &1732848648
@@ -20562,10 +20870,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788642805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 1f841dd8d9de8f24f986ac31e3f218d9,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 2c0de25e4264e514e81899a0ab3b5b91, type: 3}
 --- !u!65 &1788642809
@@ -20682,70 +21003,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4312423351586654, guid: 93479b9ca0020be40af8fd1c3abcadf0,
     type: 2}
   m_PrefabInternal: {fileID: 891482573}
---- !u!1 &1836900529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1836900530}
-  - component: {fileID: 1836900531}
-  m_Layer: 0
-  m_Name: shipLevel3Unlocked
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1836900530
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1836900529}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.41, y: 2.87, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 828039239}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1836900531
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1836900529}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: f84f11f18fa234041af7c741866a5f79, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &1838499802
 GameObject:
   m_ObjectHideFlags: 0
@@ -21130,10 +21387,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1851950023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 424023ce62a91814cb18f58155060a90,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 9af68995bea69d04984b2abca043ce69, type: 3}
 --- !u!65 &1851950027
@@ -21222,10 +21492,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1861058254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 282427f20ac17ba4094cd9a3cbb0bc35,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: e08ed8011992ebb408c446c9ccea9ed2, type: 3}
 --- !u!65 &1861058258
@@ -21353,7 +21636,7 @@ Transform:
   - {fileID: 2034880540}
   - {fileID: 119421065}
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882329962
 GameObject:
@@ -21524,10 +21807,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1886996123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 307a62ef5a7394842942b7c681c1f6ab,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 1aa34ea918a9ead4984009f2e735ec57, type: 3}
 --- !u!65 &1886996127
@@ -21663,7 +21959,7 @@ Transform:
   m_LocalScale: {x: 21.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1151726771}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1894533863
 SpriteRenderer:
@@ -21866,10 +22162,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1898954491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 572af43faaa383c4a91c75d09bbbc527,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 118e66511c4c87545aa0e81873575486, type: 3}
 --- !u!65 &1898954495
@@ -22702,8 +23011,12 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 868595182}
   localMenuObject: {fileID: 741473211}
   partStatsIndicatorObject: {fileID: 0}
-  localLevelBuyObject: {fileID: 0}
   levelIndicatorObject: {fileID: 0}
+  localLevelBuyPeriod: {fileID: 0}
+  localLevelButtonSprite: {fileID: 0}
+  localLevelBuySprite: {fileID: 0}
+  localLevelIndicatorObject: {fileID: 0}
+  localLevelIndicatorSprite: {fileID: 0}
 --- !u!65 &1959883383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23021,10 +23334,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967406754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 56582ecc08c449e458b849fab8f44226,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 17dfb08a9ef3d6d4e82eae25e3541741, type: 3}
 --- !u!65 &1967406758
@@ -23118,7 +23444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1983994018
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23165,7 +23491,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2065434969}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994684790
 GameObject:
@@ -23335,10 +23661,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2002523949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: d6f8182fbca0e5448bce418d5000d2a0,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 8e99b4515f92ea7478533fca2cb741f4, type: 3}
 --- !u!65 &2002523953
@@ -23593,8 +23932,12 @@ MonoBehaviour:
   localButtonActiveObject: {fileID: 1486351967}
   localMenuObject: {fileID: 0}
   partStatsIndicatorObject: {fileID: 0}
-  localLevelBuyObject: {fileID: 0}
   levelIndicatorObject: {fileID: 0}
+  localLevelBuyPeriod: {fileID: 0}
+  localLevelButtonSprite: {fileID: 0}
+  localLevelBuySprite: {fileID: 0}
+  localLevelIndicatorObject: {fileID: 0}
+  localLevelIndicatorSprite: {fileID: 0}
 --- !u!65 &2057373893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23782,6 +24125,7 @@ Transform:
   - {fileID: 1167635122}
   - {fileID: 1151726771}
   - {fileID: 1088608638}
+  - {fileID: 412895181}
   - {fileID: 382050218}
   - {fileID: 592122849}
   - {fileID: 1339561787}
@@ -23793,100 +24137,6 @@ Transform:
   m_Father: {fileID: 741473212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2076220945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2076220946}
-  - component: {fileID: 2076220949}
-  - component: {fileID: 2076220948}
-  - component: {fileID: 2076220947}
-  m_Layer: 0
-  m_Name: miscButtonBuy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2076220946
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2076220945}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.605, y: 3.09, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1151726771}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2076220947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2076220945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bbec30ffe3ea84199f28f6ca235409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
-    type: 2}
-  buttonIndicatorObject: {fileID: 1660576330}
-  localButtonObject: {fileID: 1275806927}
-  localBuyPeriod: {fileID: 921191462}
---- !u!65 &2076220948
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2076220945}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99, y: 0.3, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &2076220949
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2076220945}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: c8e4cf4843568a043b8c2aeb987fd533, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1 &2076663477 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1884864414324874, guid: 54cbcde70ebd15740888a416df9e9e0e,
@@ -23959,7 +24209,7 @@ Transform:
   m_LocalScale: {x: 15, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828039239}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091176318
 GameObject:
@@ -24035,10 +24285,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2091176318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: 0018cf769ba2f904ba2e64d849da7384,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: b3f0ef4bfa7a3424eb0ed3c93c97e74e, type: 3}
 --- !u!65 &2091176322
@@ -24127,10 +24390,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2094700467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: dc9d2a4d77e4c4c48ad2c1a33d04ea90,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 2f83ca9e241e81e4196ac43eaf8fcd64, type: 3}
 --- !u!65 &2094700471
@@ -24415,10 +24691,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2124479443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6656186786634ca42b5fda357f2370c4, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0da80cc6f3fd6409c3da2302f86173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerObject: {fileID: 1525386156040004, guid: cc096eb66ec8fbc46978fdc8acbe5a25,
+    type: 2}
+  buttonIndicatorObject: {fileID: 0}
+  partStatsIndicatorObject: {fileID: 0}
+  localPartLevel1Menu: {fileID: 0}
+  localPartLevel2Menu: {fileID: 0}
+  localPartLevel3Menu: {fileID: 0}
+  localBuyPeriod: {fileID: 0}
+  localButtonSprite: {fileID: 0}
+  localBuySprite: {fileID: 0}
   statsIndicatorObject: {fileID: 1983994017}
+  partDescriptionObject: {fileID: 412895180}
+  partDescriptionSprite: {fileID: 21300000, guid: a1a589a35ce196245857cdafdca4bd15,
+    type: 3}
   extendedPartObject: {fileID: 592122848}
   extendedPartSprite: {fileID: 21300000, guid: 7721c1db7527795469fc70a62c3f4517, type: 3}
 --- !u!65 &2124479447
