@@ -1,7 +1,7 @@
 ﻿//File: closeSpawn.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 03/26/2017
+//Last Modified: 05/03/2017
 
 /*
 --As the ship moves stars and asteroids will be spawned around it. This will save memory but look totally random. Will use for all background particles.
@@ -16,6 +16,7 @@ public var AsteroidParent : GameObject;
 public var StarParent : GameObject;
 public var Stars : GameObject[] = new GameObject[2];
 public var Asteroids : GameObject[] = new GameObject[3];
+public var AsteroidParticles : GameObject[] = new GameObject[9];
 
 static var spawnRange : float = 20.0; // Changes size of active chunk.
 private var state : int; //Used for specifying positive and negative.
@@ -71,6 +72,7 @@ function Spawn(direction : int) {
     var size : int;
     var starCount : int = spawnRange * 10;
     var asteroidCount : int = spawnRange * 2;
+    var asteroidParticleCount : int = spawnRange * 4;
     playerScript.despawn = 1; //Despawn objects out of spawnRange
 
     while (starCount > 0 || asteroidCount > 0) {
@@ -98,7 +100,6 @@ function Spawn(direction : int) {
 
             size = rand.Range(0, 2);
             Instantiate(Stars[size], temp, Quaternion.Euler(0, 0, rand.Range(0,360)), StarParent.transform);
-
             starCount--;
         }
         
@@ -111,9 +112,22 @@ function Spawn(direction : int) {
                 size = 1; //Spawn medium (30% chance).
             if (size >= 8)
                 size = 2; //Spawn large (20% chance).
-
             Instantiate(Asteroids[size], temp, Quaternion.Euler(0, 0, rand.Range(0,360)), AsteroidParent.transform);
             asteroidCount--;
+        }
+
+        if (asteroidParticleCount > 0) {
+
+            size = rand.Range(0.0, 10.0);
+            if (size <= 5)
+                size = 1; //Spawn small (50% chance).
+            if (size < 8 && size > 5)
+                size = 4; //Spawn medium (30% chance).
+            if (size >= 8)
+                size = 7; //Spawn large (20% chance).
+            size = rand.Range(size - 1, size + 2);
+            Instantiate(AsteroidParticles[size], temp, Quaternion.Euler(0, 0, rand.Range(0,360)), AsteroidParent.transform);
+            asteroidParticleCount--;
         }
     }
 }

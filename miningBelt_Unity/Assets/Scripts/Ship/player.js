@@ -1,7 +1,7 @@
 ﻿//File: Player.js
 //Program: miningBelt
 //Author: Kaylan Stoering
-//Last Modified: 04/27/2017
+//Last Modified: 05/05/2017
 
 /*
 --Player.js holds player stats and controls game movement.
@@ -78,7 +78,12 @@ static var spawnRangeY : Vector2; //Global spawnRangeY for closeSpawn and despaw
 
 function Start () {
 
+    Screen.SetResolution(800, 600, false); //Sets resolution at runtime to avoid sizing issues.
     TempRB = this.GetComponent(Rigidbody2D); //Assigns own Rigidbody2D for easy script assigning.
+
+    currentHealth = Health + (HealthBonus * 50);
+    currentShield = Shield + ShieldBonus;
+    currentHull = Hull + HullBonus;
 }
 
 function Update () {
@@ -111,7 +116,11 @@ function OnDestroy () { //Resets player variables. Death = fresh start unless de
     Cargo = 5;
     FireRate = 1;
 
-    if (persistance == 1) { //Normal reset. Sets you cank to total defaults.
+    currentHealth = totalHealth;
+    currentHull = totalHull;
+    currentShield = totalShield;
+
+    if (persistance == 1) { //Normal reset. Sets you back to total defaults.
 
         level2Bought = 0;
         level3Bought = 0;

@@ -17,6 +17,8 @@ public var storeObject : GameObject;
 public var closeStoreButtonObject : GameObject;
 public var developerMenuIndicator : GameObject;
 
+public var shipPartsParent : GameObject;
+
 function Start () {
 
     playerScript = PlayerObject.GetComponent(player);
@@ -24,8 +26,11 @@ function Start () {
 
 function OnMouseDown() {
 
-    if (name == "restartButton")
+    if (name == "restartButton") {
+
+        shipPartsParent.SetActive(true);
         SceneManagement.SceneManager.LoadScene(0);
+    }
 
     if (name == "menuButton") {
 

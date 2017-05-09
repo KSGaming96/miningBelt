@@ -22,6 +22,7 @@ static var EnergyWeapon : GameObject;
 static var MissileWeapon : GameObject;
 
 private var itemStorageScript : itemStorage;
+private var weaponPartsParent : GameObject;
 
 static var energySplit : int = 0;
 static var missileSplit : int = 0;
@@ -32,7 +33,8 @@ static var energyFireRate : float;
 static var missileFireRate : float;
 
 function Start () {
-
+    
+    weaponPartsParent = GameObject.Find("WeaponParts");
     playerScript = PlayerObject.GetComponent(player);
     statusBarScaleScript = barScalerObject.GetComponent(statusBarScale);
     itemStorageScript = bottomGUI.GetComponent(itemStorage);
@@ -71,13 +73,13 @@ function Update () { //Checks if weapon is equipped depending on object tag. Spa
 function energySpawn () { //Makes a single bullet up from player.
 
     var rotation : Quaternion = PlayerObject.transform.rotation;
-    Instantiate(EnergyWeapon, transform.position, rotation);
+    Instantiate(EnergyWeapon, transform.position, rotation, weaponPartsParent.transform);
 }
 
 function missileSpawn () { //Makes a single bullet up from player.
 
     var rotation : Quaternion = PlayerObject.transform.rotation;
-    Instantiate(MissileWeapon, transform.position, rotation);
+    Instantiate(MissileWeapon, transform.position, rotation, weaponPartsParent.transform);
 }
 
 function SplitSpawn () { //Reads how many splits there are, and spawns the bullets Spread degrees apart.
@@ -95,9 +97,9 @@ function SplitSpawn () { //Reads how many splits there are, and spawns the bulle
             rotation *= Quaternion.Euler(0, 0, 360 - (i * (energySpread + missileSpread)));
 
             if (itemStorageScript.energyEquip == 1 && energySplit == 1)
-                Instantiate(EnergyWeapon, transform.position, rotation);
+                Instantiate(EnergyWeapon, transform.position, rotation, weaponPartsParent.transform);
             if (itemStorageScript.missileEquip == 1 && missileSplit == 1)
-                Instantiate(MissileWeapon, transform.position, rotation);
+                Instantiate(MissileWeapon, transform.position, rotation, weaponPartsParent.transform);
             
             i -= 4;
         }
@@ -109,9 +111,9 @@ function SplitSpawn () { //Reads how many splits there are, and spawns the bulle
 
         rotation = PlayerObject.transform.rotation;
         if (itemStorageScript.energyEquip == 1 && energySplit == 2)
-            Instantiate(EnergyWeapon, transform.position, rotation);
+            Instantiate(EnergyWeapon, transform.position, rotation, weaponPartsParent.transform);
         if (itemStorageScript.missileEquip == 1 && missileSplit == 2)
-            Instantiate(MissileWeapon, transform.position, rotation);
+            Instantiate(MissileWeapon, transform.position, rotation, weaponPartsParent.transform);
 
         while (i >= -2) {
 
@@ -119,9 +121,9 @@ function SplitSpawn () { //Reads how many splits there are, and spawns the bulle
             rotation *= Quaternion.Euler(0, 0, 360 - (i * (energySpread + missileSpread)));
 
             if (itemStorageScript.energyEquip == 1 && energySplit == 2)
-                Instantiate(EnergyWeapon, transform.position, rotation);
+                Instantiate(EnergyWeapon, transform.position, rotation, weaponPartsParent.transform);
             if (itemStorageScript.missileEquip == 1 && missileSplit == 2)
-                Instantiate(MissileWeapon, transform.position, rotation);
+                Instantiate(MissileWeapon, transform.position, rotation, weaponPartsParent.transform);
 
             i -= 4;
         }
@@ -133,9 +135,9 @@ function SplitSpawn () { //Reads how many splits there are, and spawns the bulle
 
         rotation = PlayerObject.transform.rotation;
         if (itemStorageScript.energyEquip == 1 && energySplit == 4)
-            Instantiate(EnergyWeapon, transform.position, rotation);
+            Instantiate(EnergyWeapon, transform.position, rotation, weaponPartsParent.transform);
         if (itemStorageScript.missileEquip == 1 && missileSplit == 4)
-            Instantiate(MissileWeapon, transform.position, rotation);
+            Instantiate(MissileWeapon, transform.position, rotation, weaponPartsParent.transform);
 
         while (i >= -6) {
 
@@ -143,9 +145,9 @@ function SplitSpawn () { //Reads how many splits there are, and spawns the bulle
             rotation *= Quaternion.Euler(0, 0, 360 - (i * (energySpread + missileSpread)));
 
             if (itemStorageScript.energyEquip == 1 && energySplit == 4)
-                Instantiate(EnergyWeapon, transform.position, rotation);
+                Instantiate(EnergyWeapon, transform.position, rotation, weaponPartsParent.transform);
             if (itemStorageScript.missileEquip == 1 && missileSplit == 4)
-                Instantiate(MissileWeapon, transform.position, rotation);
+                Instantiate(MissileWeapon, transform.position, rotation, weaponPartsParent.transform);
 
             i -= 4;
         }

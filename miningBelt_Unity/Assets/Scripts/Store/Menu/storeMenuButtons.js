@@ -138,7 +138,7 @@ function buyTimer() { //Sprite changes to localBuySprite. Button disappears if t
     localLevelBuyPeriod.SetActive(true);
     while (buyTime <= maxBuyTime) { //Scaling localBuyPeriod until full, then closes. Running as a co-routine.
         buyTime += Time.deltaTime;
-        scaleFactor = (buyTime / maxBuyTime) * 15;
+        scaleFactor = (1 - buyTime / maxBuyTime) * 15;
         localLevelBuyPeriod.transform.localScale = new Vector3(scaleFactor, 1, 1); //Scales buy timer down until objects are disabled.
         yield;
     }

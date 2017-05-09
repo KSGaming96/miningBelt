@@ -30,8 +30,10 @@ public var localBuySprite : Sprite; //Buy button Sprite
 public var statsIndicatorObject : GameObject; //Stats indicator object. Switches to selected part.
 public var partDescriptionObject : GameObject; //Sprite shown in description tab of part properties.
 public var partDescriptionSprite : Sprite; //    ^^
+public var partPurchaseObject : GameObject;
 public var extendedPartObject : GameObject; //Sprite shown in part view. Object and sprite.
 public var extendedPartSprite : Sprite;//     ^^
+public var totalPrice : int;
 
 static var purchasedBodies : int = 1; //Global variable showing what category has been purchased.
 static var purchasedWings : int = 0; //     ^^
@@ -110,6 +112,7 @@ function OnMouseDown () { //Places buttonIndicator on pressed part button if pla
         statsIndicatorObject.transform.position = gameObject.transform.position;
         statsIndicatorObject.gameObject.SetActive(true);
         partDescriptionObject.GetComponent(SpriteRenderer).sprite = partDescriptionSprite;
+        partPurchaseObject.GetComponent(partPropertiesButtons).totalPrice = totalPrice;
         extendedPartObject.GetComponent(SpriteRenderer).sprite = extendedPartSprite;
     }
 }
@@ -159,7 +162,7 @@ function buyTimer() { //Sprite changes to localBuySprite. Button disappears if t
     localBuyPeriod.SetActive(true);
     while (buyTime <= maxBuyTime) { //Scaling localBuyPeriod until full, then closes. Running as a co-routine.
         buyTime += Time.deltaTime;
-        scaleFactor = (buyTime / maxBuyTime) * 21.2;
+        scaleFactor = (1 - buyTime / maxBuyTime) * 21.2;
         localBuyPeriod.transform.localScale = new Vector3(scaleFactor, 1, 1); //Scales buy timer down until objects are disabled.
         yield;
     }

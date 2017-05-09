@@ -14,6 +14,7 @@
 public var PlayerObject : GameObject;
 public var weaponDust : GameObject;
 public var weaponParticle : GameObject;
+private var TempRB : Rigidbody2D;
 
 private var playerScript : player;
 private var rand : Random;
@@ -22,22 +23,24 @@ public var Speed : float;
 public var Life : float;
 
 private var overallSpeed : float; //Bullet speed x player velocity.
-private var rotation : float; //The direction of the bullet.
-private var relativeSpeed : float; //Player speed x rotationDifference. Slows bullets when not going in player direction. (beta)
+private var relativeSpeed : float = 1; //Player speed x rotationDifference. Slows bullets when not going in player direction. (beta)
 private var rotationDifference : float; //Float between 0 and 1 that shows how far bullet's rotations are from player direction. (beta)
 
 function Start () {
 
     playerScript = PlayerObject.GetComponent(player);
-    rotation = transform.rotation.z;
+    TempRB = GetComponent(Rigidbody2D);
+    TempRB.velocity = PlayerObject.GetComponent(Rigidbody2D).velocity;
+
+
     if (Life > 0)
         Destroy(gameObject, Life);
 }
 
-function Update () { //Transform relating to rotationMath and overallSpeed.
+function FixedUpdate () { //Transform relating to rotationMath and overallSpeed.
     
-    rotationMath();
-    transform.Translate(PlayerObject.transform.up * (relativeSpeed * Time.deltaTime));
+    //rotationMath();
+    TempRB.AddForce(transform.up * (30 * Time.deltaTime));
 }
 
 function rotationMath () { //Beta. Running into so many issues with this.
