@@ -17,15 +17,45 @@ Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\
 Loading C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.030 seconds
+- Completed reload, in  0.367 seconds
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1600x900 40Hz; virtual: 1600x900 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.934965 ms
+UnloadTime: 1.786574 ms
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 Platform assembly: C:\Users\Kaylan\Documents\GitHub\miningBelt\Kaylan's Dev Pit\Current EXE\miningBelt_Data\Managed\Boo.Lang.dll (this message is harmless)
+NullReferenceException: Object reference not set to an instance of an object
+  at weaponEquip.OnMouseDown () [0x00000] in <filename unknown>:0 
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32)
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at weaponEquip.OnMouseDown () [0x00000] in <filename unknown>:0 
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32)
+ 
+(Filename:  Line: -1)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.344724 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 2489.
+Total: 0.597235 ms (FindLiveObjects: 0.129868 ms CreateObjectMapping: 0.079341 ms MarkObjects: 0.371051 ms  DeleteObjects: 0.007105 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.124335 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 2489.
+Total: 0.531314 ms (FindLiveObjects: 0.127499 ms CreateObjectMapping: 0.061184 ms MarkObjects: 0.333946 ms  DeleteObjects: 0.007499 ms)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 734 -> priority: 1 
+  Thread -> id: 1a90 -> priority: 1 
